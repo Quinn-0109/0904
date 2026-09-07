@@ -949,7 +949,7 @@ def validate_physical_config(config, require_runtime_files=False):
             float(settings["red_ball_minimum_projected_radius_px"]) >= 10.0 and
             float(settings["red_ball_distractor_projected_gap_rad"]) >=
                 math.radians(5.0) and
-            int(settings["recording_camera_vertical_pixels"]) == 480 and
+            int(settings["recording_camera_vertical_pixels"]) == 240 and
             float(settings["recording_camera_mount_forward_m"]) == 0.30 and
             float(settings["recording_camera_mount_height_m"]) == 0.08 and
             float(settings["red_ball_camera_pitch_uncertainty_deg"]) >= 3.0 and
