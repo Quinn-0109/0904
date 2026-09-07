@@ -2435,6 +2435,12 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
         "physical_viewpoint_transit_speed", 0.70))
     door_crossing_speed = float(settings.get(
         "room_door_crossing_speed", 0.42))
+    # The EXIT leg turns onto the door normal inside the acceptance-bounded
+    # crossing speed.  The ENTRY leg is already aligned by the preceding
+    # corridor waypoint and carries no such bound, so it may cross at its own
+    # speed.  Default to the shared crossing speed when unset.
+    door_entry_speed = float(settings.get(
+        "room_door_entry_speed", door_crossing_speed))
     internal_bend_tolerance = min(0.12, max(0.05, float(settings.get(
         "room_internal_path_bend_tolerance_m", 0.12))))
     corridor_speed = float(settings.get(
@@ -2534,7 +2540,7 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
             rewritten.append(entry_corridor)
             entry_waypoint = _room_route_waypoint(
                 waypoint, entry[0], entry[1], room_id + "_entry",
-                room, "ENTRY", door_crossing_speed)
+                room, "ENTRY", door_entry_speed)
             entry_waypoint["pass_through"] = True
             entry_waypoint["speed_scale_exempt"] = True
             rewritten.append(entry_waypoint)
