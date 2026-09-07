@@ -1282,15 +1282,6 @@ class ThreeFloorGoalSequencer:
                 # segment where attitude loss was previously observed.
                 planned_room_bend = (
                     "_room_" in note and "_exit_inner_" in note)
-                # What destabilised that segment was a simultaneous
-                # forward+lateral+yaw command; direct_rl_command never emits
-                # lateral, so zero side motion is guaranteed by construction
-                # and the gate only decides how square the robot must be
-                # before it starts moving.  Holding out for 0.16 rad made the
-                # departure legs crawl at 0.53 m/s against a 2.15 m/s cap.
-                # Release translation once the heading is roughly on segment;
-                # doorway crossings and stair handoffs keep the strict gate.
-                room_bend_heading_limit = 0.50
                 plane_forward_only = (
                     bool(waypoint.get("plane_forward_only", False))
                     or planned_room_bend)
@@ -1331,9 +1322,7 @@ class ThreeFloorGoalSequencer:
                         distance_gain=(
                             distance_gain
                             if policy_kind_name == "plane" else 0.70),
-                        translation_heading_limit=(
-                            room_bend_heading_limit
-                            if planned_room_bend else 0.16))
+                        translation_heading_limit=0.16)
                 heading_error = float("inf")
             if plane_upright_hold:
                 forward = 0.0
