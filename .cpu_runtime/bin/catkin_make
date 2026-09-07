@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+args=" $* "
+if [[ "$args" == *" -C ${SIMENV_CPU_SIM_ROOT} "* ]] &&
+   [[ "$args" == *" --pkg unitree_guide "* ]]; then
+    echo "[CPU deploy] Unitree rebuild skipped; validated controller selected"
+    exit 0
+fi
+
+exec /opt/ros/noetic/bin/catkin_make "$@"

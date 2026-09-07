@@ -1,0 +1,1457 @@
+{
+  "algorithm_preparation_excluded": true,
+  "duration_sec": 970.193,
+  "exploration_budget_met": false,
+  "exploration_budget_sec": 600.0,
+  "exploration_duration_sec": 600.042,
+  "exploration_started_wall_time": 1788624477.875,
+  "exploration_time_basis": "ros_simulation_time",
+  "failure_reason": "exploration_deadline_exceeded_600.0s",
+  "final_truth_pose": [
+    -2.581163487241452,
+    5.103226355520791,
+    1.6149441278927616,
+    1.610750140816856
+  ],
+  "finished_wall_time": 1788625416.523,
+  "lobby_bounds": {
+    "x_max": 10.0,
+    "x_min": -10.0,
+    "y_max": 7.85,
+    "y_min": 0.0
+  },
+  "lobby_command_profile": {
+    "heading_stable_sec": 0.3,
+    "initial_forward_speed_mps": 0.4,
+    "linear_acceleration_mps2": 1.0,
+    "maximum_speed_mps": 1.8
+  },
+  "mission_events": [
+    {
+      "config": "/tmp/simenv_bridge_three_floor_scene/official_gui_rtf065_s111_20260906_000642/mission_config.json",
+      "event": "supervisor_started",
+      "wall_time": 1788624446.353
+    },
+    {
+      "event": "phase",
+      "phase": "WAIT_THREE_FLOOR_DESCENT",
+      "wall_time": 1788624446.354
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"phase\": \"WAIT_PLANE_RL_AND_SCANPLANNER\", \"wall_time\": 1788624446.43}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624446.431
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"expected_policy_kind\": \"stair\", \"floor\": 1, \"phase\": \"PREPARE_ENTRANCE_STAIR_RL\", \"policy\": \"/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt\", \"wall_time\": 1788624469.261}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624469.262
+    },
+    {
+      "event": "policy_status",
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788624469.682
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_POLICY_READY",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788624469.684
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_POLICY_READY",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624469.684
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_READY",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788624469.689
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"budget_sec\": 600.0, \"initial_odom_pose\": [-0.02062045205711001, -3.186174629381459, 0.3117256742457428, 1.571736241625869], \"phase\": \"EXPLORATION_STARTED\", \"preparation_excluded\": true, \"time_basis\": \"ros_simulation_time\", \"wall_time\": 1788624477.874}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624477.875
+    },
+    {
+      "budget_sec": 600.0,
+      "event": "exploration_clock_started",
+      "preparation_excluded": true,
+      "spawn_truth_pose": [
+        -0.02062045205711001,
+        -3.186174629381459,
+        0.3117256742457428,
+        1.571736241625869
+      ],
+      "time_basis": "ros_simulation_time",
+      "wall_time": 1788624477.875
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 1, \"phase\": \"ENTER_MAIN_ENTRANCE_STAIR_RL\", \"policy\": \"/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt\", \"wall_time\": 1788624477.975}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624477.975
+    },
+    {
+      "event": "task_stage",
+      "source": "ENTER_MAIN_ENTRANCE_STAIR_RL",
+      "stage": "entrance_step_stair_rl",
+      "wall_time": 1788624477.975
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"fixed_entrance_heading_with_lateral_correction\", \"floor\": 1, \"forward_only\": false, \"phase\": \"NAVIGATE_DIRECT_STAIR_RL\", \"target\": [0.0, -2.05], \"wall_time\": 1788624478.276, \"waypoint\": \"main_entrance_step_below\", \"waypoint_index\": 0}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624478.278
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"fixed_entrance_heading_with_lateral_correction\", \"floor\": 1, \"forward_only\": false, \"phase\": \"NAVIGATE_DIRECT_STAIR_RL\", \"target\": [0.0, -1.2], \"wall_time\": 1788624482.19, \"waypoint\": \"main_entrance_apron\", \"waypoint_index\": 1}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624482.19
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"fixed_entrance_heading_with_lateral_correction\", \"floor\": 1, \"forward_only\": false, \"phase\": \"NAVIGATE_DIRECT_STAIR_RL\", \"target\": [0.0, 0.8], \"wall_time\": 1788624485.302, \"waypoint\": \"main_entrance_threshold_clear\", \"waypoint_index\": 2}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624485.302
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"expected_policy_kind\": \"plane\", \"floor\": 1, \"phase\": \"RESTORE_PLANE_RL_AFTER_ENTRANCE\", \"policy\": \"/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt\", \"wall_time\": 1788624493.177}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624493.178
+    },
+    {
+      "event": "policy_status",
+      "policy": "plane",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "wall_time": 1788624493.585
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 1, \"phase\": \"EXPLORE_FLOOR\", \"wall_time\": 1788624494.433}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624494.434
+    },
+    {
+      "event": "task_stage",
+      "source": "EXPLORE_FLOOR",
+      "stage": "floor_1_exploration",
+      "wall_time": 1788624494.434
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 14.865], \"wall_time\": 1788624494.584, \"waypoint\": \"floor_0_room_0_corridor\", \"waypoint_index\": 3}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624494.584
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 14.865], \"wall_time\": 1788624508.231, \"waypoint\": \"floor_0_room_0_entry_corridor\", \"waypoint_index\": 4}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624508.232
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 14.865], \"wall_time\": 1788624509.537, \"waypoint\": \"floor_0_room_0_entry\", \"waypoint_index\": 5}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624509.537
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-5.605625, 13.508666666666667], \"wall_time\": 1788624517.864, \"waypoint\": \"floor_0_room_0_g3\", \"waypoint_index\": 6}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624517.864
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_0\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624526.293, \"waypoint\": \"floor_0_room_0_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624526.293
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.095625, 15.543166666666668], \"wall_time\": 1788624529.405, \"waypoint\": \"floor_0_room_0_g4\", \"waypoint_index\": 7}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624529.405
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_0\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624538.029, \"waypoint\": \"floor_0_room_0_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624538.03
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 14.865], \"wall_time\": 1788624541.142, \"waypoint\": \"floor_0_room_0_exit_inner_1\", \"waypoint_index\": 8}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624541.142
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 14.865], \"wall_time\": 1788624544.859, \"waypoint\": \"floor_0_room_0_exit\", \"waypoint_index\": 9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624544.86
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 14.865], \"wall_time\": 1788624552.384, \"waypoint\": \"floor_0_room_1_entry_corridor\", \"waypoint_index\": 10}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624552.384
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 14.865], \"wall_time\": 1788624554.092, \"waypoint\": \"floor_0_room_1_entry\", \"waypoint_index\": 11}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624554.092
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [6.031874999999999, 16.221333333333334], \"wall_time\": 1788624559.915, \"waypoint\": \"floor_0_room_1_g3\", \"waypoint_index\": 12}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624559.916
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_1\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624569.143, \"waypoint\": \"floor_0_room_1_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624569.144
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [3.8825, 14.865], \"wall_time\": 1788624572.361, \"waypoint\": \"floor_0_room_1_g4\", \"waypoint_index\": 13}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624572.362
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_1\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624580.786, \"waypoint\": \"floor_0_room_1_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624580.786
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 14.865], \"wall_time\": 1788624583.9, \"waypoint\": \"floor_0_room_1_exit_inner_1\", \"waypoint_index\": 14}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624583.9
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 14.865], \"wall_time\": 1788624587.623, \"waypoint\": \"floor_0_room_1_exit\", \"waypoint_index\": 15}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624587.623
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 14.865], \"wall_time\": 1788624593.449, \"waypoint\": \"floor_0_room_1_corridor_return\", \"waypoint_index\": 16}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624593.45
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 28.895], \"wall_time\": 1788624593.954, \"waypoint\": \"floor_0_room_2_corridor\", \"waypoint_index\": 17}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624593.955
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624608.293, \"waypoint\": \"floor_0_room_2_entry_corridor\", \"waypoint_index\": 18}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624608.293
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 28.894999999999996], \"wall_time\": 1788624609.5, \"waypoint\": \"floor_0_room_2_entry\", \"waypoint_index\": 19}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624609.5
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-5.605625, 27.538666666666664], \"wall_time\": 1788624617.73, \"waypoint\": \"floor_0_room_2_g3\", \"waypoint_index\": 20}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624617.731
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_2\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624626.154, \"waypoint\": \"floor_0_room_2_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624626.154
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.095625, 29.573166666666662], \"wall_time\": 1788624629.276, \"waypoint\": \"floor_0_room_2_g4\", \"waypoint_index\": 21}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624629.276
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_2\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624637.998, \"waypoint\": \"floor_0_room_2_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624637.998
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 28.894999999999996], \"wall_time\": 1788624641.112, \"waypoint\": \"floor_0_room_2_exit_inner_1\", \"waypoint_index\": 22}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624641.112
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624644.53, \"waypoint\": \"floor_0_room_2_exit\", \"waypoint_index\": 23}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624644.53
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624651.959, \"waypoint\": \"floor_0_room_3_entry_corridor\", \"waypoint_index\": 24}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624651.959
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 28.894999999999996], \"wall_time\": 1788624653.674, \"waypoint\": \"floor_0_room_3_entry\", \"waypoint_index\": 25}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624653.674
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [6.031874999999999, 29.573166666666662], \"wall_time\": 1788624659.404, \"waypoint\": \"floor_0_room_3_g3\", \"waypoint_index\": 26}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624659.405
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_3\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624668.331, \"waypoint\": \"floor_0_room_3_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624668.331
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [3.8825, 28.21683333333333], \"wall_time\": 1788624671.447, \"waypoint\": \"floor_0_room_3_g4\", \"waypoint_index\": 27}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624671.447
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 1, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_0_room_3\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624679.77, \"waypoint\": \"floor_0_room_3_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624679.771
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 28.894999999999996], \"wall_time\": 1788624682.885, \"waypoint\": \"floor_0_room_3_exit_inner_1\", \"waypoint_index\": 28}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624682.885
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624686.304, \"waypoint\": \"floor_0_room_3_exit\", \"waypoint_index\": 29}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624686.304
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 28.895], \"wall_time\": 1788624693.532, \"waypoint\": \"floor_0_room_3_corridor_return\", \"waypoint_index\": 30}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624693.533
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 8.85], \"wall_time\": 1788624694.035, \"waypoint\": \"floor_0_stair_approach\", \"waypoint_index\": 31}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624694.035
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.365, 1.75], \"wall_time\": 1788624713.897, \"waypoint\": \"floor_0_stair_side_opening\", \"waypoint_index\": 32}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624713.897
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 1, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.015, 1.75], \"wall_time\": 1788624727.541, \"waypoint\": \"floor_0_stair_handoff\", \"waypoint_index\": 33}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624727.542
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_WAIT_ZONE",
+      "topic": "/simenv/baseline_state",
+      "wall_time": 1788624735.92
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 1, \"phase\": \"RELEASE_TO_STAIR_RL\", \"token\": \"STAIR_WAIT_ZONE\", \"wall_time\": 1788624735.92}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624735.92
+    },
+    {
+      "event": "task_stage",
+      "source": "RELEASE_TO_STAIR_RL",
+      "stage": "stair_f1_to_f2",
+      "wall_time": 1788624735.92
+    },
+    {
+      "event": "mission_state",
+      "state": "TRUTH_ENTRY_GUIDE",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624735.92
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_PRE_ASCENT_ALIGN",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624735.933
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_WAIT_ZONE",
+      "topic": "/simenv/baseline_state",
+      "wall_time": 1788624736.07
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_WAIT_ZONE",
+      "topic": "/simenv/baseline_state",
+      "wall_time": 1788624736.22
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"expected\": \"SECOND_FLOOR_REACHED\", \"floor\": 2, \"phase\": \"WAIT_UPPER_LANDING\", \"wall_time\": 1788624736.37}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624736.371
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_TRUTH_STAGE_SETTLE",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624736.442
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_FLIGHT_A_POLICY_STAND",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624736.846
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_FLIGHT_A_POLICY_QUEUED_STAND",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624738.306
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_FLIGHT_A_POLICY_RL_REENTRY",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624738.559
+    },
+    {
+      "event": "policy_status",
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788624738.572
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_POLICY_READY",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788624738.572
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_POLICY_READY",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624738.573
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_READY",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788624738.581
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_ASCENT",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624739.66
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_LANDING_TURN",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624750.711
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_ASCENT_B",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624760.599
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_SETTLE",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624772.53
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_REACHED",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624773.054
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"expected_policy_kind\": \"plane\", \"floor\": 2, \"phase\": \"RESTORE_PLANE_RL\", \"policy\": \"/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt\", \"wall_time\": 1788624773.124}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624773.124
+    },
+    {
+      "event": "policy_status",
+      "policy": "plane",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "wall_time": 1788624773.552
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_EXPLORATION_READY",
+      "topic": "/simenv/second_floor_state",
+      "wall_time": 1788624774.232
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_HANDOFF_COMPLETE",
+      "topic": "/simenv/stair_transition_state",
+      "wall_time": 1788624774.233
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 2, \"phase\": \"EXPLORE_FLOOR\", \"wall_time\": 1788624774.582}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624774.583
+    },
+    {
+      "event": "task_stage",
+      "source": "EXPLORE_FLOOR",
+      "stage": "floor_2_exploration",
+      "wall_time": 1788624774.584
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.95, 1.55], \"wall_time\": 1788624774.733, \"waypoint\": \"floor_1_stair_exit\", \"waypoint_index\": 0}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624774.734
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 14.865], \"wall_time\": 1788624780.45, \"waypoint\": \"floor_1_room_0_corridor\", \"waypoint_index\": 1}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624780.451
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 14.865], \"wall_time\": 1788624798.004, \"waypoint\": \"floor_1_room_0_entry_corridor\", \"waypoint_index\": 2}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624798.004
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 14.865], \"wall_time\": 1788624799.313, \"waypoint\": \"floor_1_room_0_entry\", \"waypoint_index\": 3}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624799.313
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-5.605625, 13.508666666666667], \"wall_time\": 1788624807.251, \"waypoint\": \"floor_1_room_0_g3\", \"waypoint_index\": 4}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624807.251
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_0\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624815.78, \"waypoint\": \"floor_1_room_0_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624815.781
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.095625, 15.543166666666668], \"wall_time\": 1788624818.896, \"waypoint\": \"floor_1_room_0_g4\", \"waypoint_index\": 5}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624818.896
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_0\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624827.418, \"waypoint\": \"floor_1_room_0_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624827.418
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 14.865], \"wall_time\": 1788624830.537, \"waypoint\": \"floor_1_room_0_exit_inner_1\", \"waypoint_index\": 6}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624830.537
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 14.865], \"wall_time\": 1788624833.956, \"waypoint\": \"floor_1_room_0_exit\", \"waypoint_index\": 7}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624833.956
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 14.865], \"wall_time\": 1788624841.186, \"waypoint\": \"floor_1_room_1_entry_corridor\", \"waypoint_index\": 8}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624841.186
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 14.865], \"wall_time\": 1788624842.899, \"waypoint\": \"floor_1_room_1_entry\", \"waypoint_index\": 9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624842.899
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [6.031874999999999, 15.543166666666668], \"wall_time\": 1788624848.624, \"waypoint\": \"floor_1_room_1_g3\", \"waypoint_index\": 10}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624848.624
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_1\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624857.348, \"waypoint\": \"floor_1_room_1_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624857.349
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [3.8825, 14.186833333333334], \"wall_time\": 1788624860.467, \"waypoint\": \"floor_1_room_1_g4\", \"waypoint_index\": 11}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624860.467
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_1\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624868.79, \"waypoint\": \"floor_1_room_1_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624868.79
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 14.865], \"wall_time\": 1788624871.919, \"waypoint\": \"floor_1_room_1_exit_inner_1\", \"waypoint_index\": 12}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624871.92
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 14.865], \"wall_time\": 1788624875.247, \"waypoint\": \"floor_1_room_1_exit\", \"waypoint_index\": 13}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624875.248
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 14.865], \"wall_time\": 1788624882.172, \"waypoint\": \"floor_1_room_1_corridor_return\", \"waypoint_index\": 14}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624882.173
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 28.895], \"wall_time\": 1788624882.675, \"waypoint\": \"floor_1_room_2_corridor\", \"waypoint_index\": 15}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624882.676
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624896.917, \"waypoint\": \"floor_1_room_2_entry_corridor\", \"waypoint_index\": 16}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624896.917
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 28.894999999999996], \"wall_time\": 1788624898.228, \"waypoint\": \"floor_1_room_2_entry\", \"waypoint_index\": 17}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624898.229
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0999999999999988, 29.28], \"wall_time\": 1788624906.161, \"waypoint\": \"floor_1_room_2_g3_path_1\", \"waypoint_index\": 18}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624906.161
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.6499999999999986, 29.83], \"wall_time\": 1788624907.973, \"waypoint\": \"floor_1_room_2_g3_path_2\", \"waypoint_index\": 19}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624907.974
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-6.499999999999999, 30.380000000000003], \"wall_time\": 1788624910.085, \"waypoint\": \"floor_1_room_2_g3_path_3\", \"waypoint_index\": 20}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624910.086
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-7.582999999999998, 30.251333333333328], \"wall_time\": 1788624915.315, \"waypoint\": \"floor_1_room_2_g3\", \"waypoint_index\": 21}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624915.315
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_2\", \"room_type\": \"shallow_obstacle\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"front_obstacle_side_bypass_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624918.022, \"waypoint\": \"floor_1_room_2_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624918.023
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-8.7, 29.28], \"wall_time\": 1788624921.139, \"waypoint\": \"floor_1_room_2_g4_path_1\", \"waypoint_index\": 22}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624921.139
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-8.149999999999999, 28.18], \"wall_time\": 1788624924.258, \"waypoint\": \"floor_1_room_2_g4_path_2\", \"waypoint_index\": 23}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624924.258
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-7.049999999999999, 27.63], \"wall_time\": 1788624927.479, \"waypoint\": \"floor_1_room_2_g4_path_3\", \"waypoint_index\": 24}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624927.48
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.755, 27.538666666666664], \"wall_time\": 1788624930.194, \"waypoint\": \"floor_1_room_2_g4\", \"waypoint_index\": 25}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624930.194
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_2\", \"room_type\": \"shallow_obstacle\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"front_obstacle_side_bypass_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624935.309, \"waypoint\": \"floor_1_room_2_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624935.309
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0999999999999988, 28.18], \"wall_time\": 1788624938.427, \"waypoint\": \"floor_1_room_2_exit_inner_1\", \"waypoint_index\": 26}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624938.427
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 28.894999999999996], \"wall_time\": 1788624944.051, \"waypoint\": \"floor_1_room_2_exit_inner_2\", \"waypoint_index\": 27}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624944.051
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624946.363, \"waypoint\": \"floor_1_room_2_exit\", \"waypoint_index\": 28}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624946.363
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624957.106, \"waypoint\": \"floor_1_room_3_entry_corridor\", \"waypoint_index\": 29}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624957.106
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 28.894999999999996], \"wall_time\": 1788624958.822, \"waypoint\": \"floor_1_room_3_entry\", \"waypoint_index\": 30}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624958.822
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [6.031874999999999, 29.573166666666662], \"wall_time\": 1788624964.551, \"waypoint\": \"floor_1_room_3_g3\", \"waypoint_index\": 31}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624964.552
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_3\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788624973.279, \"waypoint\": \"floor_1_room_3_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624973.279
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [3.8825, 28.21683333333333], \"wall_time\": 1788624976.401, \"waypoint\": \"floor_1_room_3_g4\", \"waypoint_index\": 32}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624976.401
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 2, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_1_room_3\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788624984.926, \"waypoint\": \"floor_1_room_3_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624984.926
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 28.894999999999996], \"wall_time\": 1788624988.044, \"waypoint\": \"floor_1_room_3_exit_inner_1\", \"waypoint_index\": 33}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624988.045
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 28.894999999999996], \"wall_time\": 1788624991.364, \"waypoint\": \"floor_1_room_3_exit\", \"waypoint_index\": 34}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624991.364
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 28.895], \"wall_time\": 1788624998.391, \"waypoint\": \"floor_1_room_3_corridor_return\", \"waypoint_index\": 35}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624998.392
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 8.85], \"wall_time\": 1788624998.895, \"waypoint\": \"floor_1_stair_approach\", \"waypoint_index\": 36}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788624998.895
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.95, 1.55], \"wall_time\": 1788625017.75, \"waypoint\": \"floor_1_stair_side_opening\", \"waypoint_index\": 37}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625017.75
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 2, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.015, 1.75], \"wall_time\": 1788625030.988, \"waypoint\": \"floor_1_stair_handoff\", \"waypoint_index\": 38}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625030.988
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_EXPLORATION_COMPLETE",
+      "topic": "/simenv/second_floor_state",
+      "wall_time": 1788625040.676
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 2, \"phase\": \"RELEASE_TO_STAIR_RL\", \"token\": \"SECOND_FLOOR_EXPLORATION_COMPLETE\", \"wall_time\": 1788625040.675}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625040.676
+    },
+    {
+      "event": "task_stage",
+      "source": "RELEASE_TO_STAIR_RL",
+      "stage": "stair_f2_to_f3",
+      "wall_time": 1788625040.676
+    },
+    {
+      "event": "mission_state",
+      "state": "TRUTH_ENTRY_GUIDE",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625040.678
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_PRE_ASCENT_ALIGN",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625040.703
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_EXPLORATION_COMPLETE",
+      "topic": "/simenv/second_floor_state",
+      "wall_time": 1788625040.826
+    },
+    {
+      "event": "mission_state",
+      "state": "SECOND_FLOOR_EXPLORATION_COMPLETE",
+      "topic": "/simenv/second_floor_state",
+      "wall_time": 1788625040.976
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"expected\": \"THIRD_FLOOR_REACHED\", \"floor\": 3, \"phase\": \"WAIT_UPPER_LANDING\", \"wall_time\": 1788625041.126}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625041.126
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_TRUTH_STAGE_SETTLE",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625041.227
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_FLIGHT_A_POLICY_STAND",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625041.835
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_FLIGHT_A_POLICY_QUEUED_STAND",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625043.244
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_FLIGHT_A_POLICY_RL_REENTRY",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625043.503
+    },
+    {
+      "event": "policy_status",
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788625043.511
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_POLICY_READY",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625043.512
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_READY",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625043.517
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_ASCENT",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625044.56
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_LANDING_TURN",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625055.355
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_ASCENT_B",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625064.992
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_SETTLE",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625076.295
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_REACHED",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625076.819
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"expected_policy_kind\": \"plane\", \"floor\": 3, \"phase\": \"RESTORE_PLANE_RL\", \"policy\": \"/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt\", \"wall_time\": 1788625076.879}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625076.879
+    },
+    {
+      "event": "policy_status",
+      "policy": "plane",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "wall_time": 1788625077.279
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_EXPLORATION_READY",
+      "topic": "/simenv/third_floor_state",
+      "wall_time": 1788625077.984
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_HANDOFF_COMPLETE",
+      "topic": "/simenv/second_to_third_floor_stair_state",
+      "wall_time": 1788625077.985
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 3, \"phase\": \"EXPLORE_FLOOR\", \"wall_time\": 1788625078.334}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625078.335
+    },
+    {
+      "event": "task_stage",
+      "source": "EXPLORE_FLOOR",
+      "stage": "floor_3_exploration",
+      "wall_time": 1788625078.335
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.95, 1.55], \"wall_time\": 1788625078.485, \"waypoint\": \"floor_2_stair_exit\", \"waypoint_index\": 0}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625078.485
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 14.865], \"wall_time\": 1788625084.605, \"waypoint\": \"floor_2_room_0_corridor\", \"waypoint_index\": 1}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625084.606
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 14.865], \"wall_time\": 1788625101.067, \"waypoint\": \"floor_2_room_0_entry_corridor\", \"waypoint_index\": 2}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625101.067
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 14.865], \"wall_time\": 1788625102.585, \"waypoint\": \"floor_2_room_0_entry\", \"waypoint_index\": 3}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625102.585
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-5.605625, 13.508666666666667], \"wall_time\": 1788625110.732, \"waypoint\": \"floor_2_room_0_g3\", \"waypoint_index\": 4}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625110.732
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_0\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788625119.258, \"waypoint\": \"floor_2_room_0_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625119.259
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.095625, 15.543166666666668], \"wall_time\": 1788625122.38, \"waypoint\": \"floor_2_room_0_g4\", \"waypoint_index\": 5}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625122.38
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_0\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788625131.006, \"waypoint\": \"floor_2_room_0_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625131.006
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 14.865], \"wall_time\": 1788625134.13, \"waypoint\": \"floor_2_room_0_exit_inner_1\", \"waypoint_index\": 6}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625134.131
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 14.865], \"wall_time\": 1788625137.552, \"waypoint\": \"floor_2_room_0_exit\", \"waypoint_index\": 7}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625137.553
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 14.865], \"wall_time\": 1788625144.592, \"waypoint\": \"floor_2_room_1_entry_corridor\", \"waypoint_index\": 8}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625144.593
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 14.865], \"wall_time\": 1788625146.211, \"waypoint\": \"floor_2_room_1_entry\", \"waypoint_index\": 9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625146.211
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [6.031874999999999, 15.543166666666668], \"wall_time\": 1788625152.05, \"waypoint\": \"floor_2_room_1_g3\", \"waypoint_index\": 10}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625152.05
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_1\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788625160.776, \"waypoint\": \"floor_2_room_1_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625160.776
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [3.8825, 14.186833333333334], \"wall_time\": 1788625163.905, \"waypoint\": \"floor_2_room_1_g4\", \"waypoint_index\": 11}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625163.906
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_1\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788625172.432, \"waypoint\": \"floor_2_room_1_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625172.432
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 14.865], \"wall_time\": 1788625175.551, \"waypoint\": \"floor_2_room_1_exit_inner_1\", \"waypoint_index\": 12}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625175.552
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 14.865], \"wall_time\": 1788625179.681, \"waypoint\": \"floor_2_room_1_exit\", \"waypoint_index\": 13}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625179.681
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 14.865], \"wall_time\": 1788625185.519, \"waypoint\": \"floor_2_room_1_corridor_return\", \"waypoint_index\": 14}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625185.519
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 28.895], \"wall_time\": 1788625186.122, \"waypoint\": \"floor_2_room_2_corridor\", \"waypoint_index\": 15}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625186.122
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 28.894999999999996], \"wall_time\": 1788625200.568, \"waypoint\": \"floor_2_room_2_entry_corridor\", \"waypoint_index\": 16}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625200.568
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 28.894999999999996], \"wall_time\": 1788625201.796, \"waypoint\": \"floor_2_room_2_entry\", \"waypoint_index\": 17}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625201.797
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-5.605625, 27.538666666666664], \"wall_time\": 1788625210.137, \"waypoint\": \"floor_2_room_2_g3\", \"waypoint_index\": 18}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625210.138
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_2\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788625218.563, \"waypoint\": \"floor_2_room_2_g3\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625218.563
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-4.095625, 29.573166666666662], \"wall_time\": 1788625221.692, \"waypoint\": \"floor_2_room_2_g4\", \"waypoint_index\": 19}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625221.693
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": -1.0, \"door_plane_x\": -1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_2\", \"room_type\": \"open\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"open_middle_deep_then_near_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788625230.317, \"waypoint\": \"floor_2_room_2_g4\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625230.317
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.0, 28.894999999999996], \"wall_time\": 1788625233.449, \"waypoint\": \"floor_2_room_2_exit_inner_1\", \"waypoint_index\": 20}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625233.45
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.45000000000000007, 28.894999999999996], \"wall_time\": 1788625236.972, \"waypoint\": \"floor_2_room_2_exit\", \"waypoint_index\": 21}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625236.972
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 28.894999999999996], \"wall_time\": 1788625244.008, \"waypoint\": \"floor_2_room_3_entry_corridor\", \"waypoint_index\": 22}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625244.009
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 28.894999999999996], \"wall_time\": 1788625245.727, \"waypoint\": \"floor_2_room_3_entry\", \"waypoint_index\": 23}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625245.727
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.45, 28.18], \"wall_time\": 1788625251.453, \"waypoint\": \"floor_2_room_3_g3_path_1\", \"waypoint_index\": 24}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625251.453
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [3.5500000000000003, 27.63], \"wall_time\": 1788625253.881, \"waypoint\": \"floor_2_room_3_g3_path_2\", \"waypoint_index\": 25}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625253.881
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [7.259999999999998, 27.538666666666664], \"wall_time\": 1788625256.402, \"waypoint\": \"floor_2_room_3_g3\", \"waypoint_index\": 26}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625256.403
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_3\", \"room_type\": \"shallow_obstacle\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"front_obstacle_side_bypass_oblique\", \"viewpoint_role\": \"G3\", \"wall_time\": 1788625264.323, \"waypoint\": \"floor_2_room_3_g3\", \"yaw_rate_rad_s\": 2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625264.323
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [8.5, 28.18], \"wall_time\": 1788625267.442, \"waypoint\": \"floor_2_room_3_g4_path_1\", \"waypoint_index\": 27}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625267.443
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [8.5, 29.28], \"wall_time\": 1788625272.272, \"waypoint\": \"floor_2_room_3_g4_path_2\", \"waypoint_index\": 28}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625272.272
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [7.950000000000001, 29.83], \"wall_time\": 1788625275.195, \"waypoint\": \"floor_2_room_3_g4_path_3\", \"waypoint_index\": 29}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625275.195
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [4.755, 30.251333333333328], \"wall_time\": 1788625277.52, \"waypoint\": \"floor_2_room_3_g4\", \"waypoint_index\": 30}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625277.52
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"door_inward_direction\": 1.0, \"door_plane_x\": 1.1, \"floor\": 3, \"phase\": \"SCAN_ROOM\", \"room_id\": \"floor_2_room_3\", \"room_type\": \"shallow_obstacle\", \"target_rotation_rad\": 3.7551914292, \"viewpoint_policy\": \"front_obstacle_side_bypass_oblique\", \"viewpoint_role\": \"G4\", \"wall_time\": 1788625284.745, \"waypoint\": \"floor_2_room_3_g4\", \"yaw_rate_rad_s\": -2.9}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625284.745
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.45, 29.83], \"wall_time\": 1788625287.872, \"waypoint\": \"floor_2_room_3_exit_inner_1\", \"waypoint_index\": 31}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625287.872
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [2.0, 28.894999999999996], \"wall_time\": 1788625292.422, \"waypoint\": \"floor_2_room_3_exit_inner_2\", \"waypoint_index\": 32}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625292.422
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.45000000000000007, 28.894999999999996], \"wall_time\": 1788625295.053, \"waypoint\": \"floor_2_room_3_exit\", \"waypoint_index\": 33}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625295.054
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 28.895], \"wall_time\": 1788625305.091, \"waypoint\": \"floor_2_room_3_corridor_return\", \"waypoint_index\": 34}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625305.091
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [0.0, 8.85], \"wall_time\": 1788625305.596, \"waypoint\": \"floor_2_descent_approach\", \"waypoint_index\": 35}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625305.596
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-0.95, 1.55], \"wall_time\": 1788625325.158, \"waypoint\": \"floor_2_descent_side_opening\", \"waypoint_index\": 36}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625325.159
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"control_mode\": \"turn_before_forward\", \"floor\": 3, \"forward_only\": true, \"phase\": \"NAVIGATE_DIRECT_PLANE_RL\", \"target\": [-2.665, 1.625], \"wall_time\": 1788625338.606, \"waypoint\": \"floor_2_descent_landing_handoff\", \"waypoint_index\": 37}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625338.606
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"floor\": 3, \"phase\": \"RELEASE_TO_STAIR_RL\", \"token\": \"THIRD_FLOOR_EXPLORATION_COMPLETE\", \"wall_time\": 1788625345.391}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625345.391
+    },
+    {
+      "event": "task_stage",
+      "source": "RELEASE_TO_STAIR_RL",
+      "stage": "stair_f3_to_f1_descent",
+      "wall_time": 1788625345.391
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_EXPLORATION_COMPLETE",
+      "topic": "/simenv/third_floor_state",
+      "wall_time": 1788625345.391
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_PRE_ALIGN",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625345.392
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_EXPLORATION_COMPLETE",
+      "topic": "/simenv/third_floor_state",
+      "wall_time": 1788625345.541
+    },
+    {
+      "event": "mission_state",
+      "state": "THIRD_FLOOR_EXPLORATION_COMPLETE",
+      "topic": "/simenv/third_floor_state",
+      "wall_time": 1788625345.691
+    },
+    {
+      "event": "mission_state",
+      "state": "{\"phase\": \"THREE_FLOOR_SCAN_ROUTE_COMPLETE_DESCENT_ACTIVE\", \"wall_time\": 1788625345.852}",
+      "topic": "/scanplanner/route_state",
+      "wall_time": 1788625345.852
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_SETTLE",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625346.26
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_STAND",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625346.844
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_QUEUED_STAND",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625348.279
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_RL_REENTRY",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625348.535
+    },
+    {
+      "event": "policy_status",
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788625348.545
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_READY",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625348.548
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_POLICY_WARMUP",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625350.159
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_STAND",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625350.945
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_FLIGHT_B",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625351.22
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_TURN",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625363.83
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_FLIGHT_A",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625374.098
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_SEGMENT_TURN",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625383.121
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_STAND",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625394.91
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_EAST_ALIGN",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625395.167
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_FLIGHT_B",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625401.673
+    },
+    {
+      "event": "mission_state",
+      "state": "STAIR_DESCENT_TURN",
+      "topic": "/simenv/third_to_first_floor_stair_state",
+      "wall_time": 1788625413.96
+    },
+    {
+      "event": "mission_failed",
+      "reason": "exploration_deadline_exceeded_600.0s",
+      "wall_time": 1788625416.522
+    }
+  ],
+  "phase": "MISSION_FAILED",
+  "plane_policy": "/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+  "policy_events": [
+    {
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788624469.682
+    },
+    {
+      "policy": "plane",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "wall_time": 1788624493.585
+    },
+    {
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788624738.572
+    },
+    {
+      "policy": "plane",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "wall_time": 1788624773.552
+    },
+    {
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788625043.511
+    },
+    {
+      "policy": "plane",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "wall_time": 1788625077.279
+    },
+    {
+      "policy": "stair",
+      "status": "policy_reloaded:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+      "wall_time": 1788625348.545
+    }
+  ],
+  "policy_sequence_satisfied": false,
+  "return_started_wall_time": null,
+  "return_waypoints": [],
+  "schema": "scanplanner_three_floor_rl_summary_v1",
+  "spawn_truth_pose_at_exploration_start": [
+    -0.02062045205711001,
+    -3.186174629381459,
+    0.3117256742457428,
+    1.571736241625869
+  ],
+  "stage_timing_file": "/home/quinn/0904/results/official_gui_rtf065_s111_20260906_000642/mission_stage_timing.json",
+  "stair_policy": "/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+  "started_wall_time": 1788624446.331,
+  "status": "failed",
+  "wall_exploration_duration_sec": 938.649
+}

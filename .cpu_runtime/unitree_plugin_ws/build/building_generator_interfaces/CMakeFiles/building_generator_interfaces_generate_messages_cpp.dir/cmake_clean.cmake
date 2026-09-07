@@ -1,0 +1,10 @@
+file(REMOVE_RECURSE
+  "/home/quinn/0904/.cpu_runtime/unitree_plugin_ws/devel/include/building_generator_interfaces/CallElevator.h"
+  "/home/quinn/0904/.cpu_runtime/unitree_plugin_ws/devel/include/building_generator_interfaces/SetDoorState.h"
+  "CMakeFiles/building_generator_interfaces_generate_messages_cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/building_generator_interfaces_generate_messages_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

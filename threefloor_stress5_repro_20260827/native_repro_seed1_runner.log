@@ -1,0 +1,53 @@
+[controller] current Unitree RL controller built with hybrid policy support
+[scene] run-local randomized assets (seed offset 1): /tmp/simenv_bridge_three_floor_scene/native_repro_seed1
+valid three-floor RL mission: 3 floors, 12 rooms, 238.3 m floor route
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+validated 23 launch node executables
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+validated 13 descent-smoke node executables
+[three-floor] task-owned Xvfb ready on :99
+[three-floor] results: /workspace/SimEnv/results/native_repro_seed1
+[three-floor] flat gait: /workspace/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+[three-floor] stair gait: /workspace/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[three-floor] flat-floor planner: /workspace/SCAN-Planner/src/planner/plan_manage
+{
+  "checks": {
+    "all_scene_red_balls_detected": true,
+    "all_stage_times_recorded": false,
+    "distinct_reproducible_floor_scenes": true,
+    "every_room_red_ball_detected": true,
+    "final_pose_in_first_floor_lobby": false,
+    "first_floor_return_marker": false,
+    "first_to_second_stair": true,
+    "floor_1_tour": true,
+    "floor_2_tour": true,
+    "floor_3_tour": false,
+    "lobby_return_route_complete": false,
+    "main_entrance_step_stair_rl": true,
+    "mission_summary": false,
+    "mission_within_configured_budget": false,
+    "red_ball_detections_recorded": false,
+    "red_ball_evidence_only_during_room_scans": true,
+    "rl_policy_switch_sequence": false,
+    "second_to_third_stair": true,
+    "spawn_below_main_entrance_step": true,
+    "third_to_first_descent": false
+  },
+  "failure_reasons": [
+    "floor_3_tour did not succeed (termination_reason=exploration_deadline_exceeded_600.0s)",
+    "third_to_first_descent phase 'WAIT_F3' != 'FIRST_FLOOR_RETURNED'",
+    "first_floor_return_marker missing: /workspace/SimEnv/results/native_repro_seed1/first_floor_returned.json",
+    "mission timing did not prove a completed prep-excluded run <= 600.0s (schema=scanplanner_mission_stage_timing_v1, status=failed, duration=600.122, budget_met=False)",
+    "timed stage sequence ['entrance_step_stair_rl', 'floor_1_exploration', 'stair_f1_to_f2', 'floor_2_exploration', 'stair_f2_to_f3', 'floor_3_exploration'] != required ['entrance_step_stair_rl', 'floor_1_exploration', 'stair_f1_to_f2', 'floor_2_exploration', 'stair_f2_to_f3', 'floor_3_exploration', 'stair_f3_to_f1_descent', 'return_to_first_floor_lobby'] or contains invalid durations",
+    "red-ball record did not contain >= 18 valid timed confirmations (schema=scanplanner_red_ball_detections_v1, status=failed, frames=3766, confirmed=18)",
+    "mission summary is not completed (schema=scanplanner_three_floor_rl_summary_v1, status=failed, reason=upstream_failure:/scanplanner/route_state:{\"floor\": 3, \"phase\": \"THREE_FLOOR_ROUTE_FAILED\", \"reason\": \"exploration_deadline_exceeded_600.0s\", \"wall_time\": 1787972121.28})",
+    "RL policy sequence ['stair', 'plane', 'stair', 'plane', 'stair', 'plane'] does not contain ['stair', 'plane', 'stair', 'plane', 'stair', 'plane', 'stair', 'plane']",
+    "final truth pose is not in the first-floor lobby: [0.06148575053383691, 26.564788796064356, 5.521646266762029, -1.6177248195788407]",
+    "lobby return reached 0 of 2 waypoints"
+  ],
+  "passed": false,
+  "results_dir": "/workspace/SimEnv/results/native_repro_seed1",
+  "schema": "scanplanner_three_floor_rl_acceptance_v1"
+}
+[three-floor] mission status: failed
+[three-floor] acceptance failed; inspect /workspace/SimEnv/results/native_repro_seed1/roslaunch.log

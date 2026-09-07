@@ -1,0 +1,6 @@
+# CMake generated Testfile for 
+# Source directory: /home/quinn/0904/threefloor_stress5_repro_20260827/work/mounts/SCAN-Planner/src/planner/plan_manage
+# Build directory: /home/quinn/0904/.portable_build/scanplanner_build_v2/planner/plan_manage
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.

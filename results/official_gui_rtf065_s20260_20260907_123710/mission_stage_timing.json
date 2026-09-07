@@ -1,0 +1,90 @@
+{
+  "algorithm_preparation_duration_sec": 31.647,
+  "budget_met": false,
+  "clock_definition": "ROS/Gazebo simulation time from EXPLORATION_STARTED; algorithm preparation and sensor/policy warm-up are excluded",
+  "current_stage": null,
+  "exploration_finished_wall_time": 1788756939.371,
+  "exploration_started_wall_time": 1788756001.91,
+  "failure_reason": "upstream_failure:/scanplanner/route_state:{\"floor\": 3, \"phase\": \"THREE_FLOOR_ROUTE_FAILED\", \"reason\": \"exploration_deadline_exceeded_600.0s\", \"wall_time\": 1788756938.722}",
+  "maximum_duration_sec": 600.0,
+  "preparation_excluded": true,
+  "required_stages": [
+    "entrance_step_stair_rl",
+    "floor_1_exploration",
+    "stair_f1_to_f2",
+    "floor_2_exploration",
+    "stair_f2_to_f3",
+    "floor_3_exploration",
+    "stair_f3_to_f1_descent",
+    "return_to_first_floor_lobby"
+  ],
+  "schema": "scanplanner_mission_stage_timing_v1",
+  "sim_clock_reset_count": 0,
+  "sim_duration_sec": 600.418,
+  "spawn_truth_pose_at_start": [
+    -0.02011482145936406,
+    -3.1884172343575012,
+    0.3118176426014024,
+    1.578016071870743
+  ],
+  "stages": [
+    {
+      "duration_sec": 10.51,
+      "end_elapsed_sec": 10.568,
+      "end_reason": "EXPLORE_FLOOR",
+      "name": "entrance_step_stair_rl",
+      "sim_duration_sec": 10.51,
+      "start_elapsed_sec": 0.058,
+      "wall_duration_sec": 16.854
+    },
+    {
+      "duration_sec": 182.91,
+      "end_elapsed_sec": 193.478,
+      "end_reason": "RELEASE_TO_STAIR_RL",
+      "name": "floor_1_exploration",
+      "sim_duration_sec": 182.91,
+      "start_elapsed_sec": 10.568,
+      "wall_duration_sec": 286.846
+    },
+    {
+      "duration_sec": 26.65,
+      "end_elapsed_sec": 220.128,
+      "end_reason": "EXPLORE_FLOOR",
+      "name": "stair_f1_to_f2",
+      "sim_duration_sec": 26.65,
+      "start_elapsed_sec": 193.478,
+      "wall_duration_sec": 41.766
+    },
+    {
+      "duration_sec": 182.66,
+      "end_elapsed_sec": 402.788,
+      "end_reason": "RELEASE_TO_STAIR_RL",
+      "name": "floor_2_exploration",
+      "sim_duration_sec": 182.66,
+      "start_elapsed_sec": 220.128,
+      "wall_duration_sec": 284.336
+    },
+    {
+      "duration_sec": 26.63,
+      "end_elapsed_sec": 429.418,
+      "end_reason": "EXPLORE_FLOOR",
+      "name": "stair_f2_to_f3",
+      "sim_duration_sec": 26.63,
+      "start_elapsed_sec": 402.788,
+      "wall_duration_sec": 41.261
+    },
+    {
+      "duration_sec": 171.0,
+      "end_elapsed_sec": 600.418,
+      "end_reason": "failed",
+      "name": "floor_3_exploration",
+      "sim_duration_sec": 171.0,
+      "start_elapsed_sec": 429.418,
+      "wall_duration_sec": 266.298
+    }
+  ],
+  "status": "failed",
+  "time_basis": "ros_simulation_time",
+  "total_duration_sec": 600.418,
+  "wall_duration_sec": 937.461
+}

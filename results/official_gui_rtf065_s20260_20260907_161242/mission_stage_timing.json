@@ -1,0 +1,72 @@
+{
+  "algorithm_preparation_duration_sec": 31.468,
+  "budget_met": true,
+  "clock_definition": "ROS/Gazebo simulation time from EXPLORATION_STARTED; algorithm preparation and sensor/policy warm-up are excluded",
+  "current_stage": null,
+  "exploration_finished_wall_time": 1788769389.459,
+  "exploration_started_wall_time": 1788768934.248,
+  "failure_reason": "upstream_failure:/simenv/second_to_third_floor_stair_state:SOURCE_FLOOR_EXPLORATION_FAILED",
+  "maximum_duration_sec": 600.0,
+  "preparation_excluded": true,
+  "required_stages": [
+    "entrance_step_stair_rl",
+    "floor_1_exploration",
+    "stair_f1_to_f2",
+    "floor_2_exploration",
+    "stair_f2_to_f3",
+    "floor_3_exploration",
+    "stair_f3_to_f1_descent",
+    "return_to_first_floor_lobby"
+  ],
+  "schema": "scanplanner_mission_stage_timing_v1",
+  "sim_clock_reset_count": 0,
+  "sim_duration_sec": 290.036,
+  "spawn_truth_pose_at_start": [
+    -0.02038376989225235,
+    -3.1862265893157966,
+    0.31165242854284453,
+    1.5729919164264232
+  ],
+  "stages": [
+    {
+      "duration_sec": 10.542,
+      "end_elapsed_sec": 10.606,
+      "end_reason": "EXPLORE_FLOOR",
+      "name": "entrance_step_stair_rl",
+      "sim_duration_sec": 10.542,
+      "start_elapsed_sec": 0.064,
+      "wall_duration_sec": 16.559
+    },
+    {
+      "duration_sec": 176.94,
+      "end_elapsed_sec": 187.546,
+      "end_reason": "RELEASE_TO_STAIR_RL",
+      "name": "floor_1_exploration",
+      "sim_duration_sec": 176.94,
+      "start_elapsed_sec": 10.606,
+      "wall_duration_sec": 279.043
+    },
+    {
+      "duration_sec": 25.332,
+      "end_elapsed_sec": 212.878,
+      "end_reason": "EXPLORE_FLOOR",
+      "name": "stair_f1_to_f2",
+      "sim_duration_sec": 25.332,
+      "start_elapsed_sec": 187.546,
+      "wall_duration_sec": 39.562
+    },
+    {
+      "duration_sec": 77.158,
+      "end_elapsed_sec": 290.036,
+      "end_reason": "failed",
+      "name": "floor_2_exploration",
+      "sim_duration_sec": 77.158,
+      "start_elapsed_sec": 212.878,
+      "wall_duration_sec": 119.946
+    }
+  ],
+  "status": "failed",
+  "time_basis": "ros_simulation_time",
+  "total_duration_sec": 290.036,
+  "wall_duration_sec": 455.211
+}

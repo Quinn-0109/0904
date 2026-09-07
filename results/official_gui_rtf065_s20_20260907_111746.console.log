@@ -1,0 +1,143 @@
+[CPU deploy] Unitree rebuild skipped; bundled validated controller selected
+[controller] current Unitree RL controller built with hybrid policy support
+[scene] run-local randomized assets (seed offset 20): /tmp/simenv_bridge_three_floor_scene/official_gui_rtf065_s20_20260907_111746
+valid three-floor RL mission: 3 floors, 12 rooms, 327.7 m floor route
+[ros-package] simenv_competitor=/home/quinn/0904/runtime_assets/SimEnv/src/simenv_competitor
+[ros-package] unitree_guide=/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/unitree_guide/unitree_guide
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+validated 20 launch node executables
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+validated 13 descent-smoke node executables
+[three-floor] task-owned Xvfb ready on :99
+[three-floor] results: /home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746
+[three-floor] flat gait: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+[three-floor] stair gait: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[three-floor] flat-floor planner: /home/quinn/0904/threefloor_stress5_repro_20260827/work/mounts/SCAN-Planner/src/planner/plan_manage
+{
+  "checks": {
+    "all_12_physical_two_view_contracts": false,
+    "all_12_rooms_physically_exited": true,
+    "all_24_viewpoints_scanned_at_least_210deg": true,
+    "all_room_paths_passed_live_3d_audit": true,
+    "all_scene_red_balls_detected": false,
+    "all_stage_times_recorded": false,
+    "distinct_reproducible_floor_scenes": true,
+    "every_selected_danger_room_detected": false,
+    "final_pose_in_first_floor_lobby": false,
+    "first_floor_return_marker": false,
+    "first_to_second_stair": true,
+    "floor_1_tour": true,
+    "floor_2_tour": true,
+    "floor_3_tour": false,
+    "lobby_return_route_complete": false,
+    "main_entrance_step_stair_rl": true,
+    "mission_summary": false,
+    "mission_within_configured_budget": false,
+    "red_ball_detections_recorded": false,
+    "red_ball_evidence_only_during_room_scans": true,
+    "rl_policy_switch_sequence": false,
+    "room_recovery_is_bounded": true,
+    "second_to_third_stair": true,
+    "spawn_below_main_entrance_step": true,
+    "third_to_first_descent": false,
+    "zero_false_negative_dangers": false,
+    "zero_false_positive_dangers": false
+  },
+  "failure_reasons": [
+    "floor_3_tour did not succeed (termination_reason=owned_rl_attitude_lost_upright_z_-0.586)",
+    "floor_3_tour missing successful configured room sweeps: ['floor_2_room_0_g3', 'floor_2_room_0_g4', 'floor_2_room_1_g3', 'floor_2_room_1_g4', 'floor_2_room_2_g3', 'floor_2_room_2_g4', 'floor_2_room_3_g3', 'floor_2_room_3_g4']",
+    "third_to_first_descent phase 'WAIT_F3' != 'FIRST_FLOOR_RETURNED'",
+    "first_floor_return_marker missing: /home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/first_floor_returned.json",
+    "mission timing did not prove a completed prep-excluded run <= 600.0s (schema=scanplanner_mission_stage_timing_v1, status=failed, duration=427.246, budget_met=True)",
+    "timed stage sequence ['entrance_step_stair_rl', 'floor_1_exploration', 'stair_f1_to_f2', 'floor_2_exploration', 'stair_f2_to_f3', 'floor_3_exploration'] != required ['entrance_step_stair_rl', 'floor_1_exploration', 'stair_f1_to_f2', 'floor_2_exploration', 'stair_f2_to_f3', 'floor_3_exploration', 'stair_f3_to_f1_descent', 'return_to_first_floor_lobby'] or contains invalid durations",
+    "red-ball record did not contain >= 6 valid timed confirmations (schema=scanplanner_red_ball_detections_v1, status=failed, frames=7291, confirmed=5)",
+    "room-scan detections did not match all randomized red balls: ['danger_red_sphere_02', 'danger_red_sphere_03']",
+    "selected danger rooms without a matched RGB-D detection: ['floor_2_room_1', 'floor_2_room_2']",
+    "RGB-D detector produced 1 false/duplicate positives",
+    "not all 12 rooms proved their geometry-specific physical G3/G4 contract",
+    "mission summary is not completed (schema=scanplanner_three_floor_rl_summary_v1, status=failed, reason=upstream_failure:/simenv/third_floor_state:THIRD_FLOOR_EXPLORATION_FAILED)",
+    "RL policy sequence ['stair', 'plane', 'stair', 'plane', 'stair', 'plane'] does not contain ['stair', 'plane', 'stair', 'plane', 'stair', 'plane', 'stair', 'plane']",
+    "final truth pose is not in the first-floor lobby: [0.9273569298296905, 11.34043699845552, 5.340730612464226, -1.7302681863199572]",
+    "lobby return reached 0 of 2 waypoints"
+  ],
+  "passed": false,
+  "results_dir": "/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746",
+  "schema": "scanplanner_three_floor_rl_acceptance_v1"
+}
+[three-floor] mission status: failed
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/topdown_floor_1.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/topdown_floor_2.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/topdown_floor_3.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/three_floor_topdown_trajectories.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/two_view_floor_1.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/two_view_floor_2.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/two_view_floor_3.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/two_view_all_floors.png
+/home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization/three_floor_topdown_manifest.json
+{
+  "schema": "three_floor_red_ball_offline_truth_evaluation_v1",
+  "matching_tolerance_m": 1.5,
+  "truth_count": 6,
+  "detection_count": 5,
+  "true_positive_count": 4,
+  "false_positive_count": 1,
+  "false_negative_count": 2,
+  "furniture_footprints_rendered": 59,
+  "floors": [
+    {
+      "floor": 1,
+      "truth": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "mean_match_distance_m": 0.42477396155047165,
+      "maximum_match_distance_m": 0.5426772337218505
+    },
+    {
+      "floor": 2,
+      "truth": 2,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0,
+      "mean_match_distance_m": 0.14774563281811406,
+      "maximum_match_distance_m": 0.2363493177481153
+    },
+    {
+      "floor": 3,
+      "truth": 2,
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "mean_match_distance_m": null,
+      "maximum_match_distance_m": null
+    }
+  ],
+  "matches": [
+    {
+      "truth_id": "danger_red_sphere_00",
+      "room_id": "floor_1_room_2",
+      "detection_track_id": 3,
+      "distance_m": 0.2363493177481153
+    },
+    {
+      "truth_id": "danger_red_sphere_01",
+      "room_id": "floor_1_room_2",
+      "detection_track_id": 7,
+      "distance_m": 0.05914194788811284
+    },
+    {
+      "truth_id": "danger_red_sphere_04",
+      "room_id": "floor_0_room_1",
+      "detection_track_id": 1,
+      "distance_m": 0.30687068937909284
+    },
+    {
+      "truth_id": "danger_red_sphere_05",
+      "room_id": "floor_0_room_2",
+      "detection_track_id": 2,
+      "distance_m": 0.5426772337218505
+    }
+  ]
+}
+[three-floor] visualization: /home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/visualization
+[three-floor] acceptance failed; inspect /home/quinn/0904/results/official_gui_rtf065_s20_20260907_111746/roslaunch.log

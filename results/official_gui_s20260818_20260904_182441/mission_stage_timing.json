@@ -1,0 +1,54 @@
+{
+  "algorithm_preparation_duration_sec": 25.928,
+  "budget_met": true,
+  "clock_definition": "ROS/Gazebo simulation time from EXPLORATION_STARTED; algorithm preparation and sensor/policy warm-up are excluded",
+  "current_stage": null,
+  "exploration_finished_wall_time": 1788517672.148,
+  "exploration_started_wall_time": 1788517541.184,
+  "failure_reason": "upstream_failure:/simenv/baseline_state:FIRST_FLOOR_EXPLORATION_FAILED",
+  "maximum_duration_sec": 600.0,
+  "preparation_excluded": true,
+  "required_stages": [
+    "entrance_step_stair_rl",
+    "floor_1_exploration",
+    "stair_f1_to_f2",
+    "floor_2_exploration",
+    "stair_f2_to_f3",
+    "floor_3_exploration",
+    "stair_f3_to_f1_descent",
+    "return_to_first_floor_lobby"
+  ],
+  "schema": "scanplanner_mission_stage_timing_v1",
+  "sim_clock_reset_count": 0,
+  "sim_duration_sec": 125.983,
+  "spawn_truth_pose_at_start": [
+    -0.02760295163608259,
+    -3.181057142675229,
+    0.3117645840381367,
+    1.557588084744553
+  ],
+  "stages": [
+    {
+      "duration_sec": 10.833,
+      "end_elapsed_sec": 10.93,
+      "end_reason": "EXPLORE_FLOOR",
+      "name": "entrance_step_stair_rl",
+      "sim_duration_sec": 10.833,
+      "start_elapsed_sec": 0.097,
+      "wall_duration_sec": 11.433
+    },
+    {
+      "duration_sec": 115.053,
+      "end_elapsed_sec": 125.983,
+      "end_reason": "failed",
+      "name": "floor_1_exploration",
+      "sim_duration_sec": 115.053,
+      "start_elapsed_sec": 10.93,
+      "wall_duration_sec": 119.431
+    }
+  ],
+  "status": "failed",
+  "time_basis": "ros_simulation_time",
+  "total_duration_sec": 125.983,
+  "wall_duration_sec": 130.964
+}

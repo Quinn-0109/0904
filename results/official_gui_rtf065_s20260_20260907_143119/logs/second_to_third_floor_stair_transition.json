@@ -1,0 +1,221 @@
+{
+  "phase": "WAIT_F1",
+  "policy": "/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt",
+  "trace": [],
+  "entry_guide": {
+    "two_stage_guide": true,
+    "stage": "corridor",
+    "stage_switches": 0,
+    "target": null,
+    "last_distance_m": null,
+    "best_distance_m": null,
+    "route_heading_rad": null,
+    "guide_speed_cap_mps": 0.45,
+    "final_speed_cap_mps": 0.55,
+    "minimum_speed_mps": 0.25,
+    "corridor_recenter_active": false,
+    "corridor_center_error_m": null,
+    "corridor_predicted_center_error_m": null,
+    "corridor_lateral_velocity_mps": null,
+    "corridor_recenter_enter_error_m": 0.3,
+    "corridor_recenter_release_error_m": 0.1
+  },
+  "visual_alignment": {
+    "depth_samples": 0,
+    "fused_control_updates": 0,
+    "last_bearing_rad": null,
+    "last_distance_m": null
+  },
+  "flight_a_guard": {
+    "peak_height_gain_m": null,
+    "last_center_error_m": null,
+    "last_heading_error_rad": null,
+    "fall_drop_threshold_m": 0.38,
+    "maximum_center_error_m": 0.38,
+    "maximum_heading_error_rad": 0.65,
+    "recovery_center_error_m": 0.14,
+    "recovery_heading_error_rad": 0.2,
+    "recovery_forward_speed_mps": 0.6,
+    "strong_recovery_forward_speed_mps": 0.4,
+    "recovery_center_speed_mps": 0.22,
+    "recovery_yaw_rate_rps": 0.16,
+    "slip_active": false,
+    "last_peak_drawdown_m": null,
+    "slip_minimum_peak_gain_m": 0.3,
+    "slip_drawdown_trigger_m": 0.06,
+    "slip_forward_speed_mps": 0.4,
+    "slip_yaw_rate_rps": 0.6,
+    "rearward_slip": {
+      "latched": false,
+      "events": 0,
+      "last_speed_mps": null,
+      "last_filtered_speed_mps": null,
+      "speed_threshold_mps": 0.3,
+      "detect_seconds": 0.04,
+      "minimum_height_gain_m": 0.4,
+      "last_trigger_height_gain_m": null,
+      "recovery_hold_seconds": 1.5,
+      "recovery_ramp_seconds": 1.0,
+      "recovery_ramp_speed_mps": 0.4,
+      "maximum_attempts": 2,
+      "relanding_brake": {
+        "active": false,
+        "last_center_speed_mps": 0.0,
+        "last_yaw_rate_rps": 0.0,
+        "peak_center_speed_mps": 0.0,
+        "center_speed_limit_mps": 0.3,
+        "yaw_rate_limit_rps": 0.16,
+        "lateral_velocity_gate_mps": 0.08
+      }
+    },
+    "predictive_strong_recovery": {
+      "active": false,
+      "on_center_crossing": true,
+      "minimum_lateral_speed_mps": 0.2,
+      "forward_speed_mps": 0.4,
+      "center_speed_mps": 0.3
+    },
+    "near_edge_strong_recovery": {
+      "active": false,
+      "center_error_threshold_m": 0.24,
+      "forward_speed_mps": 0.4,
+      "center_speed_mps": 0.3
+    },
+    "alignment_recovery": {
+      "active": false,
+      "attempts": 0,
+      "maximum_attempts": 2,
+      "window_seconds": 1.5,
+      "safe_center_error_m": 0.24,
+      "hard_heading_error_rad": 1.2,
+      "last_reason": null
+    },
+    "stall_release_seconds": 1.5,
+    "stall_release_max_center_error_m": 0.25,
+    "stall_release_max_heading_error_rad": 0.35,
+    "stall_realign": {
+      "active": false,
+      "attempts": 0,
+      "forward_speed_mps": 0.4,
+      "center_speed_mps": 0.3
+    },
+    "early_retry": {
+      "attempts": 0,
+      "maximum_attempts": 1,
+      "last_reason": null,
+      "minimum_peak_gain_m": 0.1,
+      "minimum_drawdown_m": 0.1,
+      "maximum_current_gain_m": 0.08,
+      "minimum_center_error_m": 0.18,
+      "minimum_heading_error_rad": 0.65,
+      "plane_policy": "/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt",
+      "plane_settle_seconds": 1.0
+    }
+  },
+  "flight_b_guard": {
+    "last_center_error_m": null,
+    "last_predicted_center_error_m": null,
+    "last_lateral_velocity_mps": null,
+    "recovery_active": false,
+    "maximum_center_error_m": 0.38,
+    "maximum_heading_error_rad": 0.65,
+    "recovery_center_error_m": 0.12,
+    "recovery_release_center_error_m": 0.1,
+    "recovery_forward_speed_mps": 0.6,
+    "strong_recovery_forward_speed_mps": 0.4,
+    "recovery_center_speed_mps": 0.2,
+    "prediction_horizon_sec": 0.8,
+    "predictive_strong_recovery": {
+      "active": false,
+      "minimum_lateral_speed_mps": 0.15,
+      "center_speed_mps": 0.3
+    },
+    "near_edge_strong_recovery": {
+      "active": false,
+      "center_error_threshold_m": 0.24,
+      "center_speed_mps": 0.3
+    },
+    "rearward_slip": {
+      "latched": false,
+      "events": 0,
+      "last_speed_mps": null,
+      "last_filtered_speed_mps": null,
+      "speed_threshold_mps": 0.3,
+      "detect_seconds": 0.04,
+      "minimum_height_gain_m": 0.4,
+      "velocity_alpha": 0.7,
+      "release_ratio": 0.8,
+      "last_trigger_height_gain_m": null
+    },
+    "pitch_collapse": {
+      "latched": false,
+      "events": 0,
+      "last_pitch_rate_rps": null,
+      "rate_window_sec": 0.18,
+      "rate_trigger_rps": 1.6,
+      "rate_minimum_abs_pitch_rad": 0.6,
+      "severe_pitch_rad": 0.8,
+      "severe_detect_seconds": 0.1,
+      "minimum_height_gain_m": 0.08,
+      "maximum_recovery_attempts": 2,
+      "last_trigger_height_gain_m": null,
+      "last_trigger_reason": null
+    },
+    "alignment_recovery": {
+      "active": false,
+      "attempts": 0,
+      "maximum_attempts": 2,
+      "window_seconds": 1.5,
+      "safe_center_error_m": 0.24,
+      "hard_heading_error_rad": 1.2,
+      "maximum_height_drop_m": 0.25,
+      "last_reason": null
+    }
+  },
+  "landing_recovery": {
+    "active": false,
+    "attempts": 0,
+    "maximum_attempts": 2,
+    "retry_timeout_sec": 12.0,
+    "servo_heading_rad": null,
+    "servo_mode": null,
+    "minimum_yaw_rate_rps": 0.34
+  },
+  "flight_b_watchdog": {
+    "started": false,
+    "minimum_budget_sec": 22.0,
+    "elapsed_sec": null,
+    "global_ascent_budget_sec": 45.0
+  },
+  "pre_ascent_rl_takeover": {
+    "fast_profile_enabled": true,
+    "fast_blend_seconds": 0.5,
+    "fast_zero_hold_seconds": 0.15,
+    "profile_params_owned_at_save": false
+  },
+  "flight_a_policy_handoff": {
+    "fixed_stand_seconds": 0.1,
+    "settle_seconds": 0.35,
+    "settle_timeout_sec": 8.0,
+    "capture_max_joint_velocity_rms": 0.18,
+    "policy_queue_hold_seconds": 0.25,
+    "use_default_stand_target": false,
+    "require_fixed_stand_ready": true,
+    "fixed_stand_ready_timeout_sec": 12.0,
+    "captured_pose_minimum_gain_ratio": 0.75,
+    "fresh_fixed_stand_ready_seen": false,
+    "ready_wait_timeout_sec": 20.0,
+    "maximum_preflight_tilt_rad": 0.45,
+    "maximum_preflight_height_drop_m": 0.1,
+    "last_truth_roll_rad": 3.1394104922566015,
+    "last_truth_pitch_rad": -0.09008358633898218
+  },
+  "upper_landing_gate": {
+    "clearance_margin_m": null,
+    "required_clearance_m": 0.3,
+    "clearance_grace_sec": 15.0,
+    "stable_seconds_required": 0.5,
+    "wait_for_plane_policy_handoff": true,
+    "handoff_timeout_sec": 90.0
+  }
+}

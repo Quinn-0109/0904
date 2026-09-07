@@ -1,0 +1,2600 @@
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+... logging to /home/quinn/.ros/log/0ba9a116-a906-11f1-9447-05c1f50d701d/roslaunch-Legion-204544.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+]2;/home/quinn/0904/threefloor_stress5_repro_20260827/work/mounts/SimEnv/src/simenv_bridge/launch/scanplanner_three_floor_rl.launch
+[1mstarted roslaunch server http://Legion:40625/[0m
+
+SUMMARY
+========
+
+CLEAR PARAMETERS
+ * /scan_planner_node/
+
+PARAMETERS
+ * /a1_gazebo/FL_calf_controller/joint: FL_calf_joint
+ * /a1_gazebo/FL_calf_controller/pid/d: 8.0
+ * /a1_gazebo/FL_calf_controller/pid/i: 0.0
+ * /a1_gazebo/FL_calf_controller/pid/p: 300.0
+ * /a1_gazebo/FL_calf_controller/type: unitree_legged_co...
+ * /a1_gazebo/FL_hip_controller/joint: FL_hip_joint
+ * /a1_gazebo/FL_hip_controller/pid/d: 5.0
+ * /a1_gazebo/FL_hip_controller/pid/i: 0.0
+ * /a1_gazebo/FL_hip_controller/pid/p: 100.0
+ * /a1_gazebo/FL_hip_controller/type: unitree_legged_co...
+ * /a1_gazebo/FL_thigh_controller/joint: FL_thigh_joint
+ * /a1_gazebo/FL_thigh_controller/pid/d: 8.0
+ * /a1_gazebo/FL_thigh_controller/pid/i: 0.0
+ * /a1_gazebo/FL_thigh_controller/pid/p: 300.0
+ * /a1_gazebo/FL_thigh_controller/type: unitree_legged_co...
+ * /a1_gazebo/FR_calf_controller/joint: FR_calf_joint
+ * /a1_gazebo/FR_calf_controller/pid/d: 8.0
+ * /a1_gazebo/FR_calf_controller/pid/i: 0.0
+ * /a1_gazebo/FR_calf_controller/pid/p: 300.0
+ * /a1_gazebo/FR_calf_controller/type: unitree_legged_co...
+ * /a1_gazebo/FR_hip_controller/joint: FR_hip_joint
+ * /a1_gazebo/FR_hip_controller/pid/d: 5.0
+ * /a1_gazebo/FR_hip_controller/pid/i: 0.0
+ * /a1_gazebo/FR_hip_controller/pid/p: 100.0
+ * /a1_gazebo/FR_hip_controller/type: unitree_legged_co...
+ * /a1_gazebo/FR_thigh_controller/joint: FR_thigh_joint
+ * /a1_gazebo/FR_thigh_controller/pid/d: 8.0
+ * /a1_gazebo/FR_thigh_controller/pid/i: 0.0
+ * /a1_gazebo/FR_thigh_controller/pid/p: 300.0
+ * /a1_gazebo/FR_thigh_controller/type: unitree_legged_co...
+ * /a1_gazebo/RL_calf_controller/joint: RL_calf_joint
+ * /a1_gazebo/RL_calf_controller/pid/d: 8.0
+ * /a1_gazebo/RL_calf_controller/pid/i: 0.0
+ * /a1_gazebo/RL_calf_controller/pid/p: 300.0
+ * /a1_gazebo/RL_calf_controller/type: unitree_legged_co...
+ * /a1_gazebo/RL_hip_controller/joint: RL_hip_joint
+ * /a1_gazebo/RL_hip_controller/pid/d: 5.0
+ * /a1_gazebo/RL_hip_controller/pid/i: 0.0
+ * /a1_gazebo/RL_hip_controller/pid/p: 100.0
+ * /a1_gazebo/RL_hip_controller/type: unitree_legged_co...
+ * /a1_gazebo/RL_thigh_controller/joint: RL_thigh_joint
+ * /a1_gazebo/RL_thigh_controller/pid/d: 8.0
+ * /a1_gazebo/RL_thigh_controller/pid/i: 0.0
+ * /a1_gazebo/RL_thigh_controller/pid/p: 300.0
+ * /a1_gazebo/RL_thigh_controller/type: unitree_legged_co...
+ * /a1_gazebo/RR_calf_controller/joint: RR_calf_joint
+ * /a1_gazebo/RR_calf_controller/pid/d: 8.0
+ * /a1_gazebo/RR_calf_controller/pid/i: 0.0
+ * /a1_gazebo/RR_calf_controller/pid/p: 300.0
+ * /a1_gazebo/RR_calf_controller/type: unitree_legged_co...
+ * /a1_gazebo/RR_hip_controller/joint: RR_hip_joint
+ * /a1_gazebo/RR_hip_controller/pid/d: 5.0
+ * /a1_gazebo/RR_hip_controller/pid/i: 0.0
+ * /a1_gazebo/RR_hip_controller/pid/p: 100.0
+ * /a1_gazebo/RR_hip_controller/type: unitree_legged_co...
+ * /a1_gazebo/RR_thigh_controller/joint: RR_thigh_joint
+ * /a1_gazebo/RR_thigh_controller/pid/d: 8.0
+ * /a1_gazebo/RR_thigh_controller/pid/i: 0.0
+ * /a1_gazebo/RR_thigh_controller/pid/p: 300.0
+ * /a1_gazebo/RR_thigh_controller/type: unitree_legged_co...
+ * /a1_gazebo/joint_limits/FL_calf_joint/has_position_limits: False
+ * /a1_gazebo/joint_limits/FR_calf_joint/has_position_limits: False
+ * /a1_gazebo/joint_limits/RL_calf_joint/has_position_limits: False
+ * /a1_gazebo/joint_limits/RR_calf_joint/has_position_limits: False
+ * /a1_gazebo/joint_state_controller/publish_rate: 1000
+ * /a1_gazebo/joint_state_controller/type: joint_state_contr...
+ * /body_pose_topic: /Odometry_gazebo
+ * /closed_loop_controller/finish_dist: 0.15
+ * /closed_loop_controller/heading_error_threshold: 0.8
+ * /closed_loop_controller/kp_pos: 0.8
+ * /closed_loop_controller/kp_yaw: 1.5
+ * /closed_loop_controller/max_vx: 2.05
+ * /closed_loop_controller/max_vy: 0.35
+ * /closed_loop_controller/max_vyaw: 1.0
+ * /closed_loop_controller/time_forward: 0.8
+ * /gazebo/enable_ros_network: True
+ * /rl_floor_command_mux/command_timeout_sec: 0.4
+ * /rl_floor_command_mux/linear_acceleration: 2.2
+ * /rl_floor_command_mux/linear_deceleration: 2.0
+ * /rl_floor_command_mux/max_forward: 2.25
+ * /rl_floor_command_mux/max_lateral: 0.75
+ * /rl_floor_command_mux/max_reverse: 0.2
+ * /rl_floor_command_mux/max_yaw: 3.0
+ * /rl_floor_command_mux/output_topic: /cmd_vel
+ * /rl_floor_command_mux/planner_topic: /scanplanner/plan...
+ * /rl_floor_command_mux/rate: 30.0
+ * /rl_floor_command_mux/yaw_acceleration: 2.4
+ * /rl_floor_command_mux/yaw_slowdown: 1.05
+ * /rl_floor_command_mux/yaw_translation_stop: 1.3
+ * /robot_description: <?xml version="1....
+ * /robot_name: a1
+ * /rosdistro: noetic
+ * /rosversion: 1.17.4
+ * /scan_planner_node/fsm/emergency_time_: 1.0
+ * /scan_planner_node/fsm/fail_safe: True
+ * /scan_planner_node/fsm/is_real_world: True
+ * /scan_planner_node/fsm/manual_goal_use_current_height: True
+ * /scan_planner_node/fsm/max_replan_fail_count: 1000
+ * /scan_planner_node/fsm/navi_mode: 1
+ * /scan_planner_node/fsm/planning_horizon: 7.5
+ * /scan_planner_node/fsm/thresh_no_replan: 0.1
+ * /scan_planner_node/fsm/thresh_replan: 1.0
+ * /scan_planner_node/grid_map/cloud_is_world: True
+ * /scan_planner_node/grid_map/cx: 317.19
+ * /scan_planner_node/grid_map/cy: 256.48
+ * /scan_planner_node/grid_map/depth_filter_margin: 1
+ * /scan_planner_node/grid_map/depth_filter_maxdist: 3.0
+ * /scan_planner_node/grid_map/depth_filter_mindist: 0.3
+ * /scan_planner_node/grid_map/double_cylinder_offset: 0.18
+ * /scan_planner_node/grid_map/double_cylinder_radius: 0.25
+ * /scan_planner_node/grid_map/fx: 609.59
+ * /scan_planner_node/grid_map/fy: 609.22
+ * /scan_planner_node/grid_map/k_depth_scaling_factor: 1000.0
+ * /scan_planner_node/grid_map/map_sliding_thresh: 0.2
+ * /scan_planner_node/grid_map/max_ray_length: 5.0
+ * /scan_planner_node/grid_map/need_extrinsic: True
+ * /scan_planner_node/grid_map/obstacles_inflation_z_down: 0.4
+ * /scan_planner_node/grid_map/obstacles_inflation_z_up: 0.1
+ * /scan_planner_node/grid_map/p_hit: 0.85
+ * /scan_planner_node/grid_map/p_max: 0.98
+ * /scan_planner_node/grid_map/p_min: 0.12
+ * /scan_planner_node/grid_map/p_miss: 0.3
+ * /scan_planner_node/grid_map/p_occ: 0.8
+ * /scan_planner_node/grid_map/resolution: 0.05
+ * /scan_planner_node/grid_map/sensor_type: lidar
+ * /scan_planner_node/grid_map/skip_pixel: 2
+ * /scan_planner_node/grid_map/sliding_map_size_x: 10.0
+ * /scan_planner_node/grid_map/sliding_map_size_y: 10.0
+ * /scan_planner_node/grid_map/sliding_map_size_z: 5.0
+ * /scan_planner_node/grid_map/vis_height: 0.3
+ * /scan_planner_node/manager/control_points_distance: 0.2
+ * /scan_planner_node/manager/feasibility_tolerance: 0.5
+ * /scan_planner_node/manager/max_acc: 1.1
+ * /scan_planner_node/manager/max_jerk: 4.0
+ * /scan_planner_node/manager/max_vel: 2.05
+ * /scan_planner_node/manager/planning_horizon: 7.5
+ * /scan_planner_node/optimization/acc_tolerance: 1.0
+ * /scan_planner_node/optimization/dist0: 0.2
+ * /scan_planner_node/optimization/lambda_collision: 1.0
+ * /scan_planner_node/optimization/lambda_feasibility: 0.1
+ * /scan_planner_node/optimization/lambda_fitness: 1.0
+ * /scan_planner_node/optimization/lambda_smooth: 1.0
+ * /scan_planner_node/optimization/max_acc: 1.1
+ * /scan_planner_node/optimization/max_vel: 2.05
+ * /scan_planner_node/optimization/vel_tolerance: 1.0
+ * /scanplanner_plane_rl_bootstrap/fixed_stand_max_duration_sec: 25.0
+ * /scanplanner_plane_rl_bootstrap/release_after_rl_request: True
+ * /scanplanner_plane_rl_bootstrap/rl_repeat_seconds: 120.0
+ * /scanplanner_plane_rl_bootstrap/stand_after_seconds: 1.0
+ * /scanplanner_pointcloud_bridge/input: /scan
+ * /scanplanner_pointcloud_bridge/laser_blind: 0.5
+ * /scanplanner_pointcloud_bridge/maximum_rate_hz: 5.0
+ * /scanplanner_pointcloud_bridge/maximum_vertical_angle_deg: 55
+ * /scanplanner_pointcloud_bridge/minimum_vertical_angle_deg: -7
+ * /scanplanner_pointcloud_bridge/odom_topic: /Odometry_gazebo
+ * /scanplanner_pointcloud_bridge/output: /registered_scan
+ * /scanplanner_pointcloud_bridge/world_frame: map
+ * /scanplanner_red_ball_detector/camera_info_topic: /recording_camera...
+ * /scanplanner_red_ball_detector/camera_ready_topic: /simenv/recording...
+ * /scanplanner_red_ball_detector/confirm_count: 3
+ * /scanplanner_red_ball_detector/depth_topic: /real_sense/depth...
+ * /scanplanner_red_ball_detector/floor_height_m: 2.6
+ * /scanplanner_red_ball_detector/ground_range_scale: 0.95
+ * /scanplanner_red_ball_detector/image_topic: /recording_camera...
+ * /scanplanner_red_ball_detector/layout_metadata: /tmp/simenv_bridg...
+ * /scanplanner_red_ball_detector/maximum_processing_rate_hz: 0.0
+ * /scanplanner_red_ball_detector/merge_radius: 1.1
+ * /scanplanner_red_ball_detector/out_json: /home/quinn/0904/...
+ * /scanplanner_red_ball_detector/require_room_boundary_during_scan: True
+ * /scanplanner_red_ball_detector/room_boundary_margin_m: 0.5
+ * /scanplanner_red_ball_detector/scan_active_topic: /scanplanner/room...
+ * /scanplanner_red_ball_detector/use_depth: True
+ * /scanplanner_three_floor_goal_sequencer/direct_plane_distance_gain: 1.25
+ * /scanplanner_three_floor_goal_sequencer/direct_plane_max_lateral_speed_mps: 0.75
+ * /scanplanner_three_floor_goal_sequencer/direct_plane_min_forward_speed: 0.3
+ * /scanplanner_three_floor_goal_sequencer/direct_plane_translation_heading_limit_rad: 1.45
+ * /scanplanner_three_floor_goal_sequencer/direct_plane_yaw_rate: 1.15
+ * /scanplanner_three_floor_goal_sequencer/direct_stair_yaw_rate: 0.35
+ * /scanplanner_three_floor_goal_sequencer/entrance_fixed_heading_release_rad: 0.2
+ * /scanplanner_three_floor_goal_sequencer/entrance_lateral_gain: 0.6
+ * /scanplanner_three_floor_goal_sequencer/entrance_max_lateral_speed_mps: 0.12
+ * /scanplanner_three_floor_goal_sequencer/entrance_progress_timeout_sec: 5.0
+ * /scanplanner_three_floor_goal_sequencer/entrance_recovery_hold_sec: 1.0
+ * /scanplanner_three_floor_goal_sequencer/entrance_recovery_max_attempts: 2
+ * /scanplanner_three_floor_goal_sequencer/entrance_speed_scale: 1.45
+ * /scanplanner_three_floor_goal_sequencer/floor_control_settle_sec: 0.15
+ * /scanplanner_three_floor_goal_sequencer/handoff_timeout_sec: 300.0
+ * /scanplanner_three_floor_goal_sequencer/manager_release_settle_sec: 0.1
+ * /scanplanner_three_floor_goal_sequencer/maximum_floor_speed: 2.25
+ * /scanplanner_three_floor_goal_sequencer/maximum_replans: 2
+ * /scanplanner_three_floor_goal_sequencer/minimum_upright_duration_sec: 0.6
+ * /scanplanner_three_floor_goal_sequencer/minimum_upright_z: 0.55
+ * /scanplanner_three_floor_goal_sequencer/mission_config: /tmp/simenv_bridg...
+ * /scanplanner_three_floor_goal_sequencer/output_dir: /home/quinn/0904/...
+ * /scanplanner_three_floor_goal_sequencer/plane_attitude_hold_upright_z: 0.9
+ * /scanplanner_three_floor_goal_sequencer/plane_attitude_slowdown_upright_z: 0.97
+ * /scanplanner_three_floor_goal_sequencer/plane_fast_takeover: True
+ * /scanplanner_three_floor_goal_sequencer/plane_fast_takeover_blend_seconds: 0.5
+ * /scanplanner_three_floor_goal_sequencer/plane_fast_takeover_zero_hold_seconds: 0.15
+ * /scanplanner_three_floor_goal_sequencer/plane_motion_start_ramp_initial_speed_mps: 0.3
+ * /scanplanner_three_floor_goal_sequencer/plane_motion_start_ramp_minimum_upright_z: 0.985
+ * /scanplanner_three_floor_goal_sequencer/plane_motion_start_ramp_seconds: 3.0
+ * /scanplanner_three_floor_goal_sequencer/policy_timeout_sec: 35.0
+ * /scanplanner_three_floor_goal_sequencer/progress_timeout_sec: 45.0
+ * /scanplanner_three_floor_goal_sequencer/room_scan_settle_sec: 0.1
+ * /scanplanner_three_floor_goal_sequencer/room_scan_timeout_sec: 30.0
+ * /scanplanner_three_floor_goal_sequencer/room_scan_turn_rad: 1.9
+ * /scanplanner_three_floor_goal_sequencer/room_scan_yaw_rate: 2.8
+ * /scanplanner_three_floor_goal_sequencer/room_tolerance: 0.4
+ * /scanplanner_three_floor_goal_sequencer/speed_scale: 2.6
+ * /scanplanner_three_floor_goal_sequencer/stage_announcement_hold_sec: 0.15
+ * /scanplanner_three_floor_goal_sequencer/startup_timeout_sec: 240.0
+ * /scanplanner_three_floor_goal_sequencer/waypoint_timeout_sec: 150.0
+ * /second_to_third_floor_stair_manager/ascent_maximum_speed_mps: 0.8
+ * /second_to_third_floor_stair_manager/ascent_speed_mps: 0.8
+ * /second_to_third_floor_stair_manager/ascent_timeout_sec: 45.0
+ * /second_to_third_floor_stair_manager/auto_start: False
+ * /second_to_third_floor_stair_manager/command_topic: /cmd_vel
+ * /second_to_third_floor_stair_manager/enable_truth_return_gate: False
+ * /second_to_third_floor_stair_manager/enable_visual_stair_alignment: False
+ * /second_to_third_floor_stair_manager/entry_alignment_yaw_rate_rps: 0.4
+ * /second_to_third_floor_stair_manager/flight_a_height_gain_m: 1.05
+ * /second_to_third_floor_stair_manager/flight_b_timeout_sec: 22.0
+ * /second_to_third_floor_stair_manager/height_plot_basename: 21_truth_stair_he...
+ * /second_to_third_floor_stair_manager/hold_rl_during_ascent: True
+ * /second_to_third_floor_stair_manager/landing_cross_distance_m: 0.95
+ * /second_to_third_floor_stair_manager/landing_cross_speed_mps: 0.75
+ * /second_to_third_floor_stair_manager/landing_heading_tolerance_rad: 0.15
+ * /second_to_third_floor_stair_manager/landing_timeout_sec: 30.0
+ * /second_to_third_floor_stair_manager/landing_turn_angle_rad: -2.4
+ * /second_to_third_floor_stair_manager/landing_turn_speed_rps: 1.2
+ * /second_to_third_floor_stair_manager/mission_failure_token: SECOND_FLOOR_EXPL...
+ * /second_to_third_floor_stair_manager/mission_trigger_token: SECOND_FLOOR_EXPL...
+ * /second_to_third_floor_stair_manager/mission_trigger_topic: /simenv/second_fl...
+ * /second_to_third_floor_stair_manager/odom_topic: /Odometry_gazebo
+ * /second_to_third_floor_stair_manager/offline_stair_model_sdf: /tmp/simenv_bridg...
+ * /second_to_third_floor_stair_manager/offline_truth_layout_metadata: /tmp/simenv_bridg...
+ * /second_to_third_floor_stair_manager/output_dir: /home/quinn/0904/...
+ * /second_to_third_floor_stair_manager/plane_policy: /home/quinn/0904/...
+ * /second_to_third_floor_stair_manager/policy_warmup_seconds: 0.2
+ * /second_to_third_floor_stair_manager/pre_ascent_rl_fast_blend_seconds: 0.5
+ * /second_to_third_floor_stair_manager/pre_ascent_rl_fast_takeover: True
+ * /second_to_third_floor_stair_manager/pre_ascent_rl_fast_zero_hold_seconds: 0.15
+ * /second_to_third_floor_stair_manager/pre_ascent_rl_settle_seconds: 0.6
+ * /second_to_third_floor_stair_manager/pre_ascent_stand_seconds: 0.0
+ * /second_to_third_floor_stair_manager/second_floor_handoff_timeout_sec: 90.0
+ * /second_to_third_floor_stair_manager/second_floor_stable_seconds: 0.5
+ * /second_to_third_floor_stair_manager/source_floor_index: 1
+ * /second_to_third_floor_stair_manager/stair_policy: /home/quinn/0904/...
+ * /second_to_third_floor_stair_manager/state_topic: /simenv/second_to...
+ * /second_to_third_floor_stair_manager/target_floor_number: 3
+ * /second_to_third_floor_stair_manager/total_height_gain_m: 2.2
+ * /second_to_third_floor_stair_manager/trajectory_plot_basename: 21_f2_to_third_fl...
+ * /second_to_third_floor_stair_manager/transition_log_basename: second_to_third_f...
+ * /second_to_third_floor_stair_manager/transition_plot_basename: 21_second_to_thir...
+ * /second_to_third_floor_stair_manager/truth_entry_final_speed_mps: 0.55
+ * /second_to_third_floor_stair_manager/truth_entry_guide: True
+ * /second_to_third_floor_stair_manager/truth_entry_guide_min_speed_mps: 0.25
+ * /second_to_third_floor_stair_manager/truth_entry_guide_speed_mps: 0.45
+ * /second_to_third_floor_stair_manager/truth_entry_timeout_sec: 120.0
+ * /second_to_third_floor_stair_manager/truth_fixed_two_flight_profile: True
+ * /second_to_third_floor_stair_manager/truth_flight_a_backslide_recovery_hold_seconds: 1.5
+ * /second_to_third_floor_stair_manager/truth_flight_a_backslide_recovery_max_attempts: 2
+ * /second_to_third_floor_stair_manager/truth_flight_a_backslide_recovery_ramp_seconds: 1.0
+ * /second_to_third_floor_stair_manager/truth_flight_a_backslide_recovery_ramp_speed_mps: 0.4
+ * /second_to_third_floor_stair_manager/truth_flight_a_climb_ramp_seconds: 1.2
+ * /second_to_third_floor_stair_manager/truth_flight_a_near_edge_strong_center_error_m: 0.24
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_capture_max_joint_velocity_rms: 0.18
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fast_fixed_stand: True
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fast_fixed_stand_duration_seconds: 0.5
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fast_fixed_stand_minimum_elapsed_seconds: 0.5
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fast_fixed_stand_minimum_gain_ratio: 0.75
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fast_fixed_stand_settle_seconds: 0.0
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fast_fixed_stand_stable_seconds: 0.5
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_fixed_stand_ready_timeout_sec: 12.0
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_require_fixed_stand_ready: True
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_settle_seconds: 0.35
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_settle_timeout_sec: 8.0
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_stand_seconds: 0.1
+ * /second_to_third_floor_stair_manager/truth_flight_a_policy_use_default_stand_target: False
+ * /second_to_third_floor_stair_manager/truth_flight_a_rearward_slip_max_climb_speed_mps: 0.12
+ * /second_to_third_floor_stair_manager/truth_flight_a_rearward_slip_speed_mps: 0.3
+ * /second_to_third_floor_stair_manager/truth_flight_a_recovery_center_speed_mps: 0.22
+ * /second_to_third_floor_stair_manager/truth_flight_a_recovery_forward_speed_mps: 0.6
+ * /second_to_third_floor_stair_manager/truth_flight_a_require_fresh_ready: True
+ * /second_to_third_floor_stair_manager/truth_flight_a_stall_release_seconds: 1.5
+ * /second_to_third_floor_stair_manager/truth_flight_a_strong_recovery_forward_speed_mps: 0.4
+ * /second_to_third_floor_stair_manager/truth_flight_b_max_yaw_rate_rps: 0.1
+ * /second_to_third_floor_stair_manager/truth_flight_b_near_edge_strong_center_error_m: 0.24
+ * /second_to_third_floor_stair_manager/truth_flight_b_pitch_min_height_gain_m: 0.08
+ * /second_to_third_floor_stair_manager/truth_flight_b_pitch_rate_min_abs_rad: 0.6
+ * /second_to_third_floor_stair_manager/truth_flight_b_pitch_rate_trigger_rps: 1.6
+ * /second_to_third_floor_stair_manager/truth_flight_b_pitch_rate_window_sec: 0.18
+ * /second_to_third_floor_stair_manager/truth_flight_b_pitch_recovery_max_attempts: 2
+ * /second_to_third_floor_stair_manager/truth_flight_b_rearward_slip_speed_mps: 0.3
+ * /second_to_third_floor_stair_manager/truth_flight_b_recovery_forward_speed_mps: 0.6
+ * /second_to_third_floor_stair_manager/truth_flight_b_recovery_hold_seconds: 4.0
+ * /second_to_third_floor_stair_manager/truth_flight_b_severe_pitch_detect_seconds: 0.1
+ * /second_to_third_floor_stair_manager/truth_flight_b_severe_pitch_rad: 0.8
+ * /second_to_third_floor_stair_manager/truth_flight_b_strong_recovery_forward_speed_mps: 0.4
+ * /second_to_third_floor_stair_manager/truth_landing_recenter_speed_mps: 0.75
+ * /second_to_third_floor_stair_manager/truth_two_stage_guide: True
+ * /second_to_third_floor_stair_manager/truth_upper_floor_exit_clearance_m: 0.8
+ * /second_to_third_floor_stair_manager/two_flight_stair: True
+ * /second_to_third_floor_stair_manager/upper_floor_handoff_complete_phase: THIRD_FLOOR_HANDO...
+ * /second_to_third_floor_stair_manager/upper_floor_handoff_timeout_phase: THIRD_FLOOR_HANDO...
+ * /second_to_third_floor_stair_manager/upper_floor_reached_phase: THIRD_FLOOR_REACHED
+ * /second_to_third_floor_stair_manager/upper_floor_ready_token: THIRD_FLOOR_EXPLO...
+ * /second_to_third_floor_stair_manager/upper_floor_settle_phase: THIRD_FLOOR_SETTLE
+ * /second_to_third_floor_stair_manager/upper_floor_state_topic: /simenv/third_flo...
+ * /second_to_third_floor_stair_manager/upper_landing_clearance_grace_sec: 15.0
+ * /second_to_third_floor_stair_manager/wait_for_second_floor_handoff: True
+ * /second_to_third_floor_stair_manager/world_frame_ascent: True
+ * /simenv/plane_tilt_guard_release_rad: 0.1
+ * /simenv/plane_tilt_guard_stop_rad: 0.27
+ * /simenv/plane_tilt_guard_warning_rad: 0.14
+ * /stair_descent_manager/command_topic: /cmd_vel
+ * /stair_descent_manager/descent_maximum_speed_mps: 0.8
+ * /stair_descent_manager/descent_segment_timeout_sec: 600.0
+ * /stair_descent_manager/descent_speed_mps: 0.8
+ * /stair_descent_manager/end_floor_number: 1
+ * /stair_descent_manager/mission_trigger_token: THIRD_FLOOR_EXPLO...
+ * /stair_descent_manager/mission_trigger_topic: /simenv/third_flo...
+ * /stair_descent_manager/odom_topic: /Odometry_gazebo
+ * /stair_descent_manager/offline_stair_model_sdf: /tmp/simenv_bridg...
+ * /stair_descent_manager/offline_truth_layout_metadata: /tmp/simenv_bridg...
+ * /stair_descent_manager/output_dir: /home/quinn/0904/...
+ * /stair_descent_manager/policy_switch_fast_fixed_stand: True
+ * /stair_descent_manager/policy_switch_fast_fixed_stand_duration_seconds: 0.5
+ * /stair_descent_manager/policy_switch_fast_fixed_stand_minimum_elapsed_seconds: 0.5
+ * /stair_descent_manager/policy_switch_fast_fixed_stand_minimum_gain_ratio: 0.75
+ * /stair_descent_manager/policy_switch_fast_fixed_stand_settle_seconds: 0.0
+ * /stair_descent_manager/policy_switch_fast_fixed_stand_stable_seconds: 0.5
+ * /stair_descent_manager/policy_switch_fixed_stand_timeout_sec: 12.0
+ * /stair_descent_manager/policy_switch_max_joint_velocity_rms: 0.35
+ * /stair_descent_manager/policy_switch_queue_hold_seconds: 0.25
+ * /stair_descent_manager/policy_switch_reentry_timeout_sec: 20.0
+ * /stair_descent_manager/policy_switch_settle_seconds: 0.45
+ * /stair_descent_manager/policy_switch_settle_timeout_sec: 6.0
+ * /stair_descent_manager/policy_warmup_seconds: 0.75
+ * /stair_descent_manager/pre_descent_stand_seconds: 0.25
+ * /stair_descent_manager/segment_one_log_basename: third_to_second_f...
+ * /stair_descent_manager/segment_two_log_basename: second_to_first_f...
+ * /stair_descent_manager/skip_entry_guide: True
+ * /stair_descent_manager/stair_policy: /home/quinn/0904/...
+ * /stair_descent_manager/start_floor_number: 3
+ * /stair_descent_manager/state_topic: /simenv/third_to_...
+ * /stair_descent_manager/transition_log_basename: stair_descent.json
+ * /stair_descent_manager/truth_descent_backoff_escalation_m: 0.15
+ * /stair_descent_manager/truth_descent_east_align_minimum_x_speed_mps: 0.3
+ * /stair_descent_manager/truth_descent_east_align_tread_drop_m: 0.05
+ * /stair_descent_manager/truth_descent_entry_guide_speed_mps: 1.15
+ * /stair_descent_manager/truth_descent_final_landing_max_body_height_m: 1.0
+ * /stair_descent_manager/truth_descent_final_landing_max_tilt_rad: 0.45
+ * /stair_descent_manager/truth_descent_final_landing_min_body_height_m: 0.2
+ * /stair_descent_manager/truth_descent_final_landing_minimum_upright_z: 0.75
+ * /stair_descent_manager/truth_descent_final_landing_settle_seconds: 1.0
+ * /stair_descent_manager/truth_descent_final_landing_timeout_sec: 20.0
+ * /stair_descent_manager/truth_descent_flight_a_end_y: 1.75
+ * /stair_descent_manager/truth_descent_flight_center_correction_error_m: 0.22
+ * /stair_descent_manager/truth_descent_flight_center_correction_speed_mps: 0.5
+ * /stair_descent_manager/truth_descent_flight_center_correction_yaw_rate_rps: 0.2
+ * /stair_descent_manager/truth_descent_flight_center_steer_gain: 1.0
+ * /stair_descent_manager/truth_descent_flight_center_steer_max_rad: 0.24
+ * /stair_descent_manager/truth_descent_flight_end_slowdown_drop_m: 0.95
+ * /stair_descent_manager/truth_descent_flight_end_speed_mps: 0.6
+ * /stair_descent_manager/truth_descent_flight_heading_correction_error_rad: 0.22
+ * /stair_descent_manager/truth_descent_flight_heading_correction_speed_mps: 0.4
+ * /stair_descent_manager/truth_descent_flight_heading_correction_yaw_rate_rps: 0.3
+ * /stair_descent_manager/truth_descent_flight_heading_gain: 0.55
+ * /stair_descent_manager/truth_descent_flight_initial_hold_drop_m: 0.18
+ * /stair_descent_manager/truth_descent_flight_initial_ramp_end_drop_m: 0.45
+ * /stair_descent_manager/truth_descent_flight_initial_speed_mps: 0.55
+ * /stair_descent_manager/truth_descent_flight_max_yaw_rate_rps: 0.14
+ * /stair_descent_manager/truth_descent_flight_severe_tilt_hold_sec: 0.8
+ * /stair_descent_manager/truth_descent_flight_severe_tilt_rad: 0.6
+ * /stair_descent_manager/truth_descent_flight_severe_tilt_speed_mps: 0.3
+ * /stair_descent_manager/truth_descent_flight_tilt_hold_sec: 0.6
+ * /stair_descent_manager/truth_descent_flight_tilt_slowdown_rad: 0.48
+ * /stair_descent_manager/truth_descent_flight_tilt_speed_mps: 0.55
+ * /stair_descent_manager/truth_descent_gain_up_drop_m: 0.35
+ * /stair_descent_manager/truth_descent_landing_heading_tolerance_rad: 0.18
+ * /stair_descent_manager/truth_descent_landing_minimum_x_speed_mps: 0.3
+ * /stair_descent_manager/truth_descent_landing_minimum_yaw_rate_rps: 0.34
+ * /stair_descent_manager/truth_descent_landing_position_tolerance_m: 0.12
+ * /stair_descent_manager/truth_descent_landing_recenter_speed_mps: 0.4
+ * /stair_descent_manager/truth_descent_landing_settle_seconds: 1.5
+ * /stair_descent_manager/truth_descent_landing_slip_max_attempts: 4
+ * /stair_descent_manager/truth_descent_landing_turn_speed_rps: 1.2
+ * /stair_descent_manager/truth_descent_max_center_error_m: 0.4
+ * /stair_descent_manager/truth_descent_minimum_upright_z: 0.55
+ * /stair_descent_manager/truth_descent_segment_turn_alignment_minimum_speed_mps: 0.3
+ * /stair_descent_manager/truth_descent_segment_turn_alignment_progress_min_m: 0.025
+ * /stair_descent_manager/truth_descent_segment_turn_alignment_progress_timeout_sec: 3.0
+ * /stair_descent_manager/truth_descent_segment_turn_drift_limit_m: 0.4
+ * /stair_descent_manager/truth_descent_segment_turn_lateral_speed_mps: 0.4
+ * /stair_descent_manager/truth_descent_segment_turn_position_tolerance_m: 0.16
+ * /stair_descent_manager/truth_descent_segment_turn_progress_min_improvement_rad: 0.11
+ * /stair_descent_manager/truth_descent_segment_turn_progress_timeout_sec: 2.8
+ * /stair_descent_manager/truth_descent_segment_turn_side_speed_mps: 0.4
+ * /stair_descent_manager/truth_descent_segment_turn_x_safe_tolerance_m: 0.25
+ * /stair_descent_manager/truth_descent_segment_turn_y_safe_high_m: 1.95
+ * /stair_descent_manager/truth_descent_segment_turn_yaw_rate_rps: 1.0
+ * /stair_descent_manager/truth_descent_side_slip_pause_sec: 0.5
+ * /stair_descent_manager/truth_descent_stall_seconds: 3.0
+ * /stair_descent_manager/truth_descent_step_pause_interval_m: 0.18
+ * /stair_descent_manager/truth_descent_step_pause_seconds: 0.0
+ * /stair_descent_manager/truth_descent_trigger_timeout_sec: 2400.0
+ * /stair_descent_manager/truth_descent_turn_forward_speed_mps: 0.08
+ * /stair_descent_manager/truth_descent_turn_forward_y_limit_m: 4.82
+ * /stair_descent_manager/truth_descent_turn_start_y: 5.05
+ * /stair_descent_manager/truth_entry_guide: True
+ * /stair_descent_manager/truth_two_stage_guide: True
+ * /stair_transition_manager/ascent_maximum_speed_mps: 0.8
+ * /stair_transition_manager/ascent_speed_mps: 0.8
+ * /stair_transition_manager/ascent_timeout_sec: 70.0
+ * /stair_transition_manager/auto_start: False
+ * /stair_transition_manager/command_topic: /cmd_vel
+ * /stair_transition_manager/enable_truth_return_gate: False
+ * /stair_transition_manager/enable_visual_stair_alignment: False
+ * /stair_transition_manager/entry_alignment_yaw_rate_rps: 0.4
+ * /stair_transition_manager/flight_a_height_gain_m: 1.05
+ * /stair_transition_manager/flight_b_timeout_sec: 70.0
+ * /stair_transition_manager/hold_rl_during_ascent: True
+ * /stair_transition_manager/landing_cross_distance_m: 0.95
+ * /stair_transition_manager/landing_cross_speed_mps: 0.75
+ * /stair_transition_manager/landing_heading_tolerance_rad: 0.15
+ * /stair_transition_manager/landing_timeout_sec: 30.0
+ * /stair_transition_manager/landing_turn_angle_rad: -2.4
+ * /stair_transition_manager/landing_turn_speed_rps: 1.2
+ * /stair_transition_manager/odom_topic: /Odometry_gazebo
+ * /stair_transition_manager/offline_stair_model_sdf: /tmp/simenv_bridg...
+ * /stair_transition_manager/offline_truth_layout_metadata: /tmp/simenv_bridg...
+ * /stair_transition_manager/output_dir: /home/quinn/0904/...
+ * /stair_transition_manager/plane_policy: /home/quinn/0904/...
+ * /stair_transition_manager/policy_warmup_seconds: 0.2
+ * /stair_transition_manager/pre_ascent_rl_fast_blend_seconds: 0.5
+ * /stair_transition_manager/pre_ascent_rl_fast_takeover: True
+ * /stair_transition_manager/pre_ascent_rl_fast_zero_hold_seconds: 0.15
+ * /stair_transition_manager/pre_ascent_rl_settle_seconds: 0.6
+ * /stair_transition_manager/pre_ascent_stand_seconds: 0.0
+ * /stair_transition_manager/second_floor_handoff_timeout_sec: 90.0
+ * /stair_transition_manager/second_floor_stable_seconds: 0.5
+ * /stair_transition_manager/stair_policy: /home/quinn/0904/...
+ * /stair_transition_manager/total_height_gain_m: 2.2
+ * /stair_transition_manager/truth_entry_final_speed_mps: 0.55
+ * /stair_transition_manager/truth_entry_guide: True
+ * /stair_transition_manager/truth_entry_guide_min_speed_mps: 0.25
+ * /stair_transition_manager/truth_entry_guide_speed_mps: 0.45
+ * /stair_transition_manager/truth_entry_timeout_sec: 120.0
+ * /stair_transition_manager/truth_fixed_two_flight_profile: True
+ * /stair_transition_manager/truth_flight_a_backslide_recovery_hold_seconds: 1.5
+ * /stair_transition_manager/truth_flight_a_backslide_recovery_max_attempts: 2
+ * /stair_transition_manager/truth_flight_a_backslide_recovery_ramp_seconds: 1.0
+ * /stair_transition_manager/truth_flight_a_backslide_recovery_ramp_speed_mps: 0.4
+ * /stair_transition_manager/truth_flight_a_climb_ramp_seconds: 1.2
+ * /stair_transition_manager/truth_flight_a_near_edge_strong_center_error_m: 0.24
+ * /stair_transition_manager/truth_flight_a_policy_capture_max_joint_velocity_rms: 0.18
+ * /stair_transition_manager/truth_flight_a_policy_fast_fixed_stand: True
+ * /stair_transition_manager/truth_flight_a_policy_fast_fixed_stand_duration_seconds: 0.5
+ * /stair_transition_manager/truth_flight_a_policy_fast_fixed_stand_minimum_elapsed_seconds: 0.5
+ * /stair_transition_manager/truth_flight_a_policy_fast_fixed_stand_minimum_gain_ratio: 0.75
+ * /stair_transition_manager/truth_flight_a_policy_fast_fixed_stand_settle_seconds: 0.0
+ * /stair_transition_manager/truth_flight_a_policy_fast_fixed_stand_stable_seconds: 0.5
+ * /stair_transition_manager/truth_flight_a_policy_fixed_stand_ready_timeout_sec: 12.0
+ * /stair_transition_manager/truth_flight_a_policy_require_fixed_stand_ready: True
+ * /stair_transition_manager/truth_flight_a_policy_settle_seconds: 0.35
+ * /stair_transition_manager/truth_flight_a_policy_settle_timeout_sec: 8.0
+ * /stair_transition_manager/truth_flight_a_policy_stand_seconds: 0.1
+ * /stair_transition_manager/truth_flight_a_policy_use_default_stand_target: False
+ * /stair_transition_manager/truth_flight_a_prediction_horizon_sec: 1.1
+ * /stair_transition_manager/truth_flight_a_rearward_slip_max_climb_speed_mps: 0.12
+ * /stair_transition_manager/truth_flight_a_rearward_slip_speed_mps: 0.3
+ * /stair_transition_manager/truth_flight_a_recovery_center_speed_mps: 0.22
+ * /stair_transition_manager/truth_flight_a_recovery_forward_speed_mps: 0.6
+ * /stair_transition_manager/truth_flight_a_require_fresh_ready: True
+ * /stair_transition_manager/truth_flight_a_stall_release_seconds: 1.5
+ * /stair_transition_manager/truth_flight_a_strong_recovery_forward_speed_mps: 0.4
+ * /stair_transition_manager/truth_flight_b_max_yaw_rate_rps: 0.1
+ * /stair_transition_manager/truth_flight_b_near_edge_strong_center_error_m: 0.24
+ * /stair_transition_manager/truth_flight_b_pitch_min_height_gain_m: 0.08
+ * /stair_transition_manager/truth_flight_b_pitch_rate_min_abs_rad: 0.6
+ * /stair_transition_manager/truth_flight_b_pitch_rate_trigger_rps: 1.6
+ * /stair_transition_manager/truth_flight_b_pitch_rate_window_sec: 0.18
+ * /stair_transition_manager/truth_flight_b_pitch_recovery_max_attempts: 2
+ * /stair_transition_manager/truth_flight_b_rearward_slip_speed_mps: 0.3
+ * /stair_transition_manager/truth_flight_b_recovery_forward_speed_mps: 0.6
+ * /stair_transition_manager/truth_flight_b_recovery_hold_seconds: 4.0
+ * /stair_transition_manager/truth_flight_b_severe_pitch_detect_seconds: 0.1
+ * /stair_transition_manager/truth_flight_b_severe_pitch_rad: 0.8
+ * /stair_transition_manager/truth_flight_b_strong_recovery_forward_speed_mps: 0.4
+ * /stair_transition_manager/truth_landing_recenter_speed_mps: 0.75
+ * /stair_transition_manager/truth_two_stage_guide: True
+ * /stair_transition_manager/two_flight_stair: True
+ * /stair_transition_manager/upper_landing_clearance_grace_sec: 15.0
+ * /stair_transition_manager/wait_for_second_floor_handoff: True
+ * /stair_transition_manager/world_frame_ascent: True
+ * /state_from_gazebo/robot_name: a1
+ * /three_floor_rl_mission_supervisor/lobby_heading_stable_sec: 0.3
+ * /three_floor_rl_mission_supervisor/lobby_initial_forward_speed_mps: 0.4
+ * /three_floor_rl_mission_supervisor/lobby_linear_acceleration_mps2: 1.0
+ * /three_floor_rl_mission_supervisor/minimum_upright_duration_sec: 0.6
+ * /three_floor_rl_mission_supervisor/minimum_upright_z: 0.55
+ * /three_floor_rl_mission_supervisor/mission_config: /tmp/simenv_bridg...
+ * /three_floor_rl_mission_supervisor/mission_timeout_sec: 1800.0
+ * /three_floor_rl_mission_supervisor/output_dir: /home/quinn/0904/...
+ * /three_floor_rl_mission_supervisor/plane_fast_takeover: True
+ * /three_floor_rl_mission_supervisor/plane_fast_takeover_blend_seconds: 0.5
+ * /three_floor_rl_mission_supervisor/plane_fast_takeover_zero_hold_seconds: 0.15
+ * /three_floor_rl_mission_supervisor/plane_motion_start_ramp_initial_speed_mps: 0.3
+ * /three_floor_rl_mission_supervisor/plane_motion_start_ramp_minimum_upright_z: 0.985
+ * /three_floor_rl_mission_supervisor/plane_motion_start_ramp_seconds: 3.0
+ * /three_floor_rl_mission_supervisor/progress_timeout_sec: 20.0
+ * /unpause_after_controllers/controller_namespace: /a1_gazebo
+ * /unpause_after_controllers/load_window_seconds: 2.0
+ * /unpause_after_controllers/timeout: 120
+ * /use_sim_time: True
+ * /world_file: /tmp/simenv_bridg...
+
+NODES
+  /
+    building_control (building_generator_classic/building_generator_classic_control)
+    closed_loop_controller (scan_planner/closed_loop_controller)
+    gazebo (gazebo_ros/gzserver)
+    junior_ctrl (simenv_bridge/classic_trotting_controller.py)
+    open_mapping_entrance (simenv_competitor/open_mapping_entrance.py)
+    rl_floor_command_mux (simenv_bridge/rl_floor_command_mux.py)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    scan_planner_node (scan_planner/scan_planner_node)
+    scanplanner_plane_rl_bootstrap (simenv_competitor/controller_mode_bootstrap.py)
+    scanplanner_pointcloud_bridge (simenv_bridge/scanplanner_pointcloud_bridge.py)
+    scanplanner_red_ball_detector (simenv_bridge/danger_detector.py)
+    scanplanner_three_floor_goal_sequencer (simenv_bridge/scanplanner_three_floor_goal_sequencer.py)
+    second_to_third_floor_stair_manager (simenv_bridge/stair_transition_manager.py)
+    stair_descent_manager (simenv_bridge/stair_descent_manager.py)
+    stair_transition_manager (simenv_bridge/stair_transition_manager.py)
+    state_from_gazebo (unitree_guide/state_from_gazebo)
+    three_floor_rl_mission_supervisor (simenv_bridge/three_floor_rl_mission_supervisor.py)
+    unpause_after_controllers (simenv_competitor/unpause_after_controllers.py)
+    urdf_spawner (gazebo_ros/spawn_model)
+  /a1_gazebo/
+    controller_spawner (controller_manager/spawner)
+[33m[WARN] [1788597886.375575152]: [closed_loop_controller] ready.[0m
+hit: 1.7346
+miss: -0.847298
+min log: -1.99243
+max: 3.89182
+thresh log: 1.38629
+Using junior_ctrl: /home/quinn/0904/SimEnv-master/devel/lib/unitree_guide/junior_ctrl
+Waiting for Gazebo A1 joint state and trunk IMU before junior_ctrl
+[31m[ERROR] [1788597887.509126139]: GetModelState: model [a1_gazebo] does not exist[0m
+[0m[INFO] [1788597886.689210182]: Finished loading Gazebo ROS API Plugin.[0m
+[0m[INFO] [1788597886.690187096]: waitForService: Service [/gazebo/set_physics_properties] has not been advertised, waiting...[0m
+[0m[INFO] [1788597887.468279167]: waitForService: Service [/gazebo/set_physics_properties] is now available.[0m
+[0m[INFO] [1788597887.528177162]: Physics dynamic reconfigure ready.[0m
+[0m[INFO] [1788597887.804127462]: <initialOrientationAsReference> is unset, using default value of false to comply with REP 145 (world as orientation reference)[0m
+[0m[INFO] [1788597887.804165711]: <robotNamespace> set to: //[0m
+[0m[INFO] [1788597887.804172209]: <topicName> set to: trunk_imu[0m
+[0m[INFO] [1788597887.804177106]: <frameName> set to: imu_link[0m
+[0m[INFO] [1788597887.804194729]: <updateRateHZ> set to: 1000[0m
+[0m[INFO] [1788597887.804201113]: <gaussianNoise> set to: 0[0m
+[0m[INFO] [1788597887.804217088]: <xyzOffset> set to: 0 0 0[0m
+[0m[INFO] [1788597887.804232722]: <rpyOffset> set to: 0 -0 0[0m
+[0m[INFO] [1788597887.824923853]: load csv file name:/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/unitree_ros/robots/a1_description/scan_mode/mid360_stable.csv[0m
+data size:2500
+[livox] csv rows=2500
+[0m[INFO] [1788597887.826418832]: ros topic name:/scan[0m
+[0m[INFO] [1788597887.827155043]: scan info size:2500[0m
+[livox] before RayPlugin::Load
+[livox] after RayPlugin::Load
+[livox] before CreateCollision
+[livox] after CreateCollision
+[0m[INFO] [1788597887.827539713]: sample:800[0m
+[0m[INFO] [1788597887.827547588]: downsample:1[0m
+[livox] before rayShape Load/Init samples=800
+[livox] after rayShape Init
+[INFO] [1788597886.633191, 0.000000]: Waiting to open mapping entrance main_entrance
+[INFO] [1788597889.235411, 0.000000]: Mapping entrance ready: door 'main_entrance' set to open
+[INFO] [1788597886.632473, 0.000000]: Loading model XML from ros parameter robot_description
+[INFO] [1788597886.639332, 0.000000]: Waiting for service /gazebo/spawn_urdf_model
+[INFO] [1788597887.545874, 0.000000]: Calling service /gazebo/spawn_urdf_model
+[INFO] [1788597889.230712, 0.000000]: Spawn status: SpawnModel: Successfully spawned entity
+[INFO] [1788597889.231633, 0.000000]: Waiting for service /gazebo/set_model_configuration
+[INFO] [1788597889.233675, 0.000000]: temporary hack to **fix** the -J joint position option (issue #93), sleeping for 1 second to avoid race condition.
+[INFO] [1788597890.235980, 0.000000]: Calling service /gazebo/set_model_configuration
+[INFO] [1788597890.239031, 0.000000]: Set model configuration status: SetModelConfiguration: success
+[INFO] [1788597892.253265, 0.000000]: Gazebo unpaused after 2.0 s paused controller-load window
+[INFO] [1788597892.261989, 0.008000]: All 13 A1 controllers reached running state
+A1 sensors and 12 joint controllers are ready; starting classic junior_ctrl
+[INFO] Realtime scheduler disabled. Set UNITREE_ENABLE_REALTIME=1 to request SCHED_FIFO.
+The control interface for ROS Gazebo simulation
+robot_name: a1
+controller dt: 0.004 s, frequency: 250.000 Hz
+classic gait profile=trot period=0.550s stance_ratio=0.650
+/home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+cuda::is_available():0
+RL inference device: cpu (requested=hybrid, policy=plane)
+[INFO] RL policy resident in preload cache: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+cuda::is_available():0
+RL inference device: cpu (requested=hybrid, policy=plane)
+load model is successed!
+load model to device!
+[INFO] UNITREE_RL_PRELOAD_PLANE_POLICY already cached: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+cuda::is_available():0
+[WARNING] UNITREE_RL_DEVICE=hybrid selected CUDA for this policy but CUDA is unavailable; using CPU.
+RL inference device: cpu (requested=hybrid, policy=stair)
+[INFO] RL policy resident in preload cache: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[INFO] UNITREE_RL_PRELOAD_STAIR_POLICY preloaded: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[INFO] RL observation source: trunk IMU and joint states (no ground truth).
+[INFO] Autonomous startup: entering fixed stand (hold until /joy RL).
+Switched from passive to fixed stand
+[0m[INFO] [1788597893.437374292, 1.168000000]: [SCANReplanFSM] Set RViz goal height from initial body_pose z: 0.057[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[INFO] Hold-stand released; RL requested.
+Switched from fixed stand to RL
+[INFO] Entered RL /cmd_vel mode.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788597900.741563388, 6.142000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.315 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.00,-0.98[0m
+[0m[INFO] [1788597903.852032602, 8.152000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.212 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.07,-0.98[0m
+[0m[INFO] [1788597906.969784152, 10.158000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.153 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=0.00,0.00,-0.98[0m
+[0m[INFO] [1788597909.210489175, 11.608000000]: RL locomotion_ready latched after 5.50 s takeover and 5.47 s stable hold[0m
+cuda::is_available():0
+[WARNING] UNITREE_RL_DEVICE=hybrid selected CUDA for this policy but CUDA is unavailable; using CPU.
+RL inference device: cpu (requested=hybrid, policy=stair)
+[INFO] RL policy hot-switched from preload cache: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788597933.059698960, 26.996000000]: Using one-shot plane RL takeover profile: blend 0.50 s, zero hold 0.15 s[0m
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788597910.076710593, 12.164000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.152 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.01,-0.98[0m
+[0m[INFO] [1788597913.193939774, 14.174000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.147 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.02,-0.98[0m
+[0m[INFO] [1788597916.298056489, 16.182000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.146 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.03,-0.98[0m
+[0m[INFO] [1788597917.772230551, 17.134000000]: RL locomotion_ready latched after 5.50 s takeover and 5.50 s stable hold[0m
+[0m[INFO] [1788597919.398257509, 18.186000000]: RL policy input vx=0.348 vy=-0.001 wz=0.016 action_rms=0.183 ready=1 userCmd=0 kbd=0 raw=0.348,-0.001,0.016 grav=-0.02,0.03,-0.98[0m
+[0m[INFO] [1788597922.508508127, 20.194000000]: RL policy input vx=0.521 vy=-0.024 wz=-0.049 action_rms=0.216 ready=1 userCmd=0 kbd=0 raw=0.521,-0.024,-0.049 grav=-0.02,-0.02,-0.98[0m
+[0m[INFO] [1788597925.613361179, 22.200000000]: RL policy input vx=0.413 vy=-0.079 wz=-0.047 action_rms=0.186 ready=1 userCmd=0 kbd=0 raw=0.413,-0.079,-0.047 grav=0.01,0.03,-0.98[0m
+[0m[INFO] [1788597928.716648291, 24.200000000]: RL policy input vx=0.420 vy=-0.004 wz=-0.038 action_rms=0.161 ready=1 userCmd=0 kbd=0 raw=0.420,-0.004,-0.038 grav=-0.00,0.02,-0.98[0m
+[0m[INFO] [1788597931.819731785, 26.202000000]: RL policy input vx=0.420 vy=0.014 wz=-0.040 action_rms=0.210 ready=1 userCmd=0 kbd=0 raw=0.420,0.014,-0.040 grav=0.21,0.02,-0.96[0m
+cuda::is_available():0
+RL inference device: cpu (requested=hybrid, policy=plane)
+[INFO] RL policy hot-switched from preload cache: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788597934.083000332, 27.648000000]: RL locomotion_ready latched after 0.65 s takeover and 0.39 s stable hold[0m
+[0m[INFO] [1788597934.950219182, 28.204000000]: RL policy input vx=0.757 vy=-0.014 wz=-0.021 action_rms=0.203 ready=1 userCmd=0 kbd=0 raw=0.757,-0.014,-0.021 grav=-0.04,-0.02,-0.98[0m
+[0m[INFO] [1788597938.050428026, 30.206000000]: RL policy input vx=2.249 vy=-0.067 wz=-0.033 action_rms=0.349 ready=1 userCmd=0 kbd=0 raw=2.249,-0.067,-0.033 grav=0.02,0.03,-0.98[0m
+[0m[INFO] [1788597941.144047557, 32.206000000]: RL policy input vx=2.246 vy=0.130 wz=0.063 action_rms=0.286 ready=1 userCmd=0 kbd=0 raw=2.246,0.130,0.063 grav=0.00,-0.06,-0.98[0m
+[0m[INFO] [1788597944.264544442, 34.206000000]: RL policy input vx=2.249 vy=0.078 wz=0.038 action_rms=0.328 ready=1 userCmd=0 kbd=0 raw=2.249,0.078,0.038 grav=0.00,0.02,-0.98[0m
+[0m[INFO] [1788597947.386365687, 36.218000000]: RL policy input vx=1.617 vy=0.099 wz=0.068 action_rms=0.384 ready=1 userCmd=0 kbd=0 raw=1.617,0.099,0.068 grav=0.03,-0.03,-0.98[0m
+[0m[INFO] [1788597950.490002004, 38.220000000]: RL policy input vx=0.000 vy=0.000 wz=0.403 action_rms=0.177 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.403 grav=0.02,-0.00,-0.98[0m
+[0m[INFO] [1788597953.603323961, 40.232000000]: RL policy input vx=0.450 vy=0.000 wz=0.049 action_rms=0.164 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.049 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788597956.733642327, 42.248000000]: RL policy input vx=0.450 vy=0.000 wz=-0.012 action_rms=0.287 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.012 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788597959.828515677, 44.252000000]: RL policy input vx=0.899 vy=-0.033 wz=-0.040 action_rms=0.282 ready=1 userCmd=0 kbd=0 raw=0.899,-0.033,-0.040 grav=-0.00,-0.04,-0.98[0m
+[0m[INFO] [1788597962.928616211, 46.258000000]: RL policy input vx=0.900 vy=-0.001 wz=-0.001 action_rms=0.161 ready=1 userCmd=0 kbd=0 raw=0.900,-0.001,-0.001 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788597966.032555913, 48.262000000]: RL policy input vx=0.000 vy=0.000 wz=1.480 action_rms=0.150 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,1.480 grav=0.03,-0.00,-0.98[0m
+[0m[INFO] [1788597969.141027255, 50.266000000]: RL policy input vx=0.000 vy=0.000 wz=0.792 action_rms=0.301 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.792 grav=0.01,0.00,-0.98[0m
+[0m[INFO] [1788597972.248467503, 52.282000000]: RL policy input vx=0.638 vy=-0.550 wz=-0.783 action_rms=0.253 ready=1 userCmd=0 kbd=0 raw=0.638,-0.550,-0.783 grav=-0.02,0.03,-0.98[0m
+[0m[INFO] [1788597975.365124576, 54.298000000]: RL policy input vx=0.897 vy=-0.069 wz=-0.084 action_rms=0.198 ready=1 userCmd=0 kbd=0 raw=0.897,-0.069,-0.084 grav=-0.00,-0.03,-0.98[0m
+[0m[INFO] [1788597978.488508636, 56.314000000]: RL policy input vx=0.000 vy=0.000 wz=-1.992 action_rms=0.333 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.992 grav=0.02,0.00,-0.98[0m
+[0m[INFO] [1788597981.628934365, 58.330000000]: RL policy input vx=1.936 vy=0.641 wz=-0.173 action_rms=0.195 ready=1 userCmd=0 kbd=0 raw=1.936,0.641,-0.173 grav=-0.03,-0.06,-0.98[0m
+[0m[INFO] [1788597984.748574900, 60.338000000]: RL policy input vx=0.000 vy=0.000 wz=-0.224 action_rms=0.161 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.224 grav=0.03,0.00,-0.98[0m
+[0m[INFO] [1788597987.871232562, 62.350000000]: RL policy input vx=0.000 vy=0.000 wz=-0.210 action_rms=0.160 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.210 grav=0.00,-0.00,-0.98[0m
+[0m[INFO] [1788597990.996745805, 64.356000000]: RL policy input vx=0.449 vy=0.000 wz=-0.076 action_rms=0.223 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.076 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788597994.105484526, 66.360000000]: RL policy input vx=0.753 vy=0.116 wz=0.087 action_rms=0.170 ready=1 userCmd=0 kbd=0 raw=0.753,0.116,0.087 grav=0.01,-0.00,-0.98[0m
+[0m[INFO] [1788597997.227096226, 68.362000000]: RL policy input vx=0.450 vy=0.000 wz=0.021 action_rms=0.288 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.021 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598000.334207962, 70.368000000]: RL policy input vx=0.450 vy=0.000 wz=-0.015 action_rms=0.157 ready=1 userCmd=0 kbd=0 [FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+raw=0.450,0.000,-0.015 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598003.439112790, 72.368000000]: RL policy input vx=0.282 vy=-0.102 wz=-0.381 action_rms=0.194 ready=1 userCmd=0 kbd=0 raw=0.282,-0.102,-0.381 grav=0.03,-0.06,-0.98[0m
+[0m[INFO] [1788598006.553904790, 74.374000000]: RL policy input vx=0.808 vy=0.396 wz=0.501 action_rms=0.306 ready=1 userCmd=0 kbd=0 raw=0.808,0.396,0.501 grav=0.03,0.01,-0.98[0m
+[0m[INFO] [1788598009.660145917, 76.374000000]: RL policy input vx=0.899 vy=0.047 wz=0.058 action_rms=0.198 ready=1 userCmd=0 kbd=0 raw=0.899,0.047,0.058 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598012.772174767, 78.386000000]: RL policy input vx=0.845 vy=0.006 wz=0.008 action_rms=0.231 ready=1 userCmd=0 kbd=0 raw=0.845,0.006,0.008 grav=-0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598015.907248870, 80.400000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.406 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.00,0.02,-0.98[0m
+[0m[INFO] [1788598018.991129843, 82.402000000]: RL policy input vx=0.242 vy=0.450 wz=1.150 action_rms=0.286 ready=1 userCmd=0 kbd=0 raw=0.242,0.450,1.150 grav=-0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598022.093359902, 84.404000000]: RL policy input vx=0.211 vy=0.450 wz=1.047 action_rms=0.206 ready=1 userCmd=0 kbd=0 raw=0.211,0.450,1.047 grav=0.03,-0.02,-0.98[0m
+[0m[INFO] [1788598025.221383468, 86.416000000]: RL policy input vx=0.655 vy=0.750 wz=0.938 action_rms=0.186 ready=1 userCmd=0 kbd=0 raw=0.655,0.750,0.938 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598028.360214270, 88.422000000]: RL policy input vx=0.827 vy=0.355 wz=0.447 action_rms=0.254 ready=1 userCmd=0 kbd=0 raw=0.827,0.355,0.447 grav=-0.02,0.05,-0.98[0m
+[0m[INFO] [1788598031.576002452, 90.430000000]: RL policy input vx=0.899 vy=0.048 wz=0.059 action_rms=0.167 ready=1 userCmd=0 kbd=0 raw=0.899,0.048,0.059 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598034.793421274, 92.432000000]: RL policy input vx=0.000 vy=0.000 wz=-0.884 action_rms=0.140 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.884 grav=0.04,-0.03,-0.98[0m
+[0m[INFO] [1788598037.951773559, 94.442000000]: RL policy input vx=0.110 vy=-0.450 wz=-1.150 action_rms=0.149 ready=1 userCmd=0 kbd=0 raw=0.110,-0.450,-1.150 grav=0.00,0.01,-0.98[0m
+[0m[INFO] [1788598041.114367741, 96.458000000]: RL policy input vx=0.584 vy=-0.117 wz=-0.218 action_rms=0.185 ready=1 userCmd=0 kbd=0 raw=0.584,-0.117,-0.218 grav=0.07,-0.08,-0.97[0m
+[0m[INFO] [1788598044.308250048, 98.476000000]: RL policy input vx=0.290 vy=0.077 wz=0.286 action_rms=0.233 ready=1 userCmd=0 kbd=0 raw=0.290,0.077,0.286 grav=0.02,0.05,-0.98[0m
+[0m[INFO] [1788598047.446463802, 100.490000000]: RL policy input vx=0.000 vy=0.000 wz=-0.348 action_rms=0.176 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.348 grav=-0.00,0.00,-0.98[0m
+[0m[INFO] [1788598050.635533122, 102.510000000]: RL policy input vx=0.448 vy=0.000 wz=-0.097 action_rms=0.167 ready=1 userCmd=0 kbd=0 raw=0.448,0.000,-0.097 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598053.812874487, 104.512000000]: RL policy input vx=0.449 vy=0.000 wz=-0.081 action_rms=0.262 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.081 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598056.994758978, 106.530000000]: RL policy input vx=0.810 vy=-0.450 wz=-0.558 action_rms=0.156 ready=1 userCmd=0 kbd=0 raw=0.810,-0.450,-0.558 grav=-0.02,-0.02,-0.98[0m
+[0m[INFO] [1788598060.131296585, 108.534000000]: RL policy input vx=2.235 vy=-0.259 wz=-0.127 action_rms=0.417 ready=1 userCmd=0 kbd=0 raw=2.235,-0.259,-0.127 grav=-0.00,-0.04,-0.98[0m
+[0m[INFO] [1788598063.236063120, 110.542000000]: RL policy input vx=2.249 vy=-0.048 wz=-0.023 action_rms=0.449 ready=1 userCmd=0 kbd=0 raw=2.249,-0.048,-0.023 grav=0.01,0.00,-0.98[0m
+[0m[INFO] [1788598066.318196287, 112.542000000]: RL policy input vx=2.241 vy=0.206 wz=0.101 action_rms=0.352 ready=1 userCmd=0 kbd=0 raw=2.241,0.206,0.101 grav=-0.01,-0.04,-0.98[0m
+[0m[INFO] [1788598069.416646033, 114.552000000]: RL policy input vx=0.652 vy=0.676 wz=0.884 action_rms=0.207 ready=1 userCmd=0 kbd=0 raw=0.652,0.676,0.884 grav=0.07,-0.06,-0.98[0m
+[0m[INFO] [1788598072[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598102.581625221, 135.768000000]: Plane tilt guard scaling cmd_vel by 0.89 at tilt 0.155 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+.545265710, 116.552000000]: RL policy input vx=0.000 vy=0.000 wz=0.215 action_rms=0.168 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.215 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598075.716062973, 118.554000000]: RL policy input vx=0.450 vy=0.000 wz=0.025 action_rms=0.155 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.025 grav=0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598078.879174460, 120.558000000]: RL policy input vx=0.889 vy=-0.139 wz=-0.170 action_rms=0.299 ready=1 userCmd=0 kbd=0 raw=0.889,-0.139,-0.170 grav=-0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598081.972645501, 122.566000000]: RL policy input vx=0.900 vy=-0.016 wz=-0.020 action_rms=0.326 ready=1 userCmd=0 kbd=0 raw=0.900,-0.016,-0.020 grav=-0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598085.154969891, 124.586000000]: RL policy input vx=0.871 vy=0.002 wz=0.003 action_rms=0.199 ready=1 userCmd=0 kbd=0 raw=0.871,0.002,0.003 grav=-0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598088.331248349, 126.600000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.319 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.02,0.02,-0.98[0m
+[0m[INFO] [1788598091.455576008, 128.604000000]: RL policy input vx=0.000 vy=0.000 wz=-1.500 action_rms=0.277 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.500 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598094.567953857, 130.612000000]: RL policy input vx=0.866 vy=-0.246 wz=-0.305 action_rms=0.158 ready=1 userCmd=0 kbd=0 raw=0.866,-0.246,-0.305 grav=-0.01,-0.06,-0.98[0m
+[0m[INFO] [1788598097.672091245, 132.622000000]: RL policy input vx=0.592 vy=-0.024 wz=-0.045 action_rms=0.327 ready=1 userCmd=0 kbd=0 raw=0.592,-0.024,-0.045 grav=0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598100.825041442, 134.632000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.335 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=-0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598103.959965430, 136.644000000]: RL policy input vx=1.124 vy=0.387 wz=0.367 action_rms=0.185 ready=1 userCmd=0 kbd=0 raw=1.124,0.387,0.367 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598107.087438131, 138.662000000]: RL policy input vx=0.000 vy=0.000 wz=-0.450 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.450 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598110.228127559, 140.678000000]: RL policy input vx=0.448 vy=0.000 wz=-0.107 action_rms=0.280 ready=1 userCmd=0 kbd=0 raw=0.448,0.000,-0.107 grav=-0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598113.330845865, 142.686000000]: RL policy input vx=0.449 vy=0.000 wz=-0.054 action_rms=0.156 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.054 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598116.467074365, 144.694000000]: RL policy input vx=0.450 vy=0.000 wz=0.046 action_rms=0.260 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.046 grav=0.02,-0.03,-0.98[0m
+[0m[INFO] [1788598119.582347181, 146.698000000]: RL policy input vx=0.450 vy=0.000 wz=-0.007 action_rms=0.156 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.007 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598122.690566665, 148.698000000]: RL policy input vx=0.867 vy=0.241 wz=0.298 action_rms=0.284 ready=1 userCmd=0 kbd=0 raw=0.867,0.241,0.298 grav=-0.00,-0.00,-0.98[0m
+[0m[INFO] [1788598125.823287508, 150.712000000]: RL policy input vx=0.900 vy=0.023 wz=0.028 action_rms=0.176 ready=1 userCmd=0 kbd=0 raw=0.900,0.023,0.028 grav=0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598128.921414720, 152.712000000]: RL policy input vx=0.900 vy=0.002 wz=0.002 action_rms=0.214 ready=1 userCmd=0 kbd=0 raw=0.900,0.002,0.002 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598132.041376912, 154.718000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.400 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=0.00,0.00,-0.98[0m
+[0m[INFO] [1788598135.138960483, 156.722000000]: RL policy input vx=0.000 vy=0.000 wz=1.500 action_rms=0.294 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,1.500 grav=0.02,0.01,-0.98[0m
+[0m[INFO] [1788598138.262972662, 158.724000000]: RL policy input vx=0.867 vy=0.242 wz=0.299 action_rms=0.171 ready=1 userCmd=0 kbd=0 raw=0.867,0.242,0.299 grav=0.00,0.07,-0.98[0m
+[0m[INFO] [1788598141.357990942, 160.724000000]: RL policy input vx=0.500 vy=0.[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598150.842528106, 166.810000000]: Plane tilt guard scaling cmd_vel by 0.89 at tilt 0.155 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598173.139291416, 180.618000000]: Plane tilt guard scaling cmd_vel by 0.97 at tilt 0.144 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+022 wz=0.048 action_rms=0.237 ready=1 userCmd=0 kbd=0 raw=0.500,0.022,0.048 grav=0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598144.486428973, 162.738000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.212 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.02,0.03,-0.98[0m
+[0m[INFO] [1788598147.621115254, 164.756000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.144 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=0.01,0.02,-0.98[0m
+[0m[INFO] [1788598150.770453202, 166.770000000]: RL policy input vx=2.250 vy=-0.018 wz=-0.009 action_rms=0.356 ready=1 userCmd=0 kbd=0 raw=2.250,-0.018,-0.009 grav=-0.09,-0.12,-0.97[0m
+[0m[INFO] [1788598154.073181365, 168.784000000]: RL policy input vx=0.449 vy=0.000 wz=-0.076 action_rms=0.154 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.076 grav=0.01,0.00,-0.98[0m
+[0m[INFO] [1788598157.367051289, 170.802000000]: RL policy input vx=0.450 vy=0.000 wz=-0.040 action_rms=0.281 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.040 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598160.653137987, 172.820000000]: RL policy input vx=0.090 vy=0.450 wz=1.150 action_rms=0.250 ready=1 userCmd=0 kbd=0 raw=0.090,0.450,1.150 grav=0.04,-0.03,-0.98[0m
+[0m[INFO] [1788598163.790636168, 174.836000000]: RL policy input vx=2.225 vy=0.333 wz=0.163 action_rms=0.349 ready=1 userCmd=0 kbd=0 raw=2.225,0.333,0.163 grav=0.01,0.05,-0.98[0m
+[0m[INFO] [1788598167.070574861, 176.854000000]: RL policy input vx=2.250 vy=0.008 wz=0.004 action_rms=0.334 ready=1 userCmd=0 kbd=0 raw=2.250,0.008,0.004 grav=-0.00,0.03,-0.98[0m
+[0m[INFO] [1788598170.315660408, 178.868000000]: RL policy input vx=2.249 vy=-0.067 wz=-0.033 action_rms=0.338 ready=1 userCmd=0 kbd=0 raw=2.249,-0.067,-0.033 grav=0.03,0.01,-0.98[0m
+[0m[INFO] [1788598173.573012151, 180.888000000]: RL policy input vx=2.248 vy=-0.086 wz=-0.042 action_rms=0.351 ready=1 userCmd=0 kbd=0 raw=2.248,-0.086,-0.042 grav=0.02,-0.03,-0.98[0m
+[0m[INFO] [1788598176.777776402, 182.898000000]: RL policy input vx=2.250 vy=-0.025 wz=-0.012 action_rms=0.345 ready=1 userCmd=0 kbd=0 raw=2.250,-0.025,-0.012 grav=0.04,0.02,-0.98[0m
+[0m[INFO] [1788598179.897790808, 184.900000000]: RL policy input vx=0.627 vy=-0.350 wz=-0.500 action_rms=0.248 ready=1 userCmd=0 kbd=0 raw=0.627,-0.350,-0.500 grav=0.05,-0.06,-0.98[0m
+[0m[INFO] [1788598183.134663862, 186.916000000]: RL policy input vx=1.845 vy=-0.130 wz=-0.078 action_rms=0.374 ready=1 userCmd=0 kbd=0 raw=1.845,-0.130,-0.078 grav=-0.00,-0.04,-0.98[0m
+[0m[INFO] [1788598186.265140263, 188.926000000]: RL policy input vx=1.849 vy=0.066 wz=0.039 action_rms=0.412 ready=1 userCmd=0 kbd=0 raw=1.849,0.066,0.039 grav=0.02,-0.05,-0.98[0m
+[0m[INFO] [1788598189.399296195, 190.928000000]: RL policy input vx=0.000 vy=0.000 wz=-1.000 action_rms=0.265 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.000 grav=0.04,0.03,-0.98[0m
+[0m[INFO] [1788598192.647188725, 192.946000000]: RL policy input vx=0.000 vy=0.000 wz=-0.150 action_rms=0.190 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.150 grav=-0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598195.891525277, 194.946000000]: RL policy input vx=0.335 vy=0.000 wz=-0.042 action_rms=0.126 ready=1 userCmd=0 kbd=0 raw=0.335,0.000,-0.042 grav=0.03,-0.04,-0.98[0m
+[0m[INFO] [1788598199.076743478, 196.946000000]: RL policy input vx=0.000 vy=0.000 wz=-0.492 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.492 grav=0.00,0.01,-0.98[0m
+[0m[INFO] [1788598202.218676040, 198.958000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.152 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.00,-0.98[0m
+Switched from RL to fixed stand
+infer_thread退出!
+[33m[WARN] [1788598203.000569704, 199.464000000]: Using one-shot captured-pose FixedStand profile: ramp 0.50 s, settle 0.00 s, ready after 0.50 s + 0.50 s stable, minimum gain 0.75[0m
+[INFO] Using /stand_target_joints param stance.
+[FSM]: state: INIT
+wait for goal.
+Switched from fixed stand to RL
+[INFO] Entered RL /cmd_vel mode.
+[33m[WARN] [1788598204.316680318, 200.306000000]: Using one-shot stair RL takeover profile: blend 0.50 s, zero hold 0.15 s[0m
+cuda::is_available():0
+[WARNING] UNITREE_RL_DEVICE=hybrid selected CUDA for this policy but CUDA is unavailable; using CPU.
+RL inference device: cpu (requested=hybrid, policy=stair)
+[INFO] RL policy activated from preload cache at FixedStand entry boundary: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598240.916098960, 223.798000000]: Using one-shot plane RL takeover profile: blend 0.50 s, zero hold 0.15 s[0m
+[0m[INFO] [1788598205.350218901, 200.972000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.147 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.01,-0.98[0m
+[0m[INFO] [1788598205.350323495, 200.974000000]: RL locomotion_ready latched after 0.67 s takeover and 0.66 s stable hold[0m
+[0m[INFO] [1788598208.488298522, 202.986000000]: RL policy input vx=0.799 vy=-0.056 wz=-0.009 action_rms=0.385 ready=1 userCmd=0 kbd=0 raw=0.799,-0.056,-0.009 grav=-0.41,0.05,-0.89[0m
+[0m[INFO] [1788598211.598305572, 204.988000000]: RL policy input vx=0.617 vy=-0.166 wz=0.031 action_rms=0.280 ready=1 userCmd=0 kbd=0 raw=0.617,-0.166,0.031 grav=-0.39,-0.02,-0.90[0m
+[0m[INFO] [1788598214.726048848, 207.004000000]: RL policy input vx=0.602 vy=-0.213 wz=0.004 action_rms=0.404 ready=1 userCmd=0 kbd=0 raw=0.602,-0.213,0.004 grav=-0.47,-0.02,-0.86[0m
+[0m[INFO] [1788598217.890572289, 209.022000000]: RL policy input vx=0.406 vy=-0.631 wz=-1.099 action_rms=0.174 ready=1 userCmd=0 kbd=0 raw=0.406,-0.631,-1.099 grav=-0.04,-0.01,-0.98[0m
+[0m[INFO] [1788598221.034724853, 211.036000000]: RL policy input vx=0.298 vy=-0.037 wz=-0.135 action_rms=0.171 ready=1 userCmd=0 kbd=0 raw=0.298,-0.037,-0.135 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598224.125771836, 213.044000000]: RL policy input vx=0.000 vy=0.000 wz=-0.568 action_rms=0.159 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.568 grav=-0.03,0.04,-0.98[0m
+[0m[INFO] [1788598227.294981263, 215.064000000]: RL policy input vx=0.000 vy=0.000 wz=-0.240 action_rms=0.197 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.240 grav=-0.03,0.02,-0.98[0m
+[0m[INFO] [1788598230.476558409, 217.074000000]: RL policy input vx=0.557 vy=-0.299 wz=-0.060 action_rms=0.516 ready=1 userCmd=0 kbd=0 raw=0.557,-0.299,-0.060 grav=-0.28,-0.00,-0.94[0m
+[0m[INFO] [1788598233.615298652, 219.084000000]: RL policy input vx=0.582 vy=0.248 wz=0.029 action_rms=0.372 ready=1 userCmd=0 kbd=0 raw=0.582,0.248,0.029 grav=-0.44,-0.00,-0.87[0m
+[0m[INFO] [1788598236.738168102, 221.092000000]: RL policy input vx=0.613 vy=-0.157 wz=0.025 action_rms=0.514 ready=1 userCmd=0 kbd=0 raw=0.613,-0.157,0.025 grav=-0.43,-0.03,-0.88[0m
+[0m[INFO] [1788598239.838392791, 223.102000000]: RL policy input vx=0.799 vy=0.038 wz=0.017 action_rms=0.252 ready=1 userCmd=8 kbd=0 raw=0.799,0.038,0.017 grav=-0.19,-0.00,-0.96[0m
+cuda::is_available():0
+RL inference device: cpu (requested=hybrid, policy=plane)
+[INFO] RL policy hot-switched from preload cache: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+[FSM]: state: INIT
+wait for goal.
+[INFO] [1788598201.535892, 198.520000]: Robot is already 0.03 m from the pre-riser pose; skipping the corridor/side legs.
+[INFO] [1788598201.538275, 198.520000]: Pre-ascent residual heading error -0.115 rad (visual_depth=False, bearing=none).
+[INFO] [1788598202.437383, 199.100000]: Flight-A body settled for 0.37 s; waiting for joint RMS capture window <= 0.180 (current=0.412).
+[INFO] [1788598202.561415, 199.180000]: Pre-ascent stand target set from flight-A pre-reload capture entry sample
+[INFO] [1788598202.574153, 199.188000]: Flight-A plane gait settled at joint RMS 0.120; holding FixedStand for at least 0.1 s at snapshot pose before queued stair-policy entry.
+[INFO] [1788598204.034477, 200.124000]: Flight-A FixedStand readiness gate complete; queued the stair policy for State_RL entry and retaining stand ownership for 0.25 s.
+[INFO] [1788598204.307535, 200.302000]: Flight-A policy request has been queued under FixedStand; requesting RL so State_RL loads it before inference starts.
+[INFO] [1788598205.368796, 200.984000]: Fresh RL readiness confirmed after the flight-A FixedStand boundary; starting the climb ramp.
+[INFO] [1788598205.389865, 201.000000]: Flight-A fresh RL readiness observed; ascent clocks reset and 1.2 s climb ramp started.
+[INFO] [1788598205.391148, 201.000000]: STPUB phase=STAIR_ASCENT world=(0.000,0.001,-0.043) body=(0.001,-0.000,-0.043) truth_z=0.310 pose=0.31049424469185605
+[INFO] [1788598206.975463, 202.020000]: STPUB phase=STAIR_ASCENT world=(0.000,0.800,-0.035) body=(0.796,-0.079,-0.035) truth_z=0.343 pose=0.3392064210093381
+[INFO] [1788598208.570060, 203.040000]: STPUB phase=STAIR_ASCENT world=(0.033,0.800,-0.008) body=(0.799,-0.051,-0.008) truth_z=0.546 pose=0.5470782296400987
+[INFO] [1788598210.164567, 204.060000]: STPUB phase=STAIR_ASCENT world=(0.041,0.800,0.024) body=(0.801,0.013,0.024) truth_z=0.774 pose=0.7789463103121751
+[INFO] [1788598211.739878, 205.080000]: STPUB phase=STAIR_ASCENT world=(0.220,0.600,0.030) body=(0.616,-0.169,0.030) truth_z=0.999 pose=0.998884736266475
+[INFO] [1788598213.322856, 206.100000]: STPUB phase=STAIR_ASCENT world=(-0.220,0.600,0.056) body=(0.557,0.313,0.056) truth_z=1.197 pose=1.1993646896639845
+[INFO] [1788598214.907249, 207.120000]: STPUB phase=STAIR_ASCENT world=(0.035,0.800,0.008) body=(0.801,-0.018,0.008) truth_z=1.390 pose=1.3907741107415317
+[INFO] [1788598216.508986, 208.140000]: STPUB phase=STAIR_ASCENT world=(0.053,0.800,0.011) body=(0.801,-0.028,0.011) truth_z=1.579 pose=1.5786786858820143
+[INFO] [1788598217.032693, 208.480000]: Intermediate landing entered at y=4.77 m; starting moving turn.
+[INFO] [1788598218.100176, 209.160000]: STPUB phase=STAIR_LANDING_TURN world=(0.750,0.000,-0.964) body=(0.480,-0.576,-0.964) truth_z=1.608 pose=1.607180389850545
+[INFO] [1788598219.705057, 210.180000]: STPUB phase=STAIR_LANDING_TURN world=(0.661,0.000,-0.310) body=(0.635,-0.184,-0.310) truth_z=1.616 pose=1.6162416834326847
+[INFO] [1788598221.286189, 211.200000]: STPUB phase=STAIR_LANDING_TURN world=(0.300,0.000,-0.115) body=(0.298,-0.031,-0.115) truth_z=1.613 pose=1.6134061202624377
+[INFO] [1788598222.856591, 212.220000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-1.200) body=(0.000,0.000,-1.200) truth_z=1.616 pose=1.6158880234055404
+[INFO] [1788598224.431346, 213.240000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-0.479) body=(0.000,0.000,-0.479) truth_z=1.624 pose=1.6239141284486054
+[INFO] [1788598226.027959, 214.260000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-0.252) body=(0.000,0.000,-0.252) truth_z=1.632 pose=1.6316743092045194
+[INFO] [1788598227.643062, 215.280000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-0.240) body=(0.000,0.000,-0.240) truth_z=1.638 pose=1.6383517714061815
+[INFO] [1788598228.464578, 215.800000]: Flight-B entry aligned: x error=-0.043 m, heading error=-0.148 rad.
+[INFO] [1788598228.466542, 215.800000]: Flight-B entry joints saved (12 dofs) -> /home/quinn/0904/results/official_gui_rtf065_s20260820_20260905_164403/flight_b_entry_joints_0.json
+[INFO] [1788598228.495171, 215.820000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=1.637919404033989 truth_z=1.637919404033989
+[INFO] [1788598228.496507, 215.820000]: Pre-ascent RL settle: holding zero command until motion is stable for 0.6 s before FixedStand.
+[INFO] [1788598228.497477, 215.820000]: Pre-ascent RL settle active: stable 0.00/0.60 s.
+[INFO] [1788598229.386966, 216.380000]: Pre-ascent RL motion settled for 0.61 s; settle-only gate complete (FixedStand disabled).
+[INFO] [1788598229.417903, 216.400000]: STPUB phase=STAIR_ASCENT_B world=(-0.026,-0.800,-0.064) body=(0.782,-0.171,-0.064) truth_z=1.622 pose=1.6219388853095098
+[INFO] [1788598230.112023, 216.840000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=1.6404122624810933 truth_z=1.6404122624810933
+[INFO] [1788598231.026658, 217.420000]: STPUB phase=STAIR_ASCENT_B world=(0.000,-0.600,-0.055) body=(0.593,-0.094,-0.055) truth_z=1.731 pose=1.7305950884655712
+[INFO] [1788598231.713784, 217.860000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=1.8406559455947085 truth_z=1.8345277587014237
+[INFO] [1788598232.622597, 218.440000]: STPUB phase=STAIR_ASCENT_B world=(0.200,-0.600,0.012) body=(0.593,0.221,0.012) truth_z=1.963 pose=1.9687108753410263
+[INFO] [1788598233.300020, 218.880000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=2.0612983327177976 truth_z=2.057246881738685
+[INFO] [1788598234.200809, 219.460000]: STPUB phase=STAIR_ASCENT_B world=(-0.200,-0.600,0.023) body=(0.612,-0.160,0.023) truth_z=2.185 pose=2.1859925318814604
+[INFO] [1788598234.886849, 219.900000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=2.29583499879445 truth_z=2.2953711568104977
+[INFO] [1788598235.788109, 220.480000]: STPUB phase=STAIR_ASCENT_B world=(0.000,-0.800,0.015) body=(0.799,0.034,0.015) truth_z=2.429 pose=2.4355585068008
+[INFO] [1788598236.470144, 220.920000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=2.5162350075979543 truth_z=2.5109844850349803
+[INFO] [1788598237.363255, 221.500000]: STPUB phase=STAIR_ASCENT_B world=(0.000,-0.800,0.046) body=(0.793,0.104,0.046) truth_z=2.639 pose=2.6391168638588534
+[INFO] [1788598238.042734, 221.940000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=2.7413816091561176 truth_z=2.7413816091561176
+[INFO] [1788598238.941174, 222.520000]: STPUB phase=STAIR_ASCENT_B world=(0.000,-0.800,0.026) body=(0.798,0.060,0.026) truth_z=2.832 pose=2.835222055827078
+[INFO] [1788598239.618929, 222.960000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=0.310 profile=True heading=-1.571 pose_z=2.8935821191624846 truth_z=2.893302922682357
+[INFO] [1788598240.300756, 223.400000]: Upper landing entered: gain=2.59 m, clearance=0.01 m; stabilizing for 0.5 s.
+[INFO] [1788598240.826250, 223.740000]: Floor-2 landing confirmed after two flights: gain=2.60 m clearance=0.13 m.
+[INFO] [1788598242.015104, 224.508000]: Plane policy acknowledged on the upper landing; releasing stair controller ownership.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598298.424356278, 260.420000000]: Plane tilt guard scaling cmd_vel by 0.93 at tilt 0.149 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598300.029041243, 261.454000000]: Plane tilt guard scaling cmd_vel by 0.95 at tilt 0.147 rad[0m
+[33m[WARN] [1788598300.126436976, 261.518000000]: Plane tilt guard holding zero command at 0.304 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598302.095560281, 262.784000000]: Plane tilt guard scaling cmd_vel by 0.93 at tilt 0.149 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788598241.943874058, 224.462000000]: RL locomotion_ready latched after 0.67 s takeover and 0.41 s stable hold[0m
+[0m[INFO] [1788598242.936927213, 225.108000000]: RL policy input vx=0.000 vy=0.000 wz=0.982 action_rms=0.148 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.982 grav=0.00,-0.00,-0.98[0m
+[0m[INFO] [1788598246.065432868, 227.126000000]: RL policy input vx=0.000 vy=0.000 wz=0.216 action_rms=0.144 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.216 grav=0.02,-0.02,-0.98[0m
+[0m[INFO] [1788598249.221032968, 229.146000000]: RL policy input vx=0.000 vy=0.000 wz=1.150 action_rms=0.180 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,1.150 grav=0.03,-0.05,-0.98[0m
+[0m[INFO] [1788598252.389658159, 231.162000000]: RL policy input vx=0.481 vy=0.000 wz=0.147 action_rms=0.174 ready=1 userCmd=0 kbd=0 raw=0.481,0.000,0.147 grav=0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598255.578432753, 233.166000000]: RL policy input vx=2.250 vy=0.000 wz=0.001 action_rms=0.259 ready=1 userCmd=0 kbd=0 raw=2.250,0.000,0.001 grav=0.02,0.00,-0.98[0m
+[0m[INFO] [1788598258.805195610, 235.178000000]: RL policy input vx=2.250 vy=0.000 wz=0.010 action_rms=0.358 ready=1 userCmd=0 kbd=0 raw=2.250,0.000,0.010 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598262.021227391, 237.182000000]: RL policy input vx=2.250 vy=0.000 wz=0.006 action_rms=0.302 ready=1 userCmd=0 kbd=0 raw=2.250,0.000,0.006 grav=0.02,-0.03,-0.98[0m
+[0m[INFO] [1788598265.256952043, 239.198000000]: RL policy input vx=0.526 vy=0.738 wz=1.047 action_rms=0.234 ready=1 userCmd=0 kbd=0 raw=0.526,0.738,1.047 grav=0.05,-0.11,-0.97[0m
+[0m[INFO] [1788598268.403609536, 241.206000000]: RL policy input vx=0.000 vy=0.000 wz=0.214 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.214 grav=0.02,-0.01,-0.98[0m
+[0m[INFO] [1788598271.576154223, 243.218000000]: RL policy input vx=0.450 vy=0.000 wz=0.026 action_rms=0.299 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.026 grav=0.00,-0.03,-0.98[0m
+[0m[INFO] [1788598274.758475617, 245.232000000]: RL policy input vx=0.887 vy=-0.150 wz=-0.185 action_rms=0.183 ready=1 userCmd=0 kbd=0 raw=0.887,-0.150,-0.185 grav=-0.02,0.01,-0.98[0m
+[0m[INFO] [1788598277.911921066, 247.240000000]: RL policy input vx=0.900 vy=-0.015 wz=-0.018 action_rms=0.232 ready=1 userCmd=0 kbd=0 raw=0.900,-0.015,-0.018 grav=-0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598281.057572372, 249.254000000]: RL policy input vx=0.900 vy=-0.006 wz=-0.008 action_rms=0.310 ready=1 userCmd=0 kbd=0 raw=0.900,-0.006,-0.008 grav=-0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598284.177218605, 251.258000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.214 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.02,0.01,-0.98[0m
+[0m[INFO] [1788598287.338589880, 253.270000000]: RL policy input vx=0.000 vy=0.000 wz=-1.500 action_rms=0.287 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.500 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598290.473708523, 255.284000000]: RL policy input vx=0.866 vy=-0.244 wz=-0.302 action_rms=0.159 ready=1 userCmd=0 kbd=0 raw=0.866,-0.244,-0.302 grav=-0.01,-0.06,-0.98[0m
+[0m[INFO] [1788598293.563652646, 257.288000000]: RL policy input vx=0.565 vy=-0.029 wz=-0.057 action_rms=0.322 ready=1 userCmd=0 kbd=0 raw=0.565,-0.029,-0.057 grav=-0.00,-0.03,-0.98[0m
+[0m[INFO] [1788598296.682275243, 259.302000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.348 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=-0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598299.806588776, 261.312000000]: RL policy input vx=2.066 vy=0.691 wz=0.355 action_rms=0.333 ready=1 userCmd=0 kbd=0 raw=2.066,0.691,0.355 grav=-0.03,0.04,-0.98[0m
+[0m[INFO] [1788598300.836020210, 261.974000000]: Plane tilt guard released at 0.090 rad[0m
+[0m[INFO] [1788598302.935193420, 263.324000000]: RL policy input vx=0.565 vy=0.750 wz=1.018 action_rms=0.239 ready=1 userCmd=0 kbd=0 raw=0.565,0.750,1.018 grav=-0.09,-0.02,-0.98[0m
+[0m[INFO] [1788598306.047084683, 265.330000000]: RL policy input vx=0.339 vy=0.558 wz=1.132 action_rms=0.180 ready=1 userCmd=0 kbd=0 raw=0.339,0.558,1.132 grav=-0.07,0.05,-0.98[0m
+[0m[INFO] [1788598309.16[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+2090306, 267.342000000]: RL policy input vx=0.371 vy=0.120 wz=0.344 action_rms=0.133 ready=1 userCmd=0 kbd=0 raw=0.371,0.120,0.344 grav=0.04,0.03,-0.98[0m
+[0m[INFO] [1788598312.282100169, 269.346000000]: RL policy input vx=0.447 vy=0.000 wz=-0.137 action_rms=0.188 ready=1 userCmd=0 kbd=0 raw=0.447,0.000,-0.137 grav=-0.03,0.01,-0.98[0m
+[0m[INFO] [1788598315.379227939, 271.348000000]: RL policy input vx=0.449 vy=0.000 wz=-0.057 action_rms=0.298 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.057 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598318.496145752, 273.350000000]: RL policy input vx=0.770 vy=0.000 wz=0.000 action_rms=0.196 ready=1 userCmd=0 kbd=0 raw=0.770,0.000,0.000 grav=0.00,0.00,-0.98[0m
+[0m[INFO] [1788598321.633312061, 275.368000000]: RL policy input vx=0.450 vy=0.000 wz=0.012 action_rms=0.213 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.012 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598324.745364306, 277.368000000]: RL policy input vx=0.425 vy=0.000 wz=-0.029 action_rms=0.160 ready=1 userCmd=0 kbd=0 raw=0.425,0.000,-0.029 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598327.848596675, 279.374000000]: RL policy input vx=1.635 vy=0.466 wz=0.304 action_rms=0.203 ready=1 userCmd=0 kbd=0 raw=1.635,0.466,0.304 grav=-0.02,-0.02,-0.98[0m
+[0m[INFO] [1788598330.954248134, 281.388000000]: RL policy input vx=0.864 vy=0.251 wz=0.311 action_rms=0.249 ready=1 userCmd=0 kbd=0 raw=0.864,0.251,0.311 grav=-0.01,0.01,-0.98[0m
+[0m[INFO] [1788598334.071127436, 283.406000000]: RL policy input vx=0.899 vy=0.032 wz=0.040 action_rms=0.169 ready=1 userCmd=0 kbd=0 raw=0.899,0.032,0.040 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598337.179103437, 285.412000000]: RL policy input vx=0.362 vy=-0.002 wz=-0.006 action_rms=0.288 ready=1 userCmd=0 kbd=0 raw=0.362,-0.002,-0.006 grav=0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598340.285795175, 287.424000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.187 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.03,0.01,-0.98[0m
+[0m[INFO] [1788598343.381424958, 289.424000000]: RL policy input vx=0.930 vy=0.750 wz=0.747 action_rms=0.210 ready=1 userCmd=0 kbd=0 raw=0.930,0.750,0.747 grav=0.01,0.02,-0.98[0m
+[0m[INFO] [1788598346.503120668, 291.440000000]: RL policy input vx=0.816 vy=0.750 wz=0.817 action_rms=0.184 ready=1 userCmd=0 kbd=0 raw=0.816,0.750,0.817 grav=0.02,0.02,-0.98[0m
+[0m[INFO] [1788598349.607553091, 293.442000000]: RL policy input vx=0.583 vy=0.323 wz=0.557 action_rms=0.154 ready=1 userCmd=0 kbd=0 raw=0.583,0.323,0.557 grav=0.01,0.10,-0.98[0m
+[0m[INFO] [1788598352.714404748, 295.454000000]: RL policy input vx=0.878 vy=0.199 wz=0.245 action_rms=0.157 ready=1 userCmd=0 kbd=0 raw=0.878,0.199,0.245 grav=0.00,0.06,-0.98[0m
+[0m[INFO] [1788598355.851231833, 297.470000000]: RL policy input vx=0.899 vy=0.030 wz=0.037 action_rms=0.332 ready=1 userCmd=0 kbd=0 raw=0.899,0.030,0.037 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598358.971388495, 299.474000000]: RL policy input vx=0.000 vy=0.000 wz=-2.720 action_rms=0.183 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.720 grav=0.02,0.01,-0.98[0m
+[0m[INFO] [1788598362.083211583, 301.480000000]: RL policy input vx=0.797 vy=-0.750 wz=-0.830 action_rms=0.208 ready=1 userCmd=0 kbd=0 raw=0.797,-0.750,-0.830 grav=-0.03,-0.02,-0.98[0m
+[0m[INFO] [1788598365.177881669, 303.482000000]: RL policy input vx=0.290 vy=-0.078 wz=-0.290 action_rms=0.210 ready=1 userCmd=0 kbd=0 raw=0.290,-0.078,-0.290 grav=0.04,-0.02,-0.98[0m
+[0m[INFO] [1788598368.267284360, 305.486000000]: RL policy input vx=0.000 vy=0.000 wz=-0.450 action_rms=0.142 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.450 grav=0.04,-0.01,-0.98[0m
+[0m[INFO] [1788598371.374078482, 307.502000000]: RL policy input vx=0.000 vy=0.000 wz=-0.256 action_rms=0.144 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.256 grav=-0.00,0.00,-0.98[0m
+[0m[INFO] [1788598374.463165493, 309.502000000]: RL policy input vx=0.449 vy=0.000 wz=-0.074 action_rms=0.247 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.074 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598377.598276543, 311.520000000]: RL policy input vx=0.299 vy=0.000 wz=-0.100 a[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598383.374994366, 315.254000000]: Plane tilt guard scaling cmd_vel by 0.99 at tilt 0.141 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598387.345677816, 317.830000000]: Plane tilt guard scaling cmd_vel by 0.97 at tilt 0.143 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598426.245518083, 342.964000000]: Plane tilt guard scaling cmd_vel by 0.86 at tilt 0.159 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+ction_rms=0.154 ready=1 userCmd=0 kbd=0 raw=0.299,0.000,-0.100 grav=0.02,-0.02,-0.98[0m
+[0m[INFO] [1788598380.701296049, 313.530000000]: RL policy input vx=1.229 vy=-0.450 wz=-0.386 action_rms=0.408 ready=1 userCmd=0 kbd=0 raw=1.229,-0.450,-0.386 grav=-0.04,-0.04,-0.98[0m
+[0m[INFO] [1788598383.825269924, 315.546000000]: RL policy input vx=2.240 vy=-0.213 wz=-0.104 action_rms=0.361 ready=1 userCmd=0 kbd=0 raw=2.240,-0.213,-0.104 grav=0.02,-0.04,-0.98[0m
+[0m[INFO] [1788598386.928315695, 317.560000000]: RL policy input vx=2.250 vy=0.031 wz=0.015 action_rms=0.342 ready=1 userCmd=0 kbd=0 raw=2.250,0.031,0.015 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598390.028472753, 319.572000000]: RL policy input vx=2.250 vy=0.018 wz=0.009 action_rms=0.424 ready=1 userCmd=0 kbd=0 raw=2.250,0.018,0.009 grav=-0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598393.115162713, 321.574000000]: RL policy input vx=0.474 vy=0.387 wz=0.754 action_rms=0.290 ready=1 userCmd=0 kbd=0 raw=0.474,0.387,0.754 grav=0.02,0.01,-0.98[0m
+[0m[INFO] [1788598396.224618412, 323.582000000]: RL policy input vx=0.446 vy=0.000 wz=0.149 action_rms=0.165 ready=1 userCmd=0 kbd=0 raw=0.446,0.000,0.149 grav=0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598399.365849465, 325.602000000]: RL policy input vx=0.450 vy=0.000 wz=0.018 action_rms=0.283 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.018 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598402.504825188, 327.620000000]: RL policy input vx=0.831 vy=-0.346 wz=-0.434 action_rms=0.148 ready=1 userCmd=0 kbd=0 raw=0.831,-0.346,-0.434 grav=-0.02,-0.00,-0.98[0m
+[0m[INFO] [1788598405.617515082, 329.628000000]: RL policy input vx=0.899 vy=-0.035 wz=-0.043 action_rms=0.325 ready=1 userCmd=0 kbd=0 raw=0.899,-0.035,-0.043 grav=-0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598408.708033013, 331.636000000]: RL policy input vx=0.900 vy=-0.012 wz=-0.014 action_rms=0.181 ready=1 userCmd=0 kbd=0 raw=0.900,-0.012,-0.014 grav=0.00,-0.03,-0.98[0m
+[0m[INFO] [1788598411.802331453, 333.640000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.140 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598414.925268401, 335.644000000]: RL policy input vx=0.000 vy=0.000 wz=-1.086 action_rms=0.168 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.086 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598418.040514894, 337.654000000]: RL policy input vx=0.861 vy=-0.263 wz=-0.327 action_rms=0.221 ready=1 userCmd=0 kbd=0 raw=0.861,-0.263,-0.327 grav=-0.01,-0.08,-0.98[0m
+[0m[INFO] [1788598421.141242426, 339.664000000]: RL policy input vx=0.450 vy=-0.026 wz=-0.064 action_rms=0.307 ready=1 userCmd=0 kbd=0 raw=0.450,-0.026,-0.064 grav=0.01,-0.04,-0.98[0m
+[0m[INFO] [1788598424.261737162, 341.678000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.365 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598427.396706864, 343.688000000]: RL policy input vx=0.561 vy=0.002 wz=0.003 action_rms=0.318 ready=1 userCmd=0 kbd=0 raw=0.561,0.002,0.003 grav=0.05,-0.05,-0.98[0m
+[0m[INFO] [1788598430.548603762, 345.696000000]: RL policy input vx=0.449 vy=0.000 wz=-0.056 action_rms=0.251 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.056 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598433.677457268, 347.698000000]: RL policy input vx=0.359 vy=0.000 wz=-0.069 action_rms=0.154 ready=1 userCmd=0 kbd=0 raw=0.359,0.000,-0.069 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598436.834558629, 349.704000000]: RL policy input vx=0.450 vy=0.000 wz=0.015 action_rms=0.297 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.015 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598439.994381923, 351.716000000]: RL policy input vx=0.450 vy=0.000 wz=-0.020 action_rms=0.155 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.020 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598443.192608032, 353.732000000]: RL policy input vx=0.892 vy=0.123 wz=0.150 action_rms=0.201 ready=1 userCmd=0 kbd=0 raw=0.892,0.123,0.150 grav=-0.00,0.01,-0.98[0m
+[0m[INFO] [1788598446.306862989, 355.732000000]: RL policy input vx=0.900 vy=0.016 wz=0.019 action_rms=0.234 ready=1 userCmd=0 kbd=0 raw=0.900,[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598491.868230758, 384.730000000]: Plane tilt guard scaling cmd_vel by 0.86 at tilt 0.158 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598495.186547260, 386.836000000]: Plane tilt guard scaling cmd_vel by 1.00 at tilt 0.140 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+0.016,0.019 grav=-0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598449.466126484, 357.744000000]: RL policy input vx=0.332 vy=-0.007 wz=-0.022 action_rms=0.229 ready=1 userCmd=0 kbd=0 raw=0.332,-0.007,-0.022 grav=0.02,-0.03,-0.98[0m
+[0m[INFO] [1788598452.593723606, 359.756000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.405 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598455.683239283, 361.760000000]: RL policy input vx=0.000 vy=0.000 wz=1.482 action_rms=0.311 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,1.482 grav=0.00,0.00,-0.98[0m
+[0m[INFO] [1788598458.806703966, 363.770000000]: RL policy input vx=0.890 vy=0.132 wz=0.162 action_rms=0.276 ready=1 userCmd=0 kbd=0 raw=0.890,0.132,0.162 grav=-0.00,0.03,-0.98[0m
+[0m[INFO] [1788598461.913047588, 365.772000000]: RL policy input vx=0.000 vy=0.000 wz=0.887 action_rms=0.177 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.887 grav=0.03,-0.02,-0.98[0m
+[0m[INFO] [1788598465.044186085, 367.788000000]: RL policy input vx=0.800 vy=0.750 wz=1.287 action_rms=0.208 ready=1 userCmd=0 kbd=0 raw=0.800,0.750,1.287 grav=-0.02,-0.03,-0.98[0m
+[0m[INFO] [1788598468.215139767, 369.798000000]: RL policy input vx=0.297 vy=-0.045 wz=-0.165 action_rms=0.158 ready=1 userCmd=0 kbd=0 raw=0.297,-0.045,-0.165 grav=0.04,-0.02,-0.98[0m
+[0m[INFO] [1788598471.360134731, 371.802000000]: RL policy input vx=0.449 vy=0.000 wz=0.062 action_rms=0.156 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,0.062 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598474.514615481, 373.804000000]: RL policy input vx=0.450 vy=0.000 wz=-0.002 action_rms=0.301 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.002 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598477.680591975, 375.820000000]: RL policy input vx=0.726 vy=0.750 wz=0.882 action_rms=0.277 ready=1 userCmd=0 kbd=0 raw=0.726,0.750,0.882 grav=0.01,0.02,-0.98[0m
+[0m[INFO] [1788598480.860558823, 377.826000000]: RL policy input vx=2.243 vy=0.176 wz=0.086 action_rms=0.415 ready=1 userCmd=0 kbd=0 raw=2.243,0.176,0.086 grav=0.01,0.03,-0.98[0m
+[0m[INFO] [1788598484.090899232, 379.844000000]: RL policy input vx=2.249 vy=0.048 wz=0.023 action_rms=0.292 ready=1 userCmd=0 kbd=0 raw=2.249,0.048,0.023 grav=0.03,-0.03,-0.98[0m
+[0m[INFO] [1788598487.308011701, 381.850000000]: RL policy input vx=2.250 vy=0.040 wz=0.020 action_rms=0.345 ready=1 userCmd=0 kbd=0 raw=2.250,0.040,0.020 grav=0.04,-0.00,-0.98[0m
+[0m[INFO] [1788598490.477796606, 383.862000000]: RL policy input vx=2.245 vy=0.150 wz=0.073 action_rms=0.445 ready=1 userCmd=0 kbd=0 raw=2.245,0.150,0.073 grav=0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598493.647088308, 385.864000000]: RL policy input vx=2.243 vy=0.182 wz=0.089 action_rms=0.315 ready=1 userCmd=0 kbd=0 raw=2.243,0.182,0.089 grav=0.05,0.02,-0.98[0m
+[0m[INFO] [1788598496.797364934, 387.866000000]: RL policy input vx=1.825 vy=-0.304 wz=-0.182 action_rms=0.338 ready=1 userCmd=0 kbd=0 raw=1.825,-0.304,-0.182 grav=-0.05,-0.06,-0.98[0m
+[0m[INFO] [1788598499.936588629, 389.872000000]: RL policy input vx=1.849 vy=-0.052 wz=-0.031 action_rms=0.378 ready=1 userCmd=0 kbd=0 raw=1.849,-0.052,-0.031 grav=-0.01,-0.09,-0.98[0m
+[0m[INFO] [1788598503.062064445, 391.884000000]: RL policy input vx=1.225 vy=0.074 wz=0.068 action_rms=0.391 ready=1 userCmd=0 kbd=0 raw=1.225,0.074,0.068 grav=-0.02,-0.07,-0.98[0m
+[0m[INFO] [1788598506.180840987, 393.894000000]: RL policy input vx=0.000 vy=0.000 wz=-0.435 action_rms=0.161 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.435 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598509.289918888, 395.900000000]: RL policy input vx=1.421 vy=0.000 wz=-0.120 action_rms=0.258 ready=1 userCmd=0 kbd=0 raw=1.421,0.000,-0.120 grav=-0.03,0.09,-0.98[0m
+[0m[INFO] [1788598512.406850485, 397.908000000]: RL policy input vx=0.732 vy=0.000 wz=-0.040 action_rms=0.170 ready=1 userCmd=0 kbd=0 raw=0.732,0.000,-0.040 grav=0.02,-0.05,-0.98[0m
+[0m[INFO] [1788598515.520764157, 399.912000000]: RL policy input vx=0.000 vy=0.000 wz=-0.604 action_rms=0.142 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.604 grav=0.00,0.01,-0.98[0m
+[0m[INFO] [1788598518.6736[FSM]: state: INIT
+wait for goal.
+02951, 401.912000000]: RL policy input vx=0.000 vy=0.000 wz=-0.220 action_rms=0.145 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.220 grav=-0.00,-0.00,-0.98[0m
+Switched from RL to fixed stand
+infer_thread退出!
+[33m[WARN] [1788598519.590020977, 402.488000000]: Using one-shot captured-pose FixedStand profile: ramp 0.50 s, settle 0.00 s, ready after 0.50 s + 0.50 s stable, minimum gain 0.75[0m
+[INFO] Using /stand_target_joints param stance.
+[FSM]: state: INIT
+wait for goal.
+Switched from fixed stand to RL
+[INFO] Entered RL /cmd_vel mode.
+[33m[WARN] [1788598520.894259240, 403.310000000]: Using one-shot stair RL takeover profile: blend 0.50 s, zero hold 0.15 s[0m
+cuda::is_available():0
+[WARNING] UNITREE_RL_DEVICE=hybrid selected CUDA for this policy but CUDA is unavailable; using CPU.
+RL inference device: cpu (requested=hybrid, policy=stair)
+[INFO] RL policy activated from preload cache at FixedStand entry boundary: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598555.511724215, 425.632000000]: Using one-shot plane RL takeover profile: blend 0.50 s, zero hold 0.15 s[0m
+[0m[INFO] [1788598521.871699822, 403.926000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.148 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.01,0.02,-0.98[0m
+[0m[INFO] [1788598521.931504044, 403.964000000]: RL locomotion_ready latched after 0.66 s takeover and 0.65 s stable hold[0m
+[0m[INFO] [1788598525.042367212, 405.944000000]: RL policy input vx=0.800 vy=-0.040 wz=-0.004 action_rms=0.427 ready=1 userCmd=0 kbd=0 raw=0.800,-0.040,-0.004 grav=-0.43,0.03,-0.88[0m
+[0m[INFO] [1788598528.154014280, 407.954000000]: RL policy input vx=0.799 vy=0.048 wz=0.021 action_rms=0.336 ready=1 userCmd=0 kbd=0 raw=0.799,0.048,0.021 grav=-0.31,-0.14,-0.92[0m
+[0m[INFO] [1788598531.275992421, 409.964000000]: RL policy input vx=0.797 vy=0.070 wz=0.031 action_rms=0.426 ready=1 userCmd=0 kbd=0 raw=0.797,0.070,0.031 grav=-0.43,0.05,-0.88[0m
+[0m[INFO] [1788598534.390817653, 411.976000000]: RL policy input vx=0.632 vy=-0.403 wz=-0.624 action_rms=0.153 ready=1 userCmd=0 kbd=0 raw=0.632,-0.403,-0.624 grav=0.02,-0.05,-0.98[0m
+[0m[INFO] [1788598537.511257384, 413.986000000]: RL policy input vx=0.299 vy=-0.026 wz=-0.094 action_rms=0.159 ready=1 userCmd=0 kbd=0 raw=0.299,-0.026,-0.094 grav=-0.01,0.01,-0.98[0m
+[0m[INFO] [1788598540.620757098, 415.994000000]: RL policy input vx=0.000 vy=0.000 wz=-0.359 action_rms=0.166 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.359 grav=-0.03,0.02,-0.98[0m
+[0m[INFO] [1788598543.739354029, 418.004000000]: RL policy input vx=0.781 vy=-0.174 wz=-0.066 action_rms=0.223 ready=1 userCmd=0 kbd=0 raw=0.781,-0.174,-0.066 grav=-0.04,-0.04,-0.98[0m
+[0m[INFO] [1788598546.863133172, 420.024000000]: RL policy input vx=0.589 vy=0.231 wz=0.018 action_rms=0.376 ready=1 userCmd=0 kbd=0 raw=0.589,0.231,0.018 grav=-0.40,-0.01,-0.89[0m
+[0m[INFO] [1788598549.967589679, 422.040000000]: RL policy input vx=0.570 vy=0.274 wz=0.044 action_rms=0.656 ready=1 userCmd=0 kbd=0 raw=0.570,0.274,0.044 grav=-0.35,-0.04,-0.92[0m
+[0m[INFO] [1788598553.073016598, 424.058000000]: RL policy input vx=0.588 vy=0.121 wz=0.071 action_rms=0.562 ready=1 userCmd=0 kbd=0 raw=0.588,0.121,0.071 grav=-0.38,-0.02,-0.90[0m
+cuda::is_available():0
+RL inference device: cpu (requested=hybrid, policy=plane)
+[INFO] RL policy hot-switched from preload cache: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+[FSM]: state: INIT
+wait for goal.
+[INFO] [1788598518.202353, 401.612000]: Floor-2 stair controller armed by SECOND_FLOOR_EXPLORATION_COMPLETE.
+[INFO] [1788598518.213055, 401.620000]: Robot is already 0.02 m from the pre-riser pose; skipping the corridor/side legs.
+[INFO] [1788598518.214440, 401.620000]: Pre-ascent residual heading error -0.117 rad (visual_depth=False, bearing=none).
+[INFO] [1788598519.136314, 402.200000]: Flight-A body settled for 0.35 s; waiting for joint RMS capture window <= 0.180 (current=0.417).
+[INFO] [1788598519.176380, 402.220000]: Pre-ascent stand target set from flight-A pre-reload capture entry sample
+[INFO] [1788598519.181104, 402.224000]: Flight-A plane gait settled at joint RMS 0.141; holding FixedStand for at least 0.1 s at snapshot pose before queued stair-policy entry.
+[INFO] [1788598520.613190, 403.126000]: Flight-A FixedStand readiness gate complete; queued the stair policy for State_RL entry and retaining stand ownership for 0.25 s.
+[INFO] [1788598520.884466, 403.304000]: Flight-A policy request has been queued under FixedStand; requesting RL so State_RL loads it before inference starts.
+[INFO] [1788598521.955634, 403.980000]: Fresh RL readiness confirmed after the flight-A FixedStand boundary; starting the climb ramp.
+[INFO] [1788598521.984034, 404.000000]: Flight-A fresh RL readiness observed; ascent clocks reset and 1.2 s climb ramp started.
+[INFO] [1788598521.985624, 404.000000]: STPUB phase=STAIR_ASCENT world=(0.000,0.001,-0.031) body=(0.001,-0.000,-0.031) truth_z=2.912 pose=2.9123921926771863
+[INFO] [1788598523.597349, 405.020000]: STPUB phase=STAIR_ASCENT world=(0.000,0.800,-0.028) body=(0.797,-0.064,-0.028) truth_z=2.941 pose=2.939602818243203
+[INFO] [1788598525.191720, 406.040000]: STPUB phase=STAIR_ASCENT world=(0.028,0.800,-0.001) body=(0.800,-0.029,-0.001) truth_z=3.122 pose=3.12704023019472
+[INFO] [1788598526.768687, 407.060000]: STPUB phase=STAIR_ASCENT world=(0.034,0.800,0.003) body=(0.800,-0.028,0.003) truth_z=3.398 pose=3.3989718471955097
+[INFO] [1788598528.348324, 408.080000]: STPUB phase=STAIR_ASCENT world=(0.000,0.800,0.031) body=(0.797,0.070,0.031) truth_z=3.615 pose=3.6159205229926146
+[INFO] [1788598529.933424, 409.100000]: STPUB phase=STAIR_ASCENT world=(0.000,0.800,0.016) body=(0.799,0.036,0.016) truth_z=3.845 pose=3.852896351415212
+[INFO] [1788598531.516650, 410.120000]: STPUB phase=STAIR_ASCENT world=(-0.220,0.600,0.045) body=(0.567,0.295,0.045) truth_z=4.056 pose=4.0579221380389034
+[INFO] [1788598532.725557, 410.900000]: Intermediate landing entered at y=4.77 m; starting moving turn.
+[INFO] [1788598533.098444, 411.140000]: STPUB phase=STAIR_LANDING_TURN world=(0.750,0.000,-1.200) body=(0.155,-0.734,-1.200) truth_z=4.233 pose=4.235151940786649
+[INFO] [1788598534.674301, 412.160000]: STPUB phase=STAIR_LANDING_TURN world=(0.750,0.000,-0.518) body=(0.669,-0.340,-0.518) truth_z=4.213 pose=4.215262482696258
+[INFO] [1788598536.266067, 413.180000]: STPUB phase=STAIR_LANDING_TURN world=(0.369,0.000,-0.240) body=(0.364,-0.058,-0.240) truth_z=4.215 pose=4.214428339699566
+[INFO] [1788598537.840818, 414.200000]: STPUB phase=STAIR_LANDING_TURN world=(0.300,0.000,-1.200) body=(0.300,0.008,-1.200) truth_z=4.219 pose=4.215458631430145
+[INFO] [1788598539.417969, 415.220000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-0.647) body=(0.000,0.000,-0.647) truth_z=4.222 pose=4.222018906171712
+[INFO] [1788598541.004988, 416.240000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-0.286) body=(0.000,0.000,-0.286) truth_z=4.224 pose=4.224257714577878
+[INFO] [1788598542.584206, 417.260000]: STPUB phase=STAIR_LANDING_TURN world=(0.000,0.000,-0.240) body=(0.000,0.000,-0.240) truth_z=4.232 pose=4.23179582243461
+[INFO] [1788598542.738001, 417.360000]: Flight-B entry aligned: x error=-0.042 m, heading error=-0.148 rad.
+[INFO] [1788598542.739625, 417.360000]: Flight-B entry joints saved (12 dofs) -> /home/quinn/0904/results/official_gui_rtf065_s20260820_20260905_164403/flight_b_entry_joints_1.json
+[INFO] [1788598542.768874, 417.380000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=4.23234116068502 truth_z=4.2323662763136065
+[INFO] [1788598542.770403, 417.380000]: Pre-ascent RL settle: holding zero command until motion is stable for 0.6 s before FixedStand.
+[INFO] [1788598542.772071, 417.382000]: Pre-ascent RL settle active: stable 0.00/0.60 s.
+[INFO] [1788598543.390749, 417.780000]: Pre-ascent RL motion settled for 0.62 s; settle-only gate complete (FixedStand disabled).
+[INFO] [1788598544.164180, 418.280000]: STPUB phase=STAIR_ASCENT_B world=(-0.027,-0.800,-0.060) body=(0.784,-0.163,-0.060) truth_z=4.247 pose=4.250295916526151
+[INFO] [1788598544.348962, 418.400000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=4.278603087900001 truth_z=4.27829015250397
+[INFO] [1788598545.747171, 419.300000]: STPUB phase=STAIR_ASCENT_B world=(0.300,-0.400,-0.014) body=(0.412,0.283,-0.014) truth_z=4.440 pose=4.440159744385245
+[INFO] [1788598545.932051, 419.420000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=4.438066029635664 truth_z=4.438066029635664
+[INFO] [1788598547.318246, 420.320000]: STPUB phase=STAIR_ASCENT_B world=(-0.200,-0.600,0.024) body=(0.612,-0.159,0.024) truth_z=4.633 pose=4.6346130538032675
+[INFO] [1788598547.502523, 420.440000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=4.647266563848851 truth_z=4.647127959889813
+[INFO] [1788598548.888467, 421.340000]: STPUB phase=STAIR_ASCENT_B world=(0.200,-0.600,0.036) body=(0.576,0.261,0.036) truth_z=4.822 pose=4.823389681463075
+[INFO] [1788598549.072907, 421.460000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=4.854161163395112 truth_z=4.8530535792599645
+[INFO] [1788598550.458403, 422.360000]: STPUB phase=STAIR_ASCENT_B world=(0.000,-0.800,0.042) body=(0.794,0.095,0.042) truth_z=5.045 pose=5.045909151794529
+[INFO] [1788598550.643387, 422.480000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=5.068289362768571 truth_z=5.067507814476001
+[INFO] [1788598552.028505, 423.380000]: STPUB phase=STAIR_ASCENT_B world=(0.000,-0.800,0.022) body=(0.798,0.051,0.022) truth_z=5.248 pose=5.24861419847329
+[INFO] [1788598552.213065, 423.500000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=5.270402784120944 truth_z=5.267902124289656
+[INFO] [1788598553.598734, 424.400000]: STPUB phase=STAIR_ASCENT_B world=(0.200,-0.600,0.057) body=(0.559,0.295,0.057) truth_z=5.435 pose=5.43655323957664
+[INFO] [1788598553.784419, 424.520000]: ASCENT_B gate: entry_guide=True truth_pose=True start_z=2.912 profile=True heading=-1.571 pose_z=5.458975881038909 truth_z=5.456067572577409
+[INFO] [1788598554.899572, 425.240000]: Upper landing entered: gain=2.60 m, clearance=0.00 m; stabilizing for 0.5 s.
+[INFO] [1788598555.426740, 425.580000]: Floor-3 landing confirmed after two flights: gain=2.60 m clearance=0.11 m.
+[INFO] [1788598556.607715, 426.330000]: Plane policy acknowledged on the upper landing; releasing stair controller ownership.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598612.924894362, 462.456000000]: Plane tilt guard scaling cmd_vel by 0.87 at tilt 0.157 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788598556.192549308, 426.068000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.141 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598556.548350210, 426.294000000]: RL locomotion_ready latched after 0.66 s takeover and 0.41 s stable hold[0m
+[0m[INFO] [1788598559.306208821, 428.076000000]: RL policy input vx=0.000 vy=0.000 wz=0.568 action_rms=0.173 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.568 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598562.458383218, 430.094000000]: RL policy input vx=1.035 vy=0.000 wz=0.107 action_rms=0.390 ready=1 userCmd=0 kbd=0 raw=1.035,0.000,0.107 grav=-0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598565.632259803, 432.112000000]: RL policy input vx=0.000 vy=0.000 wz=0.404 action_rms=0.142 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.404 grav=0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598568.780426259, 434.132000000]: RL policy input vx=2.246 vy=0.000 wz=0.069 action_rms=0.347 ready=1 userCmd=0 kbd=0 raw=2.246,0.000,0.069 grav=0.00,0.01,-0.98[0m
+[0m[INFO] [1788598571.912012057, 436.144000000]: RL policy input vx=2.250 vy=0.000 wz=-0.013 action_rms=0.334 ready=1 userCmd=0 kbd=0 raw=2.250,0.000,-0.013 grav=0.04,0.01,-0.98[0m
+[0m[INFO] [1788598575.034617944, 438.146000000]: RL policy input vx=2.248 vy=0.000 wz=0.043 action_rms=0.228 ready=1 userCmd=0 kbd=0 raw=2.248,0.000,0.043 grav=0.01,-0.06,-0.98[0m
+[0m[INFO] [1788598578.151210198, 440.148000000]: RL policy input vx=1.980 vy=0.000 wz=0.126 action_rms=0.253 ready=1 userCmd=0 kbd=0 raw=1.980,0.000,0.126 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598581.276312910, 442.162000000]: RL policy input vx=0.000 vy=0.000 wz=0.599 action_rms=0.179 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.599 grav=0.04,0.05,-0.98[0m
+[0m[INFO] [1788598584.409969156, 444.168000000]: RL policy input vx=0.449 vy=0.000 wz=0.075 action_rms=0.299 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,0.075 grav=0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598587.546796243, 446.180000000]: RL policy input vx=0.450 vy=0.000 wz=0.006 action_rms=0.160 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.006 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598590.675382876, 448.198000000]: RL policy input vx=0.899 vy=-0.049 wz=-0.061 action_rms=0.200 ready=1 userCmd=0 kbd=0 raw=0.899,-0.049,-0.061 grav=0.00,-0.04,-0.98[0m
+[0m[INFO] [1788598593.825230049, 450.212000000]: RL policy input vx=0.900 vy=-0.004 wz=-0.005 action_rms=0.162 ready=1 userCmd=0 kbd=0 raw=0.900,-0.004,-0.005 grav=-0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598596.972431622, 452.220000000]: RL policy input vx=0.000 vy=0.000 wz=0.342 action_rms=0.154 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.342 grav=0.03,-0.01,-0.98[0m
+[0m[INFO] [1788598600.102841279, 454.228000000]: RL policy input vx=0.000 vy=0.000 wz=1.787 action_rms=0.331 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,1.787 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598603.221659566, 456.240000000]: RL policy input vx=0.442 vy=-0.550 wz=-0.984 action_rms=0.173 ready=1 userCmd=0 kbd=0 raw=0.442,-0.550,-0.984 grav=-0.02,0.06,-0.98[0m
+[0m[INFO] [1788598606.352676983, 458.252000000]: RL policy input vx=0.895 vy=-0.093 wz=-0.114 action_rms=0.196 ready=1 userCmd=0 kbd=0 raw=0.895,-0.093,-0.114 grav=-0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598609.482214071, 460.266000000]: RL policy input vx=0.000 vy=0.000 wz=-1.122 action_rms=0.243 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.122 grav=0.03,-0.03,-0.98[0m
+[0m[INFO] [1788598612.638511190, 462.272000000]: RL policy input vx=1.277 vy=0.115 wz=-0.888 action_rms=0.356 ready=1 userCmd=0 kbd=0 raw=1.277,0.115,-0.888 grav=-0.06,0.02,-0.98[0m
+[0m[INFO] [1788598615.791134220, 464.290000000]: RL policy input vx=0.287 vy=0.087 wz=0.322 action_rms=0.217 ready=1 userCmd=0 kbd=0 raw=0.287,0.087,0.322 grav=0.03,0.00,-0.98[0m
+[0m[INFO] [1788598618.947860247, 466.306000000]: RL policy input vx=0.000 vy=0.000 wz=-0.240 action_rms=0.183 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.240 grav=-0.00,-0.00,-0.98[0m
+[0m[INFO] [1788598622.099936106, 468.320000000]: RL policy input vx=0.449 vy=0.000 wz=-0.083 action_rms=0.175 ready=1 userCm[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598658.349216406, 491.552000000]: Plane tilt guard scaling cmd_vel by 0.97 at tilt 0.144 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598673.279922871, 500.936000000]: Plane tilt guard scaling cmd_vel by 0.97 at tilt 0.144 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598676.646508035, 503.098000000]: Plane tilt guard scaling cmd_vel by 0.99 at tilt 0.141 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598680.471309313, 505.540000000]: Plane tilt guard scaling cmd_vel by 0.98 at tilt 0.143 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+d=0 kbd=0 raw=0.449,0.000,-0.083 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598625.227212744, 470.330000000]: RL policy input vx=0.522 vy=0.092 wz=0.065 action_rms=0.182 ready=1 userCmd=0 kbd=0 raw=0.522,0.092,0.065 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598628.367682826, 472.340000000]: RL policy input vx=0.450 vy=0.000 wz=0.017 action_rms=0.256 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.017 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598631.481955475, 474.340000000]: RL policy input vx=0.450 vy=0.000 wz=-0.010 action_rms=0.157 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.010 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598634.615127798, 476.344000000]: RL policy input vx=0.896 vy=0.089 wz=0.109 action_rms=0.186 ready=1 userCmd=0 kbd=0 raw=0.896,0.089,0.109 grav=-0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598637.730523663, 478.360000000]: RL policy input vx=0.900 vy=0.008 wz=0.010 action_rms=0.291 ready=1 userCmd=0 kbd=0 raw=0.900,0.008,0.010 grav=-0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598640.849833660, 480.372000000]: RL policy input vx=0.348 vy=0.004 wz=0.014 action_rms=0.146 ready=1 userCmd=0 kbd=0 raw=0.348,0.004,0.014 grav=0.03,-0.03,-0.98[0m
+[0m[INFO] [1788598643.983693874, 482.382000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.158 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=-0.00,0.02,-0.98[0m
+[0m[INFO] [1788598647.101323694, 484.390000000]: RL policy input vx=0.358 vy=0.564 wz=1.110 action_rms=0.366 ready=1 userCmd=0 kbd=0 raw=0.358,0.564,1.110 grav=-0.01,-0.03,-0.98[0m
+[0m[INFO] [1788598650.269566345, 486.392000000]: RL policy input vx=0.834 vy=0.322 wz=0.405 action_rms=0.208 ready=1 userCmd=0 kbd=0 raw=0.834,0.322,0.405 grav=0.01,0.06,-0.98[0m
+[0m[INFO] [1788598653.438499868, 488.412000000]: RL policy input vx=0.667 vy=0.154 wz=0.250 action_rms=0.300 ready=1 userCmd=0 kbd=0 raw=0.667,0.154,0.250 grav=-0.00,0.05,-0.98[0m
+[0m[INFO] [1788598656.570916490, 490.414000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.256 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.01,0.02,-0.98[0m
+[0m[INFO] [1788598659.745610602, 492.418000000]: RL policy input vx=1.215 vy=-0.466 wz=-0.405 action_rms=0.318 ready=1 userCmd=0 kbd=0 raw=1.215,-0.466,-0.405 grav=0.00,-0.03,-0.98[0m
+[0m[INFO] [1788598663.002581200, 494.438000000]: RL policy input vx=0.000 vy=0.000 wz=0.203 action_rms=0.152 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.203 grav=0.02,-0.01,-0.98[0m
+[0m[INFO] [1788598666.193289110, 496.438000000]: RL policy input vx=0.450 vy=0.000 wz=0.026 action_rms=0.246 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.026 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598669.399999319, 498.454000000]: RL policy input vx=0.723 vy=-0.004 wz=-0.006 action_rms=0.185 ready=1 userCmd=0 kbd=0 raw=0.723,-0.004,-0.006 grav=-0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598672.535110304, 500.462000000]: RL policy input vx=1.693 vy=-0.450 wz=-0.282 action_rms=0.248 ready=1 userCmd=0 kbd=0 raw=1.693,-0.450,-0.282 grav=-0.05,-0.05,-0.98[0m
+[0m[INFO] [1788598675.671090429, 502.478000000]: RL policy input vx=2.248 vy=-0.095 wz=-0.047 action_rms=0.323 ready=1 userCmd=0 kbd=0 raw=2.248,-0.095,-0.047 grav=0.07,-0.02,-0.98[0m
+[0m[INFO] [1788598678.821935479, 504.488000000]: RL policy input vx=2.245 vy=0.145 wz=0.071 action_rms=0.397 ready=1 userCmd=0 kbd=0 raw=2.245,0.145,0.071 grav=-0.06,-0.09,-0.97[0m
+[0m[INFO] [1788598681.951206890, 506.494000000]: RL policy input vx=2.247 vy=0.113 wz=0.055 action_rms=0.319 ready=1 userCmd=0 kbd=0 raw=2.247,0.113,0.055 grav=0.03,0.03,-0.98[0m
+[0m[INFO] [1788598685.054853521, 508.506000000]: RL policy input vx=0.000 vy=0.000 wz=0.760 action_rms=0.138 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.760 grav=0.02,0.05,-0.98[0m
+[0m[INFO] [1788598688.258999942, 510.506000000]: RL policy input vx=0.448 vy=0.000 wz=0.099 action_rms=0.166 ready=1 userCmd=0 kbd=0 raw=0.448,0.000,0.099 grav=-0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598691.520955546, 512.522000000]: RL policy input vx=0.450 vy=0.000 wz=0.004 action_rms=0.295 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.004 grav=0.01,-0.01,-0.98[0m
+[0m[INFO][FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598717.641778289, 529.062000000]: Plane tilt guard scaling cmd_vel by 0.94 at tilt 0.148 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+ [1788598694.791082342, 514.538000000]: RL policy input vx=0.898 vy=-0.064 wz=-0.079 action_rms=0.166 ready=1 userCmd=0 kbd=0 raw=0.898,-0.064,-0.079 grav=-0.00,-0.03,-0.98[0m
+[0m[INFO] [1788598698.017862593, 516.544000000]: RL policy input vx=0.900 vy=-0.004 wz=-0.004 action_rms=0.313 ready=1 userCmd=0 kbd=0 raw=0.900,-0.004,-0.004 grav=-0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598701.259919136, 518.558000000]: RL policy input vx=0.300 vy=-0.003 wz=-0.011 action_rms=0.262 ready=1 userCmd=0 kbd=0 raw=0.300,-0.003,-0.011 grav=0.02,-0.03,-0.98[0m
+[0m[INFO] [1788598704.413833730, 520.566000000]: RL policy input vx=0.000 vy=0.000 wz=2.772 action_rms=0.193 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.772 grav=0.04,0.01,-0.98[0m
+[0m[INFO] [1788598707.518616272, 522.566000000]: RL policy input vx=0.000 vy=0.000 wz=-1.393 action_rms=0.169 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-1.393 grav=0.02,0.01,-0.98[0m
+[0m[INFO] [1788598710.639916491, 524.574000000]: RL policy input vx=0.892 vy=-0.118 wz=-0.144 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.892,-0.118,-0.144 grav=-0.00,-0.05,-0.98[0m
+[0m[INFO] [1788598713.762341046, 526.580000000]: RL policy input vx=0.000 vy=0.000 wz=-0.375 action_rms=0.147 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.375 grav=0.03,-0.02,-0.98[0m
+[0m[INFO] [1788598716.909388383, 528.588000000]: RL policy input vx=0.453 vy=-0.453 wz=-1.664 action_rms=0.152 ready=1 userCmd=0 kbd=0 raw=0.453,-0.453,-1.664 grav=0.00,0.03,-0.98[0m
+[0m[INFO] [1788598720.017300995, 530.590000000]: RL policy input vx=0.281 vy=0.104 wz=0.391 action_rms=0.181 ready=1 userCmd=0 kbd=0 raw=0.281,0.104,0.391 grav=0.06,-0.01,-0.98[0m
+[0m[INFO] [1788598723.116517615, 532.592000000]: RL policy input vx=0.000 vy=0.000 wz=-0.391 action_rms=0.142 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.391 grav=-0.00,0.00,-0.98[0m
+[0m[INFO] [1788598726.236489590, 534.594000000]: RL policy input vx=0.448 vy=0.000 wz=-0.102 action_rms=0.239 ready=1 userCmd=0 kbd=0 raw=0.448,0.000,-0.102 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598729.353941373, 536.596000000]: RL policy input vx=0.449 vy=0.000 wz=-0.057 action_rms=0.164 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,-0.057 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598732.491253206, 538.604000000]: RL policy input vx=0.450 vy=0.000 wz=0.040 action_rms=0.200 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.040 grav=0.02,-0.01,-0.98[0m
+[0m[INFO] [1788598735.614205479, 540.614000000]: RL policy input vx=0.450 vy=0.000 wz=-0.012 action_rms=0.224 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,-0.012 grav=0.01,-0.02,-0.98[0m
+[0m[INFO] [1788598738.739173733, 542.634000000]: RL policy input vx=0.881 vy=0.186 wz=0.229 action_rms=0.345 ready=1 userCmd=0 kbd=0 raw=0.881,0.186,0.229 grav=-0.01,0.00,-0.98[0m
+[0m[INFO] [1788598741.860910498, 544.646000000]: RL policy input vx=0.900 vy=0.019 wz=0.023 action_rms=0.155 ready=1 userCmd=0 kbd=0 raw=0.900,0.019,0.023 grav=-0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598744.972733586, 546.650000000]: RL policy input vx=0.611 vy=-0.001 wz=-0.001 action_rms=0.259 ready=1 userCmd=0 kbd=0 raw=0.611,-0.001,-0.001 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598748.114584562, 548.670000000]: RL policy input vx=0.000 vy=0.000 wz=-2.900 action_rms=0.301 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-2.900 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598751.253378677, 550.686000000]: RL policy input vx=0.000 vy=0.000 wz=1.500 action_rms=0.204 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,1.500 grav=0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598754.422083313, 552.688000000]: RL policy input vx=0.883 vy=0.176 wz=0.217 action_rms=0.158 ready=1 userCmd=0 kbd=0 raw=0.883,0.176,0.217 grav=0.00,0.05,-0.98[0m
+[0m[INFO] [1788598757.545840117, 554.698000000]: RL policy input vx=0.313 vy=0.010 wz=0.035 action_rms=0.239 ready=1 userCmd=0 kbd=0 raw=0.313,0.010,0.035 grav=0.02,-0.02,-0.98[0m
+[0m[INFO] [1788598760.665872790, 556.698000000]: RL policy input vx=0.000 vy=0.000 wz=2.900 action_rms=0.197 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,2.900 grav=0.04,0.01,-0.98[0m
+[0m[INFO] [1788598763.849491931, 558.708000000]: RL policy input[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[33m[WARN] [1788598789.063320330, 574.482000000]: Plane tilt guard scaling cmd_vel by 0.94 at tilt 0.148 rad[0m
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+ vx=0.424 vy=-0.008 wz=-0.021 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.424,-0.008,-0.021 grav=0.05,-0.04,-0.98[0m
+[0m[INFO] [1788598767.064614618, 560.710000000]: RL policy input vx=0.449 vy=0.000 wz=0.087 action_rms=0.165 ready=1 userCmd=0 kbd=0 raw=0.449,0.000,0.087 grav=-0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598770.256048745, 562.712000000]: RL policy input vx=0.450 vy=0.000 wz=0.001 action_rms=0.220 ready=1 userCmd=0 kbd=0 raw=0.450,0.000,0.001 grav=0.00,-0.02,-0.98[0m
+[0m[INFO] [1788598773.471494943, 564.732000000]: RL policy input vx=0.209 vy=0.450 wz=1.150 action_rms=0.152 ready=1 userCmd=0 kbd=0 raw=0.209,0.450,1.150 grav=0.02,-0.05,-0.98[0m
+[0m[INFO] [1788598776.599062771, 566.738000000]: RL policy input vx=2.235 vy=0.259 wz=0.127 action_rms=0.304 ready=1 userCmd=0 kbd=0 raw=2.235,0.259,0.127 grav=-0.04,-0.03,-0.98[0m
+[0m[INFO] [1788598779.830713125, 568.744000000]: RL policy input vx=2.250 vy=-0.024 wz=-0.012 action_rms=0.322 ready=1 userCmd=0 kbd=0 raw=2.250,-0.024,-0.012 grav=0.01,0.05,-0.98[0m
+[0m[INFO] [1788598783.068453911, 570.756000000]: RL policy input vx=2.248 vy=-0.092 wz=-0.045 action_rms=0.369 ready=1 userCmd=0 kbd=0 raw=2.248,-0.092,-0.045 grav=-0.05,-0.06,-0.98[0m
+[0m[INFO] [1788598786.309455754, 572.772000000]: RL policy input vx=2.249 vy=-0.071 wz=-0.035 action_rms=0.343 ready=1 userCmd=0 kbd=0 raw=2.249,-0.071,-0.035 grav=0.04,-0.01,-0.98[0m
+[0m[INFO] [1788598789.549874805, 574.790000000]: RL policy input vx=2.243 vy=0.176 wz=0.086 action_rms=0.361 ready=1 userCmd=0 kbd=0 raw=2.243,0.176,0.086 grav=-0.01,-0.05,-0.98[0m
+[0m[INFO] [1788598792.698716385, 576.792000000]: RL policy input vx=1.034 vy=-0.350 wz=-0.359 action_rms=0.181 ready=1 userCmd=0 kbd=0 raw=1.034,-0.350,-0.359 grav=0.03,-0.01,-0.98[0m
+[0m[INFO] [1788598795.929083975, 578.812000000]: RL policy input vx=1.849 vy=-0.073 wz=-0.044 action_rms=0.254 ready=1 userCmd=0 kbd=0 raw=1.849,-0.073,-0.044 grav=0.00,-0.03,-0.98[0m
+[0m[INFO] [1788598799.146468838, 580.820000000]: RL policy input vx=1.850 vy=0.013 wz=0.008 action_rms=0.235 ready=1 userCmd=0 kbd=0 raw=1.850,0.013,0.008 grav=0.01,-0.01,-0.98[0m
+[0m[INFO] [1788598802.294883798, 582.820000000]: RL policy input vx=0.000 vy=0.000 wz=-0.823 action_rms=0.218 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.823 grav=0.01,0.01,-0.98[0m
+[0m[INFO] [1788598805.477502779, 584.820000000]: RL policy input vx=0.108 vy=0.000 wz=-0.084 action_rms=0.190 ready=1 userCmd=0 kbd=0 raw=0.108,0.000,-0.084 grav=-0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598808.657780125, 586.820000000]: RL policy input vx=0.000 vy=0.000 wz=-0.663 action_rms=0.135 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.663 grav=0.04,-0.01,-0.98[0m
+[0m[INFO] [1788598811.821428977, 588.838000000]: RL policy input vx=0.000 vy=0.000 wz=-0.275 action_rms=0.142 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,-0.275 grav=-0.00,0.00,-0.98[0m
+Switched from RL to fixed stand
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788598813.625272572, 589.996000000]: RL locomotion_ready latched after 164.36 s takeover and 0.27 s stable hold[0m
+infer_thread退出!
+[33m[WARN] [1788598814.042219889, 590.264000000]: Using one-shot captured-pose FixedStand profile: ramp 0.50 s, settle 0.00 s, ready after 0.50 s + 0.50 s stable, minimum gain 0.75[0m
+[INFO] Using /stand_target_joints param stance.
+Switched from fixed stand to RL
+[INFO] Entered RL /cmd_vel mode.
+[33m[WARN] [1788598815.333905404, 591.088000000]: Using one-shot stair RL takeover profile: blend 0.75 s, zero hold 0.25 s[0m
+cuda::is_available():0
+[WARNING] UNITREE_RL_DEVICE=hybrid selected CUDA for this policy but CUDA is unavailable; using CPU.
+RL inference device: cpu (requested=hybrid, policy=stair)
+[INFO] RL policy activated from preload cache at FixedStand entry boundary: /home/quinn/0904/runtime_assets/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[FSM]: state: INIT
+wait for goal.
+[0m[INFO] [1788598815.335424703, 591.090000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.194 ready=0 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=0.00,-0.01,-0.98[0m
+[0m[INFO] [1788598816.909033040, 592.106000000]: RL locomotion_ready latched after 1.02 s takeover and 1.02 s stable hold[0m
+[0m[INFO] [1788598818.447253065, 593.094000000]: RL policy input vx=0.550 vy=0.000 wz=-0.091 action_rms=0.173 ready=1 userCmd=8 kbd=0 raw=0.550,0.000,-0.091 grav=-0.03,0.03,-0.98[0m
+[0m[INFO] [1788598821.618738222, 595.098000000]: RL policy input vx=0.500 vy=0.000 wz=-0.060 action_rms=0.231 ready=1 userCmd=0 kbd=0 raw=0.500,0.000,-0.060 grav=0.41,0.01,-0.89[0m
+[0m[INFO] [1788598824.849608718, 597.102000000]: RL policy input vx=0.500 vy=0.000 wz=-0.039 action_rms=0.108 ready=1 userCmd=0 kbd=0 raw=0.500,0.000,-0.039 grav=0.37,0.07,-0.90[0m
+[0m[INFO] [1788598828.068177826, 599.104000000]: RL policy input vx=0.600 vy=0.000 wz=-0.027 action_rms=0.144 ready=1 userCmd=0 kbd=0 raw=0.600,0.000,-0.027 grav=0.42,0.02,-0.89[0m
+[0m[INFO] [1788598831.281095392, 601.122000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.02,0.01,-0.98[0m
+[0m[INFO] [1788598834.442150095, 603.126000000]: RL policy input vx=0.391 vy=-0.084 wz=1.200 action_rms=0.180 ready=1 userCmd=0 kbd=0 raw=0.391,-0.084,1.200 grav=0.01,0.08,-0.98[0m
+[0m[INFO] [1788598837.603597539, 605.128000000]: RL policy input vx=0.026 vy=-0.299 wz=0.096 action_rms=0.143 ready=1 userCmd=0 kbd=0 raw=0.026,-0.299,0.096 grav=0.01,-0.00,-0.98[0m
+[0m[INFO] [1788598840.776663581, 607.148000000]: RL policy input vx=0.550 vy=-0.000 wz=-0.010 action_rms=0.268 ready=1 userCmd=0 kbd=0 raw=0.550,-0.000,-0.010 grav=0.32,0.02,-0.93[0m
+[0m[INFO] [1788598843.989901485, 609.162000000]: RL policy input vx=0.800 vy=0.000 wz=0.001 action_rms=0.226 ready=1 userCmd=0 kbd=0 raw=0.800,0.000,0.001 grav=0.33,-0.01,-0.92[0m
+[0m[INFO] [1788598847.124138923, 611.168000000]: RL policy input vx=0.550 vy=0.000 wz=-0.048 action_rms=0.287 ready=1 userCmd=0 kbd=0 raw=0.550,0.000,-0.048 grav=0.46,-0.06,-0.86[0m
+[0m[INFO] [1788598850.291908511, 613.186000000]: RL policy input vx=0.000 vy=0.000 wz=0.000 action_rms=0.144 ready=1 userCmd=0 kbd=0 raw=0.000,0.000,0.000 grav=-0.04,0.00,-0.98[0m
+[0m[INFO] [1788598853.476364354, 615.200000000]: RL policy input vx=-0.035 vy=-0.284 wz=-0.970 action_rms=0.201 ready=1 userCmd=0 kbd=0 raw=-0.035,-0.284,-0.970 grav=-0.06,0.02,-0.98[0m
+[0m[INFO] [1788598856.605042958, 617.202000000]: RL policy input vx=-0.071 vy=-0.394 wz=-1.000 action_rms=0.199 ready=1 userCmd=0 kbd=0 raw=-0.071,-0.394,-1.000 grav=-0.00,-0.03,-0.98[0m
+stop the controller
+terminate called after throwing an instance of 'boost::wrapexcept<boost::lock_error>'
+  what():  boost: mutex lock failed in pthread_mutex_lock: Invalid argument
+des manager
+[ERROR] [1788598857.080461, 617.502000]: Three-floor RL mission failed: exploration_deadline_exceeded_600.0s
+[WARN] [1788598452.794785, 359.886000]: danger_detector: rejecting candidates because room boundary is unavailable (room_id='')
+[INFO] [1788597886.834163, 0.000000]: danger_detector: loaded 12 room boundaries; scan margin=0.50 m
+[INFO] [1788597892.395273, 0.140000]: danger_detector: first rendered RGB frame ready (320x240)
+[INFO] [1788597917.855361, 17.186000]: danger_detector: exploration clock started after preparation
+[INFO] [1788597968.277288, 49.708000]: danger_detector: scan batch label=floor_0_room_0_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788597980.514800, 57.614000]: danger_detector: scan batch label=floor_0_room_0_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598017.052126, 81.142000]: danger_detector: scan batch label=floor_0_room_1_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598037.239023, 93.982000]: danger_detector: scan batch label=floor_0_room_1_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598089.340333, 127.238000]: danger_detector: scan batch label=floor_0_room_2_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598101.477322, 135.054000]: danger_detector: scan batch label=floor_0_room_2_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598133.192530, 155.458000]: danger_detector: scan batch label=floor_0_room_3_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598144.931098, 163.026000]: danger_detector: scan batch label=floor_0_room_3_g4 raw=2 min_points=3 clusters=[]
+[INFO] [1788598144.932208, 163.028000]: danger_detector: requested one bounded rescan for floor_0_room_3 at floor_0_room_3_g4
+[INFO] [1788598147.416849, 164.624000]: danger_detector: confirmed red sphere #1 at [4.8037, 32.1974, 0.15], t=147.44s, stage=floor_1_exploration
+[INFO] [1788598149.552927, 166.000000]: danger_detector: scan batch label=floor_0_room_3_g4 raw=6 min_points=3 clusters=[(4.6876974085561205, 31.589503477514786)]
+[INFO] [1788598285.005378, 251.778000]: danger_detector: confirmed red sphere #4 at [-3.0709, 14.0729, 2.75], t=234.59s, stage=floor_2_exploration
+[INFO] [1788598285.147086, 251.870000]: danger_detector: confirmed red sphere #5 at [-2.1763, 13.5674, 2.75], t=234.68s, stage=floor_2_exploration
+[INFO] [1788598285.382560, 252.022000]: danger_detector: scan batch label=floor_1_room_0_g3 raw=7 min_points=3 clusters=[(-3.069888619644261, 14.075403240721357), (-2.307054324502498, 13.648067728232846)]
+[INFO] [1788598297.320275, 259.712000]: danger_detector: scan batch label=floor_1_room_0_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598340.604761, 287.630000]: danger_detector: scan batch label=floor_1_room_1_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598358.980519, 299.480000]: danger_detector: confirmed red sphere #6 at [1.7461, 21.0359, 2.75], t=282.29s, stage=floor_2_exploration
+[INFO] [1788598360.703923, 300.590000]: danger_detector: scan batch label=floor_1_room_1_g4 raw=8 min_points=3 clusters=[(1.7865376171756455, 20.932396787514662)]
+[INFO] [1788598413.316022, 334.610000]: danger_detector: scan batch label=floor_1_room_2_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598424.760176, 342.002000]: danger_detector: scan batch label=floor_1_room_2_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598451.359920, 358.964000]: danger_detector: confirmed red sphere #7 at [8.9852, 26.2039, 2.75], t=341.78s, stage=floor_2_exploration
+[INFO] [1788598452.791450, 359.884000]: danger_detector: scan batch label=floor_1_room_3_g3 raw=6 min_points=3 clusters=[(8.842113682654713, 26.375610491603574)]
+[INFO] [1788598463.319220, 366.674000]: danger_detector: confirmed red sphere #8 at [7.4846, 26.82, 2.75], t=349.49s, stage=floor_2_exploration
+[INFO] [1788598464.432566, 367.394000]: danger_detector: scan batch label=floor_1_room_3_g4 raw=6 min_points=3 clusters=[(7.6350917317659786, 26.785926816723048)]
+[INFO] [1788598599.689148, 453.960000]: danger_detector: scan batch label=floor_2_room_0_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598611.844471, 461.766000]: danger_detector: scan batch label=floor_2_room_0_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598644.324886, 482.596000]: danger_detector: scan batch label=floor_2_room_1_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598657.333774, 490.904000]: danger_detector: scan batch label=floor_2_room_1_g4 raw=0 min_points=3 clusters=[]
+[INFO] [1788598704.392900, 520.552000]: danger_detector: scan batch label=floor_2_room_2_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598716.254479, 528.162000]: danger_detector: confirmed red sphere #9 at [-4.9792, 30.3221, 5.35], t=510.98s, stage=floor_3_exploration
+[INFO] [1788598716.443913, 528.286000]: danger_detector: scan batch label=floor_2_room_2_g4 raw=5 min_points=3 clusters=[(-5.0155846251106375, 30.388223034425316)]
+[INFO] [1788598748.840750, 549.126000]: danger_detector: scan batch label=floor_2_room_3_g3 raw=0 min_points=3 clusters=[]
+[INFO] [1788598760.611688, 556.662000]: danger_detector: confirmed red sphere #10 at [6.1317, 34.782, 5.35], t=539.48s, stage=floor_3_exploration
+[INFO] [1788598760.817324, 556.794000]: danger_detector: scan batch label=floor_2_room_3_g4 raw=5 min_points=3 clusters=[(6.161627032556135, 34.897998586863196)]
+[INFO] [1788598857.082161, 617.504000]: danger_detector: wrote 8 confirmed red-ball detections -> /home/quinn/0904/results/official_gui_rtf065_s20260820_20260905_164403/red_ball_detections.json
+[WARN] [1788597957.343007, 42.644000]: Room viewpoint speed cap: floor_0_room_0_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788597968.480437, 49.840000]: Room viewpoint speed cap: floor_0_room_0_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598006.218743, 74.156000]: Room viewpoint speed cap: floor_0_room_1_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598027.106387, 87.612000]: Room viewpoint speed cap: floor_0_room_1_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598078.505763, 120.314000]: Room viewpoint speed cap: floor_0_room_2_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598089.546414, 127.366000]: Room viewpoint speed cap: floor_0_room_2_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598121.960878, 148.228000]: Room viewpoint speed cap: floor_0_room_3_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598133.399895, 155.594000]: Room viewpoint speed cap: floor_0_room_3_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598274.345149, 244.974000]: Room viewpoint speed cap: floor_1_room_0_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598285.589105, 252.156000]: Room viewpoint speed cap: floor_1_room_0_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598299.336410, 261.006000]: Plane attitude guard scaling translation to 0.99 (upright_z=0.969).
+[WARN] [1788598300.139360, 261.526000]: Plane attitude guard scaling translation to 0.39 (upright_z=0.927).
+[WARN] [1788598329.773461, 280.624000]: Room viewpoint speed cap: floor_1_room_1_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598350.669608, 294.132000]: Room viewpoint speed cap: floor_1_room_1_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598401.781385, 327.156000]: Room viewpoint speed cap: floor_1_room_2_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598413.528473, 334.742000]: Room viewpoint speed cap: floor_1_room_2_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598441.455077, 352.636000]: Room viewpoint speed cap: floor_1_room_3_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598452.998860, 360.016000]: Room viewpoint speed cap: floor_1_room_3_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598588.751329, 446.954000]: Room viewpoint speed cap: floor_2_room_0_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598599.902130, 454.098000]: Room viewpoint speed cap: floor_2_room_0_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598632.587651, 475.040000]: Room viewpoint speed cap: floor_2_room_1_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598651.613545, 487.244000]: Room viewpoint speed cap: floor_2_room_1_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598693.255542, 513.592000]: Room viewpoint speed cap: floor_2_room_2_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598704.609736, 520.690000]: Room viewpoint speed cap: floor_2_room_2_g4 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598737.608781, 541.902000]: Room viewpoint speed cap: floor_2_room_3_g3 2.250 -> 0.900 m/s (configured 0.900)
+[WARN] [1788598749.079238, 549.282000]: Room viewpoint speed cap: floor_2_room_3_g4 2.250 -> 0.900 m/s (configured 0.900)
+[INFO] [1788598812.765041, 589.440000]: SCAN explored all three floors; stair descent owns the return.
+[INFO] [1788597893.267158, 1.002000]: Bootstrap armed: stand@1.0s state-gated RL max_wait=25.0s repeat=120.0s start_t=1.0
+[INFO] [1788597900.679720, 6.102000]: Requesting RL /cmd_vel through /joy (repeating).
+[INFO] [1788597917.876562, 17.202000]: Bootstrap observed locomotion_ready; releasing /joy.
+[INFO] [1788597886.586501, 0.000000]: scanplanner_pointcloud_bridge: /scan -> /registered_scan at <= 5.0 Hz
+[INFO] [1788597906.731826, 10.004000]: scanplanner_pointcloud_bridge: published 50 clouds (389 points)
+[INFO] [1788597922.215580, 20.006000]: scanplanner_pointcloud_bridge: published 100 clouds (367 points)
+[INFO] [1788597937.741267, 30.006000]: scanplanner_pointcloud_bridge: published 150 clouds (775 points)
+[INFO] [1788597953.252911, 40.006000]: scanplanner_pointcloud_bridge: published 200 clouds (765 points)
+[INFO] [1788597968.738330, 50.006000]: scanplanner_pointcloud_bridge: published 250 clouds (764 points)
+[INFO] [1788597984.223898, 60.004000]: scanplanner_pointcloud_bridge: published 300 clouds (753 points)
+[INFO] [1788597999.772316, 70.006000]: scanplanner_pointcloud_bridge: published 350 clouds (764 points)
+[INFO] [1788598015.295238, 80.004000]: scanplanner_pointcloud_bridge: published 400 clouds (764 points)
+[INFO] [1788598030.900902, 90.006000]: scanplanner_pointcloud_bridge: published 450 clouds (770 points)
+[INFO] [1788598046.693509, 100.006000]: scanplanner_pointcloud_bridge: published 500 clouds (764 points)
+[INFO] [1788598062.409530, 110.006000]: scanplanner_pointcloud_bridge: published 550 clouds (772 points)
+[INFO] [1788598078.027336, 120.006000]: scanplanner_pointcloud_bridge: published 600 clouds (764 points)
+[INFO] [1788598093.632741, 130.004000]: scanplanner_pointcloud_bridge: published 650 clouds (775 points)
+[INFO] [1788598109.187724, 140.006000]: scanplanner_pointcloud_bridge: published 700 clouds (764 points)
+[INFO] [1788598124.722411, 150.006000]: scanplanner_pointcloud_bridge: published 750 clouds (767 points)
+[INFO] [1788598140.243140, 160.006000]: scanplanner_pointcloud_bridge: published 800 clouds (771 points)
+[INFO] [1788598156.071005, 170.008000]: scanplanner_pointcloud_bridge: published 850 clouds (749 points)
+[INFO] [1788598172.173836, 180.010000]: scanplanner_pointcloud_bridge: published 900 clouds (771 points)
+[INFO] [1788598187.957201, 190.008000]: scanplanner_pointcloud_bridge: published 950 clouds (753 points)
+[INFO] [1788598203.853688, 200.008000]: scanplanner_pointcloud_bridge: published 1000 clouds (598 points)
+[INFO] [1788598219.439368, 210.008000]: scanplanner_pointcloud_bridge: published 1050 clouds (753 points)
+[INFO] [1788598235.063409, 220.010000]: scanplanner_pointcloud_bridge: published 1100 clouds (706 points)
+[INFO] [1788598250.570789, 230.008000]: scanplanner_pointcloud_bridge: published 1150 clouds (764 points)
+[INFO] [1788598266.526091, 240.008000]: scanplanner_pointcloud_bridge: published 1200 clouds (757 points)
+[INFO] [1788598282.224056, 250.008000]: scanplanner_pointcloud_bridge: published 1250 clouds (760 points)
+[INFO] [1788598297.783458, 260.010000]: scanplanner_pointcloud_bridge: published 1300 clouds (774 points)
+[INFO] [1788598313.310189, 270.010000]: scanplanner_pointcloud_bridge: published 1350 clouds (765 points)
+[INFO] [1788598328.828248, 280.010000]: scanplanner_pointcloud_bridge: published 1400 clouds (762 points)
+[INFO] [1788598344.302234, 290.012000]: scanplanner_pointcloud_bridge: published 1450 clouds (767 points)
+[INFO] [1788598359.799318, 300.010000]: scanplanner_pointcloud_bridge: published 1500 clouds (775 points)
+[INFO] [1788598375.257929, 310.012000]: scanplanner_pointcloud_bridge: published 1550 clouds (756 points)
+[INFO] [1788598390.702912, 320.010000]: scanplanner_pointcloud_bridge: published 1600 clouds (785 points)
+[INFO] [1788598406.206239, 330.010000]: scanplanner_pointcloud_bridge: published 1650 clouds (769 points)
+[INFO] [1788598421.674821, 340.010000]: scanplanner_pointcloud_bridge: published 1700 clouds (759 points)
+[INFO] [1788598437.315819, 350.012000]: scanplanner_pointcloud_bridge: published 1750 clouds (765 points)
+[INFO] [1788598452.989888, 360.010000]: scanplanner_pointcloud_bridge: published 1800 clouds (771 points)
+[INFO] [1788598468.549585, 370.012000]: scanplanner_pointcloud_bridge: published 1850 clouds (754 points)
+[INFO] [1788598484.362827, 380.012000]: scanplanner_pointcloud_bridge: published 1900 clouds (772 points)
+[INFO] [1788598500.154200, 390.012000]: scanplanner_pointcloud_bridge: published 1950 clouds (760 points)
+[INFO] [1788598515.672846, 400.010000]: scanplanner_pointcloud_bridge: published 2000 clouds (631 points)
+[INFO] [1788598531.352295, 410.012000]: scanplanner_pointcloud_bridge: published 2050 clouds (790 points)
+[INFO] [1788598546.845523, 420.012000]: scanplanner_pointcloud_bridge: published 2100 clouds (721 points)
+[INFO] [1788598562.336782, 430.014000]: scanplanner_pointcloud_bridge: published 2150 clouds (720 points)
+[INFO] [1788598577.940334, 440.014000]: scanplanner_pointcloud_bridge: published 2200 clouds (768 points)
+[INFO] [1788598593.520374, 450.014000]: scanplanner_pointcloud_bridge: published 2250 clouds (768 points)
+[INFO] [1788598609.091656, 460.014000]: scanplanner_pointcloud_bridge: published 2300 clouds (757 points)
+[INFO] [1788598624.736665, 470.014000]: scanplanner_pointcloud_bridge: published 2350 clouds (765 points)
+[INFO] [1788598640.298222, 480.016000]: scanplanner_pointcloud_bridge: published 2400 clouds (769 points)
+[INFO] [1788598655.955460, 490.016000]: scanplanner_pointcloud_bridge: published 2450 clouds (763 points)
+[INFO] [1788598671.846710, 500.018000]: scanplanner_pointcloud_bridge: published 2500 clouds (776 points)
+[INFO] [1788598687.478740, 510.020000]: scanplanner_pointcloud_bridge: published 2550 clouds (763 points)
+[INFO] [1788598703.568288, 520.020000]: scanplanner_pointcloud_bridge: published 2600 clouds (764 points)
+[INFO] [1788598719.128943, 530.020000]: scanplanner_pointcloud_bridge: published 2650 clouds (749 points)
+[INFO] [1788598734.697421, 540.020000]: scanplanner_pointcloud_bridge: published 2700 clouds (757 points)
+[INFO] [1788598750.222900, 550.018000]: scanplanner_pointcloud_bridge: published 2750 clouds (762 points)
+[INFO] [1788598765.968397, 560.022000]: scanplanner_pointcloud_bridge: published 2800 clouds (758 points)
+[INFO] [1788598781.884500, 570.022000]: scanplanner_pointcloud_bridge: published 2850 clouds (767 points)
+[INFO] [1788598797.873990, 580.022000]: scanplanner_pointcloud_bridge: published 2900 clouds (774 points)
+[INFO] [1788598813.676336, 590.026000]: scanplanner_pointcloud_bridge: published 2950 clouds (763 points)
+[INFO] [1788598829.550034, 600.026000]: scanplanner_pointcloud_bridge: published 3000 clouds (758 points)
+[INFO] [1788598845.340602, 610.026000]: scanplanner_pointcloud_bridge: published 3050 clouds (751 points)
+[WARN] [1788598845.940651, 610.412000]: Descent tilt 0.487 rad: capping flight speed at 0.55 m/s.
+[WARN] [1788598847.531300, 611.432000]: Descent tilt 0.504 rad: capping flight speed at 0.55 m/s.
+[WARN] [1788598853.026726, 614.912000]: Segment turn left safe position (x=-3.838, y=1.699); zero command and re-centering before continuing turn.
+[WARN] [1788598856.028892, 616.832000]: Segment turn left safe position (x=-3.798, y=1.952); zero command and re-centering before continuing turn.
+[INFO] [1788598812.401632, 589.212000]: DSTPUB phase=STAIR_DESCENT_PRE_ALIGN world=(0.300,0.000,-0.169) body=(-0.056,-0.295,-0.169) truth_z=5.514 drop=0.000 pitch=0.0deg seg=0
+[INFO] [1788598813.589638, 589.972000]: Descent policy boundary captured joint RMS 0.219.
+[INFO] [1788598813.615584, 589.984000]: Descent plane gait settled; entering FixedStand before the stair-policy load.
+[INFO] [1788598815.070011, 590.914000]: Descent FixedStand is ready; stair policy queued.
+[INFO] [1788598815.324147, 591.082000]: Descent stair policy queued under FixedStand; requesting fresh stair-RL entry.
+[INFO] [1788598816.935724, 592.122000]: Descent stair RL fresh readiness confirmed; warming up 0.8 s.
+[INFO] [1788598817.952683, 592.772000]: Descent FLIGHT_B start: z=5.513 drop gate 1.05 m.
+[INFO] [1788598817.979575, 592.792000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(-0.108,0.539,-0.087) body=(0.550,0.000,-0.087) truth_z=5.513 drop=0.000 pitch=0.0deg seg=0
+[INFO] [1788598819.568778, 593.818000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(-0.079,0.544,-0.094) body=(0.550,0.000,-0.094) truth_z=5.511 drop=0.002 pitch=0.0deg seg=0
+[INFO] [1788598821.194964, 594.832000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(-0.049,0.548,-0.086) body=(0.550,0.000,-0.086) truth_z=5.349 drop=0.164 pitch=0.0deg seg=25
+[INFO] [1788598822.846991, 595.854000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(-0.005,0.500,-0.050) body=(0.500,0.000,-0.050) truth_z=5.120 drop=0.393 pitch=0.0deg seg=23
+[INFO] [1788598824.481460, 596.868000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(0.006,0.500,-0.037) body=(0.500,0.000,-0.037) truth_z=4.870 drop=0.642 pitch=0.0deg seg=21
+[INFO] [1788598826.093945, 597.872000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(0.007,0.800,-0.028) body=(0.800,-0.000,-0.028) truth_z=4.612 drop=0.901 pitch=0.0deg seg=21
+[INFO] [1788598827.713136, 598.876000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_B world=(-0.004,0.600,-0.033) body=(0.600,0.000,-0.033) truth_z=4.353 drop=1.159 pitch=0.0deg seg=19
+[INFO] [1788598829.307242, 599.874000]: Flight-B descent complete: drop=1.30 m y=5.06; starting landing turn.
+[INFO] [1788598831.716741, 601.392000]: DSTPUB phase=STAIR_DESCENT_TURN world=(-0.400,0.000,0.676) body=(-0.002,0.400,0.676) truth_z=4.216 drop=1.297 pitch=0.0deg seg=0
+[INFO] [1788598833.311065, 602.412000]: DSTPUB phase=STAIR_DESCENT_TURN world=(-0.400,0.000,1.200) body=(0.320,0.239,1.200) truth_z=4.209 drop=1.303 pitch=0.0deg seg=0
+[INFO] [1788598834.926017, 603.432000]: DSTPUB phase=STAIR_DESCENT_TURN world=(-0.400,0.000,1.048) body=(0.326,-0.232,1.048) truth_z=4.218 drop=1.294 pitch=0.0deg seg=0
+[INFO] [1788598836.534113, 604.454000]: DSTPUB phase=STAIR_DESCENT_TURN world=(-0.400,0.000,0.340) body=(0.103,-0.386,0.340) truth_z=4.214 drop=1.299 pitch=0.0deg seg=0
+[INFO] [1788598836.893716, 604.672000]: Descent landing heading captured at error 0.178 rad; using shortest-path hold while x aligns.
+[INFO] [1788598838.144625, 605.472000]: DSTPUB phase=STAIR_DESCENT_TURN world=(-0.300,0.007,0.051) body=(0.007,-0.300,0.051) truth_z=4.212 drop=1.300 pitch=0.0deg seg=0
+[INFO] [1788598838.892059, 605.952000]: Descent FLIGHT_A start: z=5.513 drop gate 2.45 m.
+[INFO] [1788598838.895700, 605.954000]: Descent landing aligned: x err=-0.118 m, heading err=0.012 rad; starting flight A.
+[INFO] [1788598839.713562, 606.474000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_A world=(-0.004,-0.550,0.047) body=(0.550,0.000,0.047) truth_z=4.213 drop=1.300 pitch=0.0deg seg=0
+[INFO] [1788598841.328645, 607.492000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_A world=(0.030,-0.579,-0.011) body=(0.580,0.000,-0.011) truth_z=4.000 drop=1.512 pitch=0.0deg seg=24
+[INFO] [1788598842.982657, 608.512000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_A world=(0.002,-0.800,-0.013) body=(0.800,0.000,-0.013) truth_z=3.710 drop=1.803 pitch=0.0deg seg=24
+[INFO] [1788598844.564811, 609.532000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_A world=(-0.011,-0.800,0.006) body=(0.800,0.000,0.006) truth_z=3.417 drop=2.095 pitch=0.0deg seg=22
+[INFO] [1788598846.149450, 610.552000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_A world=(0.004,-0.550,-0.013) body=(0.550,-0.000,-0.013) truth_z=3.094 drop=2.418 pitch=0.0deg seg=31
+[INFO] [1788598847.757304, 611.572000]: DSTPUB phase=STAIR_DESCENT_FLIGHT_A world=(0.018,-0.500,-0.059) body=(0.500,0.000,-0.059) truth_z=2.895 drop=2.618 pitch=0.0deg seg=25
+[INFO] [1788598848.643396, 612.142000]: Segment 1 (F3->F2) complete: drop=2.62 m, elapsed 36.3 s; turning on F2 landing for segment 2.
+[INFO] [1788598851.039951, 613.654000]: DSTPUB phase=STAIR_DESCENT_SEGMENT_TURN world=(0.117,0.300,0.000) body=(-0.285,0.150,0.000) truth_z=2.922 drop=0.000 pitch=1.0deg seg=-1
+[INFO] [1788598851.541985, 613.972000]: Segment turn aligned (x err=0.118 m, y=1.703 in band [1.70, 1.95]); starting 180 deg turn.
+[INFO] [1788598852.646281, 614.676000]: DSTPUB phase=STAIR_DESCENT_SEGMENT_TURN world=(-0.273,0.044,-0.660) body=(-0.014,-0.277,-0.660) truth_z=2.922 drop=0.000 pitch=1.0deg seg=-1
+[INFO] [1788598853.215408, 615.032000]: Segment turn aligned (x err=0.137 m, y=1.701 in band [1.70, 1.95]); starting 180 deg turn.
+[INFO] [1788598854.251074, 615.696000]: DSTPUB phase=STAIR_DESCENT_SEGMENT_TURN world=(-0.109,0.279,-1.000) body=(-0.124,-0.273,-1.000) truth_z=2.923 drop=0.000 pitch=1.0deg seg=0
+[INFO] [1788598855.816471, 616.698000]: DSTPUB phase=STAIR_DESCENT_SEGMENT_TURN world=(0.159,0.367,-1.000) body=(-0.099,-0.388,-1.000) truth_z=2.913 drop=0.000 pitch=1.0deg seg=0
+[INFO] [1788598856.318065, 617.012000]: Segment turn aligned (x err=0.098 m, y=1.946 in band [1.70, 1.95]); starting 180 deg turn.
+[INFO] [1788598857.406158, 617.712000]: DSTPUB phase=STAIR_DESCENT_SEGMENT_TURN world=(0.306,0.257,-1.000) body=(-0.023,-0.399,-1.000) truth_z=2.940 drop=0.000 pitch=1.0deg seg=-3
+[INFO] [1788598858.453131, 618.372000]: Segment turn complete; standing before descent segment 2.
+[0m[INFO] [1788597887.944689908]: Livox plugin Load complete with 800 rays[0m
+[0m[INFO] [1788597887.945882085]: <initialOrientationAsReference> is unset, using default value of false to comply with REP 145 (world as orientation reference)[0m
+[0m[INFO] [1788597887.945900078]: <robotNamespace> set to: //[0m
+[0m[INFO] [1788597887.945908028]: <topicName> set to: /livox/imu[0m
+[0m[INFO] [1788597887.945918501]: <frameName> set to: livox_imu_link[0m
+[0m[INFO] [1788597887.945930587]: <updateRateHZ> set to: 1000[0m
+[0m[INFO] [1788597887.945939528]: <gaussianNoise> set to: 0[0m
+[0m[INFO] [1788597887.945953836]: <xyzOffset> set to: 0 0 0[0m
+[0m[INFO] [1788597887.945968033]: <rpyOffset> set to: 0 -0 0[0m
+[0m[INFO] [1788597889.225791776]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[INFO] [1788597889.228115147]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
+[0m[INFO] [1788597889.232969994]: Updating LinkState: reference_frame is empty/world/map, using inertial frame[0m
+[0m[INFO] [1788597889.235045264]: Updating LinkState: reference_frame is empty/world/map, using inertial frame[0m
+[0m[INFO] [1788597889.236279249]: Camera Plugin: Using the 'robotNamespace' param: '/'[0m
+[0m[INFO] [1788597889.238226461]: Camera Plugin (ns = /)  <tf_prefix_>, set to ""[0m
+[0m[INFO] [1788597890.074390550]: Loading gazebo_ros_control plugin[0m
+[0m[INFO] [1788597890.074446755]: Starting gazebo_ros_control plugin in namespace: /a1_gazebo[0m
+[0m[INFO] [1788597890.075030092]: gazebo_ros_control plugin is waiting for model URDF in parameter [/robot_description] on the ROS param server.[0m
+[0m[INFO] [1788597890.188842234]: Loaded gazebo_ros_control.[0m
+[INFO] [1788597887.534045, 0.000000]: building_generator_classic_control ready
+
+auto-starting new master
+[1mprocess[master]: started with pid [204582][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/home/quinn/0904/threefloor_stress5_repro_20260827/work/mounts/SimEnv/src/simenv_bridge/launch/scanplanner_three_floor_rl.launch http://localhost:11311
+[1msetting /run_id to 0ba9a116-a906-11f1-9447-05c1f50d701d[0m
+[1mprocess[rosout-1]: started with pid [204592][0m
+started core service [/rosout]
+[1mprocess[gazebo-2]: started with pid [204600][0m
+[1mprocess[urdf_spawner-3]: started with pid [204603][0m
+[1mprocess[state_from_gazebo-4]: started with pid [204606][0m
+[1mprocess[a1_gazebo/controller_spawner-5]: started with pid [204607][0m
+[1mprocess[robot_state_publisher-6]: started with pid [204608][0m
+[1mprocess[unpause_after_controllers-7]: started with pid [204613][0m
+[1mprocess[building_control-8]: started with pid [204615][0m
+[1mprocess[open_mapping_entrance-9]: started with pid [204620][0m
+[1mprocess[junior_ctrl-10]: started with pid [204622][0m
+[1mprocess[scanplanner_pointcloud_bridge-11]: started with pid [204624][0m
+[1mprocess[scan_planner_node-12]: started with pid [204625][0m
+[1mprocess[closed_loop_controller-13]: started with pid [204626][0m
+[1mprocess[scanplanner_plane_rl_bootstrap-14]: started with pid [204627][0m
+[1mprocess[rl_floor_command_mux-15]: started with pid [204631][0m
+[1mprocess[stair_transition_manager-16]: started with pid [204634][0m
+[1mprocess[second_to_third_floor_stair_manager-17]: started with pid [204636][0m
+[1mprocess[stair_descent_manager-18]: started with pid [204637][0m
+[1mprocess[scanplanner_three_floor_goal_sequencer-19]: started with pid [204640][0m
+[1mprocess[scanplanner_red_ball_detector-20]: started with pid [204641][0m
+[1mprocess[three_floor_rl_mission_supervisor-21]: started with pid [204643][0m
+[1m[open_mapping_entrance-9] process has finished cleanly
+log file: /home/quinn/.ros/log/0ba9a116-a906-11f1-9447-05c1f50d701d/open_mapping_entrance-9*.log[0m
+[1m[urdf_spawner-3] process has finished cleanly
+log file: /home/quinn/.ros/log/0ba9a116-a906-11f1-9447-05c1f50d701d/urdf_spawner-3*.log[0m
+[1m[unpause_after_controllers-7] process has finished cleanly
+log file: /home/quinn/.ros/log/0ba9a116-a906-11f1-9447-05c1f50d701d/unpause_after_controllers-7*.log[0m
+[1m[stair_transition_manager-16] process has finished cleanly
+log file: /home/quinn/.ros/log/0ba9a116-a906-11f1-9447-05c1f50d701d/stair_transition_manager-16*.log[0m
+[1m[second_to_third_floor_stair_manager-17] process has finished cleanly
+log file: /home/quinn/.ros/log/0ba9a116-a906-11f1-9447-05c1f50d701d/second_to_third_floor_stair_manager-17*.log[0m
+[three_floor_rl_mission_supervisor-21] killing on exit
+[scanplanner_red_ball_detector-20] killing on exit
+[scanplanner_three_floor_goal_sequencer-19] killing on exit
+[stair_descent_manager-18] killing on exit
+[rl_floor_command_mux-15] killing on exit
+[scanplanner_plane_rl_bootstrap-14] killing on exit
+[closed_loop_controller-13] killing on exit
+[scanplanner_pointcloud_bridge-11] killing on exit
+[junior_ctrl-10] killing on exit
+[scan_planner_node-12] killing on exit
+[building_control-8] killing on exit
+[robot_state_publisher-6] killing on exit
+[a1_gazebo/controller_spawner-5] killing on exit
+[state_from_gazebo-4] killing on exit
+[gazebo-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

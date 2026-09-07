@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SIM_ROOT="$ROOT/SimEnv-master"
+TORCH_LIB="$ROOT/third_party/libtorch/lib"
+VALID_CTRL="$ROOT/runtime_assets/SimEnv/runtime_bin/junior_ctrl_validated"
+CPU_RUNTIME="$ROOT/.cpu_runtime"
+CPU_BIN="$CPU_RUNTIME/bin"
+
+test -x "$VALID_CTRL" || {
+    echo "ERROR: missing validated controller: $VALID_CTRL" >&2
+    exit 2
+}
+
+mkdir -p "$CPU_BIN"
+
+# 控制器需要的兼容动态库名称
+ln -sfn libcudart-d0da41ae.so.11.0 \
+    "$TORCH_LIB/libcudart.so.11.0"
+ln -sfn libnvToolsExt-847d78f2.so.1 \
+    "$TORCH_LIB/libnvToolsExt.so.1"
+ln -sfn libcublas-3b81d170.so.11 \
+    "$TORCH_LIB/libcublas.so.11"
+
+# 只跳过 Unitree CUDA 重编译；SCAN-Planner 仍正常编译
+cat > "$CPU_BIN/catkin_make" <<'PROXY'
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+args=" $* "
+if [[ "$args" == *" -C ${SIMENV_CPU_SIM_ROOT} "* ]] &&
+   [[ "$args" == *" --pkg unitree_guide "* ]]; then
+    echo "[CPU deploy] Unitree rebuild skipped; validated controller selected"
+    exit 0
+fi
+
+exec /opt/ros/noetic/bin/catkin_make "$@"
+PROXY
+chmod 755 "$CPU_BIN/catkin_make"
+
+unset CONDA_PREFIX CONDA_DEFAULT_ENV
+unset PYTHONPATH ROS_PACKAGE_PATH CMAKE_PREFIX_PATH CATKIN_PREFIX_PATH
+
+export SIMENV_CPU_SIM_ROOT="$SIM_ROOT"
+export PATH="$CPU_BIN:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PYTHONNOUSERSITE=1
+export CUDA_VISIBLE_DEVICES=""
+export LD_LIBRARY_PATH="$TORCH_LIB:/opt/ros/noetic/lib"
+export LIBTORCH_LIBRARY_PATH="$TORCH_LIB"
+
+if ldd "$VALID_CTRL" | grep -F "not found"; then
+    echo "ERROR: validated controller has unresolved libraries" >&2
+    exit 2
+fi
+
+exec bash "$ROOT/run_native.sh" "$@"

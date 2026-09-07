@@ -1,0 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/root/autodl-tmp/code/restore/0803b/overall_l0829/SimEnv-master/src/unitree_guide/unitree_guide/unitree_guide/src/state_from_gazebo.cpp" "unitree_guide/unitree_guide/unitree_guide/CMakeFiles/state_from_gazebo.dir/src/state_from_gazebo.cpp.o" "gcc" "unitree_guide/unitree_guide/unitree_guide/CMakeFiles/state_from_gazebo.dir/src/state_from_gazebo.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

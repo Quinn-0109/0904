@@ -1,0 +1,119 @@
+80: * /closed_loop_controller/heading_error_threshold: 0.8
+338: * /second_to_third_floor_stair_manager/truth_flight_a_near_edge_strong_center_error_m: 0.24
+426: * /stair_descent_manager/truth_descent_flight_center_correction_error_m: 0.22
+433: * /stair_descent_manager/truth_descent_flight_heading_correction_error_rad: 0.22
+456: * /stair_descent_manager/truth_descent_max_center_error_m: 0.4
+523: * /stair_transition_manager/truth_flight_a_near_edge_strong_center_error_m: 0.24
+545: * /stair_transition_manager/truth_flight_b_near_edge_strong_center_error_m: 0.24
+616:[31m[ERROR] [1787964488.152966723]: GetModelState: model [a1_gazebo] does not exist[0m
+1154:[INFO] [1787964659.617320, 154.222000]: Pre-ascent residual heading error -0.113 rad (visual_depth=False, bearing=none).
+1177:[INFO] [1787964679.908728, 171.940000]: Flight-B entry aligned: x error=-0.055 m, heading error=-0.144 rad.
+1600:[INFO] [1787964825.698106, 308.881000]: Pre-ascent residual heading error -0.112 rad (visual_depth=False, bearing=none).
+1623:[INFO] [1787964843.457976, 325.420000]: Flight-B entry aligned: x error=-0.005 m, heading error=-0.149 rad.
+2065:[INFO] [1787965007.950145, 478.784000]: Descent landing heading captured at error 0.177 rad; using shortest-path hold while x aligns.
+2185:[INFO] [1787965041.325148, 510.222000]: Descent landing heading captured at error 0.174 rad; using shortest-path hold while x aligns.
+2240:terminate called after throwing an instance of 'boost::wrapexcept<boost::lock_error>'
+2243:[ERROR] [1787965064.417788, 531.019000]: bad callback: <bound method Detector._image of <__main__.Detector object at 0x7381ccea7190>>
+2361:[WARN] [1787965080.141427, 531.677000]: Controller Spawner error while taking down controllers: transport error completing service call: unable to receive data from sender, check sender's logs for details
+2368:[31mShutdown errors:
+---- last 100 lines ----
+[INFO] [1787964827.032722, 310.112000]: scanplanner_pointcloud_bridge: published 1550 clouds (606 points)
+[INFO] [1787964837.813647, 320.111000]: scanplanner_pointcloud_bridge: published 1600 clouds (753 points)
+[INFO] [1787964848.466256, 330.112000]: scanplanner_pointcloud_bridge: published 1650 clouds (761 points)
+[INFO] [1787964859.012436, 340.112000]: scanplanner_pointcloud_bridge: published 1700 clouds (759 points)
+[INFO] [1787964869.693570, 350.114000]: scanplanner_pointcloud_bridge: published 1750 clouds (771 points)
+[INFO] [1787964880.272999, 360.112000]: scanplanner_pointcloud_bridge: published 1800 clouds (764 points)
+[INFO] [1787964890.817391, 370.115000]: scanplanner_pointcloud_bridge: published 1850 clouds (772 points)
+[INFO] [1787964902.540168, 380.312000]: scanplanner_pointcloud_bridge: published 1900 clouds (765 points)
+[INFO] [1787964913.068889, 390.315000]: scanplanner_pointcloud_bridge: published 1950 clouds (776 points)
+[INFO] [1787964923.494993, 400.312000]: scanplanner_pointcloud_bridge: published 2000 clouds (777 points)
+[INFO] [1787964934.028309, 410.312000]: scanplanner_pointcloud_bridge: published 2050 clouds (771 points)
+[INFO] [1787964944.652895, 420.314000]: scanplanner_pointcloud_bridge: published 2100 clouds (777 points)
+[INFO] [1787964955.280169, 430.311000]: scanplanner_pointcloud_bridge: published 2150 clouds (766 points)
+[INFO] [1787964965.953710, 440.311000]: scanplanner_pointcloud_bridge: published 2200 clouds (778 points)
+[INFO] [1787964976.531984, 450.313000]: scanplanner_pointcloud_bridge: published 2250 clouds (774 points)
+[INFO] [1787964988.161348, 460.311000]: scanplanner_pointcloud_bridge: published 2300 clouds (768 points)
+[INFO] [1787964998.883973, 470.315000]: scanplanner_pointcloud_bridge: published 2350 clouds (758 points)
+[INFO] [1787965009.566827, 480.312000]: scanplanner_pointcloud_bridge: published 2400 clouds (791 points)
+[INFO] [1787965020.025022, 490.312000]: scanplanner_pointcloud_bridge: published 2450 clouds (684 points)
+[INFO] [1787965030.684566, 500.312000]: scanplanner_pointcloud_bridge: published 2500 clouds (780 points)
+[INFO] [1787965041.528872, 510.413000]: scanplanner_pointcloud_bridge: published 2550 clouds (786 points)
+[INFO] [1787965052.109450, 520.424000]: scanplanner_pointcloud_bridge: published 2600 clouds (641 points)
+[INFO] [1787965063.762463, 530.411000]: scanplanner_pointcloud_bridge: published 2650 clouds (751 points)
+[INFO] [1787964988.983203, 461.083000]: SCAN explored all three floors; stair descent owns the return.
+[INFO] [1787964488.013712, 0.000000]: building_generator_classic_control ready
+[WARN] [1787965080.141427, 531.677000]: Controller Spawner error while taking down controllers: transport error completing service call: unable to receive data from sender, check sender's logs for details
+[31m[closed_loop_controller-16] escalating to SIGTERM[0m
+[31m[junior_ctrl-13] escalating to SIGTERM[0m
+[31m[a1_gazebo/controller_spawner-5] escalating to SIGTERM[0m
+[31m[gazebo-2] escalating to SIGTERM[0m
+[31m[closed_loop_controller-16] escalating to SIGKILL[0m
+[31m[junior_ctrl-13] escalating to SIGKILL[0m
+[31mShutdown errors:
+ * process[closed_loop_controller-16, pid 10850]: required SIGKILL. May still be running.
+ * process[junior_ctrl-13, pid 10813]: required SIGKILL. May still be running.[0m
+
+auto-starting new master
+[1mprocess[master]: started with pid [10772][0m
+[1mROS_MASTER_URI=http://localhost:11311[0m
+]2;/workspace/SimEnv/src/simenv_bridge/launch/scanplanner_three_floor_rl.launch http://localhost:11311
+[1msetting /run_id to 49901eba-a343-11f1-9a96-dec901a76521[0m
+[1mprocess[rosout-1]: started with pid [10782][0m
+started core service [/rosout]
+[1mprocess[gazebo-2]: started with pid [10790][0m
+[1mprocess[urdf_spawner-3]: started with pid [10794][0m
+[1mprocess[state_from_gazebo-4]: started with pid [10796][0m
+[1mprocess[a1_gazebo/controller_spawner-5]: started with pid [10797][0m
+[1mprocess[robot_state_publisher-6]: started with pid [10798][0m
+[1mprocess[unpause_after_controllers-7]: started with pid [10799][0m
+[1mprocess[building_control-8]: started with pid [10800][0m
+[1mprocess[open_mapping_entrance-9]: started with pid [10802][0m
+[1mprocess[fastlio_pointcloud_adapter-10]: started with pid [10803][0m
+[1mprocess[fast_lio_mapping-11]: started with pid [10805][0m
+[1mprocess[map_to_fastlio_origin-12]: started with pid [10807][0m
+[1mprocess[junior_ctrl-13]: started with pid [10813][0m
+[1mprocess[scanplanner_pointcloud_bridge-14]: started with pid [10829][0m
+[1mprocess[scan_planner_node-15]: started with pid [10831][0m
+[1mprocess[closed_loop_controller-16]: started with pid [10850][0m
+[1mprocess[scanplanner_plane_rl_bootstrap-17]: started with pid [10851][0m
+[1mprocess[rl_floor_command_mux-18]: started with pid [10872][0m
+[1mprocess[stair_transition_manager-19]: started with pid [10889][0m
+[1mprocess[second_to_third_floor_stair_manager-20]: started with pid [10933][0m
+[1mprocess[stair_descent_manager-21]: started with pid [10953][0m
+[1mprocess[scanplanner_three_floor_goal_sequencer-22]: started with pid [10956][0m
+[1mprocess[scanplanner_red_ball_detector-23]: started with pid [10964][0m
+[1mprocess[three_floor_rl_mission_supervisor-24]: started with pid [10973][0m
+[1m[open_mapping_entrance-9] process has finished cleanly
+log file: /root/.ros/log/49901eba-a343-11f1-9a96-dec901a76521/open_mapping_entrance-9*.log[0m
+[1m[urdf_spawner-3] process has finished cleanly
+log file: /root/.ros/log/49901eba-a343-11f1-9a96-dec901a76521/urdf_spawner-3*.log[0m
+[1m[unpause_after_controllers-7] process has finished cleanly
+log file: /root/.ros/log/49901eba-a343-11f1-9a96-dec901a76521/unpause_after_controllers-7*.log[0m
+[1m[stair_transition_manager-19] process has finished cleanly
+log file: /root/.ros/log/49901eba-a343-11f1-9a96-dec901a76521/stair_transition_manager-19*.log[0m
+[1m[second_to_third_floor_stair_manager-20] process has finished cleanly
+log file: /root/.ros/log/49901eba-a343-11f1-9a96-dec901a76521/second_to_third_floor_stair_manager-20*.log[0m
+[1m[stair_descent_manager-21] process has finished cleanly
+log file: /root/.ros/log/49901eba-a343-11f1-9a96-dec901a76521/stair_descent_manager-21*.log[0m
+[three_floor_rl_mission_supervisor-24] killing on exit
+[scanplanner_red_ball_detector-23] killing on exit
+[scanplanner_three_floor_goal_sequencer-22] killing on exit
+[rl_floor_command_mux-18] killing on exit
+[scanplanner_plane_rl_bootstrap-17] killing on exit
+[closed_loop_controller-16] killing on exit
+[scan_planner_node-15] killing on exit
+[scanplanner_pointcloud_bridge-14] killing on exit
+[map_to_fastlio_origin-12] killing on exit
+[junior_ctrl-13] killing on exit
+[fast_lio_mapping-11] killing on exit
+[fastlio_pointcloud_adapter-10] killing on exit
+[building_control-8] killing on exit
+[robot_state_publisher-6] killing on exit
+[a1_gazebo/controller_spawner-5] killing on exit
+[state_from_gazebo-4] killing on exit
+[gazebo-2] killing on exit
+[rosout-1] killing on exit
+[master] killing on exit
+shutting down processing monitor...
+... shutting down processing monitor complete
+[1mdone[0m

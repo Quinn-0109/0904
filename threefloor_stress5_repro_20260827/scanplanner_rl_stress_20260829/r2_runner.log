@@ -1,0 +1,41 @@
+[controller] current Unitree RL controller built with hybrid policy support
+[scene] run-local randomized assets (seed offset 2): /tmp/simenv_bridge_three_floor_scene/stress6_r2
+valid three-floor RL mission: 3 floors, 12 rooms, 238.2 m floor route
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+validated 23 launch node executables
+xacro: in-order processing became default in ROS Melodic. You can drop the option.
+validated 13 descent-smoke node executables
+[three-floor] task-owned Xvfb ready on :99
+[three-floor] results: /workspace/SimEnv/results/stress6_r2
+[three-floor] flat gait: /workspace/SimEnv/src/unitree_guide/logs/policy_act_inference_plane.pt
+[three-floor] stair gait: /workspace/SimEnv/src/unitree_guide/logs/policy_act_inference_stair.pt
+[three-floor] flat-floor planner: /workspace/SCAN-Planner/src/planner/plan_manage
+{
+  "checks": {
+    "all_scene_red_balls_detected": true,
+    "all_stage_times_recorded": true,
+    "distinct_reproducible_floor_scenes": true,
+    "every_room_red_ball_detected": true,
+    "final_pose_in_first_floor_lobby": true,
+    "first_floor_return_marker": true,
+    "first_to_second_stair": true,
+    "floor_1_tour": true,
+    "floor_2_tour": true,
+    "floor_3_tour": true,
+    "lobby_return_route_complete": true,
+    "main_entrance_step_stair_rl": true,
+    "mission_summary": true,
+    "mission_within_configured_budget": true,
+    "red_ball_detections_recorded": true,
+    "red_ball_evidence_only_during_room_scans": true,
+    "rl_policy_switch_sequence": true,
+    "second_to_third_stair": true,
+    "spawn_below_main_entrance_step": true,
+    "third_to_first_descent": true
+  },
+  "failure_reasons": [],
+  "passed": true,
+  "results_dir": "/workspace/SimEnv/results/stress6_r2",
+  "schema": "scanplanner_three_floor_rl_acceptance_v1"
+}
+[three-floor] PASS: explored three floors and returned to the F1 lobby
