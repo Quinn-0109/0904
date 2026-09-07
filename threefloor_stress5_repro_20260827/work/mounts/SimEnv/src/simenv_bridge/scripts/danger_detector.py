@@ -478,7 +478,10 @@ def strong_same_view_duplicate_losers(
     return discarded
 
 
-def detect_red_spheres(img_rgb, min_area=50, min_fill=0.50, sat_min=60, val_min=60,
+# min_area is an absolute contour area, so it has to track the frame size:
+# 200 px at 640x480 is the same physical blob as the validated 50 px at
+# 320x240, keeping the false-positive threshold where it was measured.
+def detect_red_spheres(img_rgb, min_area=200, min_fill=0.50, sat_min=60, val_min=60,
                        min_vertices=6, min_circularity=0.68,
                        diagnostics=None):
     hsv = cv2.cvtColor(img_rgb, cv2.COLOR_RGB2HSV)
