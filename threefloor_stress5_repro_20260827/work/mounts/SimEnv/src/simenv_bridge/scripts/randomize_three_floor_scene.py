@@ -2481,6 +2481,16 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
             plane_distance_gain)))
     stair_side_speed = float(settings.get(
         "physical_stair_side_opening_speed_mps", 1.85))
+    # Room-internal bends reach the 2.25 m/s plane ceiling without ever
+    # converting it into progress.  Across 1258 archived bend legs the median
+    # leg is 1.95 m long and takes 2.44 s -- an average of 0.74 m/s -- because
+    # the leg is a launch and a stop with almost no cruise between them.  The
+    # ceiling only shapes the transient in the middle, which is where the
+    # losses sit.  Capping it costs about 0.22 s a leg, 4.6 s a run, on a
+    # trapezoid at the observed 4 m/s command acceleration.  Same remedy the
+    # stair side opening already uses, and for the same stated reason.
+    bend_speed = float(settings.get(
+        "physical_room_internal_bend_speed_mps", 1.50))
     stair_side_lateral_speed = float(settings.get(
         "physical_stair_side_opening_maximum_lateral_speed_mps", 0.35))
     stair_handoff_yaw_rate = float(settings.get(
@@ -2589,6 +2599,8 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
                     # pass-through tolerance.
                     bend["tolerance"] = internal_bend_tolerance
                     bend["pass_through"] = True
+                    bend["speed"] = bend_speed
+                    bend["speed_scale_exempt"] = True
                     rewritten.append(bend)
                 rewritten.append(_room_route_waypoint(
                     waypoint, definition["pose"][0], definition["pose"][1],
@@ -2602,6 +2614,8 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
                     room, phase, transit_speed)
                 exit_inner["tolerance"] = internal_bend_tolerance
                 exit_inner["pass_through"] = True
+                exit_inner["speed"] = bend_speed
+                exit_inner["speed_scale_exempt"] = True
                 rewritten.append(exit_inner)
             exit_waypoint = _room_route_waypoint(
                 waypoint, corridor[0], corridor[1], room_id + "_exit",
