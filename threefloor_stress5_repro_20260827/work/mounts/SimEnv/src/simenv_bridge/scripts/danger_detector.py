@@ -363,7 +363,9 @@ def strong_same_view_duplicate_losers(
         detections, confirm_count=3, merge_radius_m=1.25,
         strong_evidence_multiplier=2,
         extra_frame_merge_radius_m=0.90,
-        extra_frame_time_sec=0.50):
+        extra_frame_time_sec=0.50,
+        late_merge_radius_m=1.60,
+        late_merge_minimum_time_sec=1.00):
     """Find tightly supported weak same-view projection tails.
 
     Floor, room, viewpoint role and exact waypoint must all match.
@@ -379,6 +381,9 @@ def strong_same_view_duplicate_losers(
         0.0, float(extra_frame_merge_radius_m))
     extra_frame_time_sec = max(
         0.0, float(extra_frame_time_sec))
+    late_merge_radius_m = max(0.0, float(late_merge_radius_m))
+    late_merge_minimum_time_sec = max(
+        0.0, float(late_merge_minimum_time_sec))
     groups = {}
 
     for index, event in enumerate(detections or []):
@@ -448,17 +453,6 @@ def strong_same_view_duplicate_losers(
                     float(strong_position[1]),
                 )
 
-                # Preserve the established three-frame rule.
-                if weak_count == confirm_count:
-                    if distance <= merge_radius_m:
-                        discarded.add(weak_index)
-                        break
-                    continue
-
-                # A four-frame tail must satisfy both tighter gates.
-                if distance > extra_frame_merge_radius_m:
-                    continue
-
                 try:
                     time_delta = abs(
                         float(weak_event[
@@ -469,9 +463,35 @@ def strong_same_view_duplicate_losers(
                         ])
                     )
                 except (KeyError, TypeError, ValueError):
+                    time_delta = None
+
+                # A tail that appears seconds AFTER the strong track is the
+                # same ball re-projected on a later pass: measured deltas are
+                # 2.1 s, 8.1 s and 17.2 s at 1.1-1.5 m.  Two balls genuinely
+                # visible at once are confirmed together -- the pair that made
+                # this gate necessary sat 2.08 m apart at 0.15 s -- so the
+                # radius stays below that and the delay is what separates them.
+                late_reprojection = (
+                    time_delta is not None and
+                    distance <= late_merge_radius_m and
+                    time_delta >= late_merge_minimum_time_sec
+                )
+
+                # Preserve the established three-frame rule.
+                if weak_count == confirm_count:
+                    if distance <= merge_radius_m or late_reprojection:
+                        discarded.add(weak_index)
+                        break
                     continue
 
-                if time_delta <= extra_frame_time_sec:
+                # A four-frame tail must satisfy both tighter gates.
+                if (distance <= extra_frame_merge_radius_m and
+                        time_delta is not None and
+                        time_delta <= extra_frame_time_sec):
+                    discarded.add(weak_index)
+                    break
+
+                if late_reprojection:
                     discarded.add(weak_index)
                     break
 
@@ -1585,7 +1605,7 @@ class Detector:
                 [record["event"] for record in candidate_records],
                 confirm_count=int(getattr(
                     self.tracker, "confirm_count", 3)),
-                merge_radius_m=1.25,
+                merge_radius_m=1.40,
                 strong_evidence_multiplier=2,
             )
             for loser in sorted(
