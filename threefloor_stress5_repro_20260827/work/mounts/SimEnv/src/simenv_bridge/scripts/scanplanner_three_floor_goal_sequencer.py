@@ -1354,7 +1354,7 @@ class ThreeFloorGoalSequencer:
                 forward = 0.0
                 lateral = 0.0
                 yaw_rate = 0.0
-            # A pass-through bend is a corner to round, not a point to land
+            # A room-internal bend is a corner to round, not a point to land
             # on, and its own bearing goes ill-conditioned close in: at 0.15 m
             # a 0.02 m offset is 0.13 rad, near the 0.16 rad gate that permits
             # forward motion, so the robot turns without closing and can run
@@ -1365,12 +1365,16 @@ class ThreeFloorGoalSequencer:
             # tolerance the audit's clearance budget is built on; the residual
             # along the direction of travel points at the next waypoint and
             # costs no clearance.
-            # target_yaw is not None on the door legs, which must finish
-            # aligned to the door normal; passing the point is not enough
-            # there, so they keep the strict test.
+            # The planner marks exactly the bends this holds for.  It is NOT
+            # every pass_through leg: those also include the corridor and
+            # stair-approach legs, which run at 2.25 m/s against a 0.48 m
+            # tolerance, and the room entry legs, which cross a doorway at
+            # 0.28 m.  Ending one of those early leaves the robot undecelerated
+            # and up to a tolerance off centre with a doorway or a stairwell
+            # in front of it, which is a fall rather than a saved second.
             if (not reached and approach_from is not None and
                     target_yaw is None and
-                    bool(waypoint.get("pass_through", False))):
+                    bool(waypoint.get("round_corner", False))):
                 along_x = float(target[0]) - approach_from[0]
                 along_y = float(target[1]) - approach_from[1]
                 approach_length = math.hypot(along_x, along_y)
