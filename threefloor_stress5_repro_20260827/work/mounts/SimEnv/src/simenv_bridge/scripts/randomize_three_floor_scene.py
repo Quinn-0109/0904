@@ -135,37 +135,6 @@ def point_box_clearance(x, y, furniture):
     return math.hypot(outside_x, outside_y)
 
 
-def route_obstacles(room):
-    """Furniture plus the room's red balls, for ROUTING only.
-
-    line_of_sight_clear and the coverage grid must keep seeing furniture
-    alone: a ball added there would occlude the sight line to itself and
-    the viewpoint search would stop believing any ball is observable.
-    """
-    items = list(room.get("furniture", []))
-    for ball in room.get("red_balls", []) or []:
-        position = ball.get("position") or ball.get("pose")
-        if not position or len(position) < 2:
-            continue
-        radius = float(ball.get("radius_m", ball.get("radius", 0.15)))
-        items.append({
-            "id": ball.get("id", "red_ball"),
-            "kind": "red_ball",
-            "pose": [float(position[0]), float(position[1]),
-                     float(position[2]) if len(position) > 2 else 0.0,
-                     0.0, 0.0, 0.0],
-            "size": [2.0 * radius, 2.0 * radius, 2.0 * radius],
-        })
-    return items
-
-
-def route_clearance(x, y, room):
-    items = route_obstacles(room)
-    if not items:
-        return float("inf")
-    return min(point_box_clearance(x, y, item) for item in items)
-
-
 def furniture_clearance(x, y, room):
     furniture = room.get("furniture", [])
     if not furniture:
@@ -1269,7 +1238,7 @@ def classify_room_geometry(room, settings):
 
 def point_is_safe(x, y, room, clearance):
     return (wall_clearance(x, y, room) >= float(clearance) and
-            route_clearance(x, y, room) >= float(clearance))
+            furniture_clearance(x, y, room) >= float(clearance))
 
 
 def nearest_safe_local_point(room, geometry, desired_depth, desired_lateral,
@@ -1345,7 +1314,7 @@ def _grid_path(room, start, goal, clearance, resolution=0.35,
             for iy in range(ny):
                 x, y = world((ix, iy))
                 if (wall_clearance(x, y, room) >= required_wall_clearance and
-                        route_clearance(x, y, room) >= clearance):
+                        furniture_clearance(x, y, room) >= clearance):
                     safe.add((ix, iy))
         _GRID_PATH_SAFE_CACHE[cache_key] = (x0, y0, nx, ny, safe)
 
@@ -1440,7 +1409,7 @@ def _paths_minimum_furniture_clearance(paths, room):
                 ratio = float(step) / steps
                 x = float(start[0]) + ratio * (float(end[0]) - float(start[0]))
                 y = float(start[1]) + ratio * (float(end[1]) - float(start[1]))
-                minimum = min(minimum, route_clearance(x, y, room))
+                minimum = min(minimum, furniture_clearance(x, y, room))
     return minimum
 
 
@@ -2833,21 +2802,15 @@ def build_randomized_scene(source_layout, source_mission, seed_offset=0,
         # the danger sources. Moving it again would invalidate that scene.
         furniture_poses = {}
 
-    # An official scene's balls are fixed before anything is planned, so put
-    # them in place first: the room A* can then route around them.  A
-    # randomized scene still places its balls afterwards, against the route
-    # that already exists.
-    official_poses = official_truth is not None
-    if official_poses:
-        danger_poses, red_truth = preserve_official_scene_sources(
-            layout, official_truth)
-
     scans = derive_physical_viewpoints(
         layout, seed_by_floor, settings)
 
-    if not official_poses:
+    if official_truth is None:
         danger_poses, red_truth = place_sparse_red_balls(
             layout, scans, seed_by_floor, settings, red_distractors)
+    else:
+        danger_poses, red_truth = preserve_official_scene_sources(
+            layout, official_truth)
     layout["red_distractors"] = copy.deepcopy(red_distractors or [])
     rewrite_physical_room_route(mission, layout, scans, settings)
 
