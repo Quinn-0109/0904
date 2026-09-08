@@ -2589,11 +2589,6 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
                     # pass-through tolerance.
                     bend["tolerance"] = internal_bend_tolerance
                     bend["pass_through"] = True
-                    # A room-internal bend is the only pass-through waypoint
-                    # the sequencer may finish by rounding rather than by
-                    # landing on: transit speed, a 0.12 m tolerance, and no
-                    # doorway or stairwell within reach of the overshoot.
-                    bend["round_corner"] = True
                     rewritten.append(bend)
                 rewritten.append(_room_route_waypoint(
                     waypoint, definition["pose"][0], definition["pose"][1],
@@ -2607,7 +2602,6 @@ def rewrite_physical_room_route(mission, layout, scans, settings):
                     room, phase, transit_speed)
                 exit_inner["tolerance"] = internal_bend_tolerance
                 exit_inner["pass_through"] = True
-                exit_inner["round_corner"] = True
                 rewritten.append(exit_inner)
             exit_waypoint = _room_route_waypoint(
                 waypoint, corridor[0], corridor[1], room_id + "_exit",
