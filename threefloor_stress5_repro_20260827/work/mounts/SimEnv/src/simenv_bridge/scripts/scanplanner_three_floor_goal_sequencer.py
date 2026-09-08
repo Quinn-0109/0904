@@ -525,6 +525,18 @@ class ThreeFloorGoalSequencer:
         # obstacle clearance along the next path segment.
         self._runtime_audit_self_radius = max(0.65, float(rospy.get_param(
             "~runtime_3d_self_filter_radius_m", 1.05)))
+        # Ground returns leak into the collision band and read as obstacles.
+        # Across 4549 archived audits every one of the 12 that failed was
+        # blocked by a point 0.050-0.063 m above the floor, while the 4537
+        # that passed had their closest point at a median of 0.431 m.  Start
+        # the band above the noise: an A1 whose body rides at 0.31 m walks
+        # over anything this low, and discarding points can only raise the
+        # measured clearance, so no audit that passes today can start failing.
+        self._runtime_audit_floor_margin = max(0.05, float(rospy.get_param(
+            "~runtime_3d_floor_margin_m", 0.10)))
+        self._runtime_audit_ceiling_margin = max(
+            self._runtime_audit_floor_margin + 0.10,
+            float(rospy.get_param("~runtime_3d_ceiling_margin_m", 0.95)))
 
         os.makedirs(self._output_dir, exist_ok=True)
         self._lock = threading.RLock()
@@ -767,8 +779,10 @@ class ThreeFloorGoalSequencer:
         target = (float(waypoint["x"]), float(waypoint["y"]))
         floor_z = float(floor["z"])
         fresh = sampled_at is not None and now - sampled_at <= self._runtime_audit_max_age
-        relevant = [point for point in points
-                    if floor_z + 0.05 <= point[2] <= floor_z + 0.95]
+        relevant = [
+            point for point in points
+            if (floor_z + self._runtime_audit_floor_margin <= point[2] <=
+                floor_z + self._runtime_audit_ceiling_margin)]
         candidates = [] if start is None else [
             point for point in relevant
             if math.hypot(point[0] - start[0], point[1] - start[1]) >
@@ -795,6 +809,8 @@ class ThreeFloorGoalSequencer:
             "collision_height_point_count": len(relevant),
             "post_self_filter_point_count": len(candidates),
             "self_filter_radius_m": self._runtime_audit_self_radius,
+            "collision_band_m": [self._runtime_audit_floor_margin,
+                                 self._runtime_audit_ceiling_margin],
             "closest_obstacle_point_xyz": (
                 [round(float(value), 3) for value in closest_point]
                 if closest_point is not None else None),
