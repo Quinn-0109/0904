@@ -928,7 +928,12 @@ def validate_physical_config(config, require_runtime_files=False):
             float(settings["physical_corridor_cruise_speed"]) <= 2.25 and
             float(settings["physical_corridor_maximum_lateral_speed_mps"]) <= 0.45 and
             1.25 <= float(settings["physical_plane_distance_gain"]) <= 1.45 and
-            1.45 <= float(settings.get(
+            # The old contract had no bound on this at all: missions carried
+            # no such setting and every leg ran on the launch parameter, 1.25.
+            # The 1.45 floor arrived with the setting itself, and it forces the
+            # room legs to brake harder than the version that never fell.  Keep
+            # the ceiling, and let the floor reach the plane gain's own floor.
+            1.25 <= float(settings.get(
                 "physical_room_pass_through_distance_gain",
                 settings["physical_plane_distance_gain"])) <= 2.20 and
             float(settings["physical_stair_side_opening_speed_mps"]) <= 1.85 and
