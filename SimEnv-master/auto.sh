@@ -46,16 +46,30 @@ UNITREE_CTRL_DT="${UNITREE_CTRL_DT:-0.004}"
 UNITREE_LOG_WAIT_WARNINGS="$(as_ros_bool "${UNITREE_LOG_WAIT_WARNINGS:-0}")"
 ROBOT_SPAWN_TIMEOUT="${ROBOT_SPAWN_TIMEOUT:-120}"
 CONTROLLER_SPAWNER_TIMEOUT="${CONTROLLER_SPAWNER_TIMEOUT:-120}"
-# These match generate_competition_scene.py's own defaults, and the base world
-# of every three-floor run that has finished inside 600 s.  The coarser
-# 0.002 / 40 iters / 5.0 they replace cost 19% of the in-place yaw rate --
-# 0.507 rad/s against 0.625 on the same commanded rate and the same swept arc,
-# which is +34 s over the 24 room viewpoints.  Forward motion was unaffected,
-# which is what a turning quadruped losing lateral foot friction looks like.
+# The step size and iteration count match generate_competition_scene.py's own
+# defaults, and the base world of every three-floor run that has finished
+# inside 600 s.  The coarser 0.002 / 40 iters they replace cost 19% of the
+# in-place yaw rate -- 0.507 rad/s against 0.625 on the same commanded rate and
+# the same swept arc, which is +34 s over the 24 room viewpoints.  Forward
+# motion was unaffected, which is what a turning quadruped losing lateral foot
+# friction looks like.
+#
+# contact_max_correcting_vel is the exception: it went to the generator default
+# of 10.0 alongside them, and it is not what bought the yaw rate.  It caps how
+# fast an interpenetrating contact is pushed apart, which has no bearing on a
+# free in-place rotation, and doubling it doubled how hard a clipped foot is
+# thrown.  Attitude losses since:
+#
+#     0.002 / 40 iters / 5.0     5 losses in 59 runs   8%
+#     0.001 / 50 iters / 10.0    8 losses in 25 runs  32%   (p = 0.017)
+#
+# across 15 seeds, and the losses look like the mechanism: commands already at
+# zero, then roll rising 0.39 rad inside 100 ms.  So keep the step size and the
+# iterations, and put only this one back.
 GAZEBO_PHYSICS_MAX_STEP_SIZE="${GAZEBO_PHYSICS_MAX_STEP_SIZE:-0.001}"
 GAZEBO_PHYSICS_REAL_TIME_UPDATE_RATE="${GAZEBO_PHYSICS_REAL_TIME_UPDATE_RATE:-1000}"
 GAZEBO_PHYSICS_ODE_ITERS="${GAZEBO_PHYSICS_ODE_ITERS:-50}"
-GAZEBO_PHYSICS_CONTACT_MAX_CORRECTING_VEL="${GAZEBO_PHYSICS_CONTACT_MAX_CORRECTING_VEL:-10.0}"
+GAZEBO_PHYSICS_CONTACT_MAX_CORRECTING_VEL="${GAZEBO_PHYSICS_CONTACT_MAX_CORRECTING_VEL:-5.0}"
 ROBOT_X="${ROBOT_X:-0.0}"
 ROBOT_Y="${ROBOT_Y:--3.2}"
 ROBOT_Z="${ROBOT_Z:-0.6}"
