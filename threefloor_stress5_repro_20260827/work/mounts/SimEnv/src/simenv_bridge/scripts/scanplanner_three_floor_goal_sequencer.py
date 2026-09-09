@@ -1300,14 +1300,17 @@ class ThreeFloorGoalSequencer:
                 # freshly landed gait even though the geometric segment is
                 # collision-free.  The waypoint flag retains the same audited
                 # segment while using forward/yaw-only tracking for this leg.
-                # EXIT_INNER_TURN_FIRST_V2
-                # Preserve turn-before-forward only on the departure
-                # segment where attitude loss was previously observed.
-                planned_room_bend = (
-                    "_room_" in note and "_exit_inner_" in note)
-                plane_forward_only = (
-                    bool(waypoint.get("plane_forward_only", False))
-                    or planned_room_bend)
+                # EXIT_INNER_TURN_FIRST_V2 forced every room exit_inner leg
+                # onto turn-before-forward, to stop attitude loss on the
+                # departure segment.  Those legs are now where attitude loss
+                # happens: five of the eight in this campaign, against two on
+                # corridor legs that kept the holonomic controller.  Removing
+                # it returns them to the controller the never-falling version
+                # used, which can take out cross-track error by strafing
+                # instead of turning into it.  The stair and landing handoffs
+                # keep their own flag; only the exit_inner rule goes.
+                plane_forward_only = bool(
+                    waypoint.get("plane_forward_only", False))
                 if (policy_kind_name == "plane" and
                         not strict_door_crossing and
                         not plane_forward_only):
